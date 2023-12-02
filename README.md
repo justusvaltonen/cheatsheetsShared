@@ -10,4 +10,5 @@ Commands and terminology memorization outsourced. Not properly maintained.
 
 ______
 To Do:
+
 -Make some sense of the tokens. There is a lot of info to be found on the docs. Way too much for my liking. Once there is a need to use different methods, add a manual.
