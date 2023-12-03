@@ -8,6 +8,8 @@
 │           └── instructions_myEnv.txt
 ├── computerScienceCheatsheet
 │   └── computerScienceAbstractCheat.txt
+├── configs_that_worked.txt
+├── configs_that_worked.txt~
 ├── customWorkstation
 │   ├── useful_rc_git.txt
 │   ├── vim_customization.txt
@@ -21,6 +23,8 @@
 │   │   │   └── githubPushWalkthroughFailing.txt
 │   │   └── git_example_gittutorial.txt
 │   ├── git_accesstokens_info.txt
+│   ├── GitAPIs
+│   │   └── salesteam_git-apis.txt
 │   ├── git_commands.txt
 │   ├── git_github_readme.txt
 │   ├── git_help_all_commands.txt
@@ -71,6 +75,8 @@
 │   │   └── dataAnalyticsIndexSources.txt
 │   ├── databasesCheatsheet
 │   │   ├── keyWords.txt
+│   │   ├── mariadbCheatsheet
+│   │   │   └── mariadbCheatsheet.txt
 │   │   └── mongodbCheatsheet
 │   │       ├── mongodbCheatsheet
 │   │       └── mongodbGuidelines.txt
@@ -84,10 +90,30 @@
 │   │   └── notesCheatKubernetes.txt
 │   └── languagesSpokenCheatsheet
 │       └── russianLanguage.txt
+├── pokerCheatsheet
+│   ├── basicsPoker.txt
+│   ├── ggPlayers.txt
+│   ├── handAnalyze.txt
+│   ├── omahaStudy.txt
+│   ├── sampleHandsTexas.txt
+│   └── tournamentManual.txt
 ├── README.md
 ├── regexCheatsheet
 │   ├── regexCheatPatternString.txt
 │   └── test.txt
+├── roadmapsITcheatsheet
+│   ├── allExistingSkills.txt
+│   └── mySkillset.txt
+├── scriptsCheatsheet
+│   ├── read_before_use.txt
+│   └── scriptsDemo
+│       ├── backupOneDir.sh
+│       ├── createHere.sh
+│       ├── findFromFiles.sh
+│       ├── makeDirList.sh
+│       ├── makeFullBackup.sh
+│       ├── scriptRedirect.sh
+│       └── smallScriptsListing
 ├── structuringCheatsheet
 │   └── webdev
 │       └── expressRoutingStructureCheat.txt
@@ -119,4 +145,4 @@
 └── xPaintCheatsheet
     └── xpaintManual.txt
 
-45 directories, 75 files
+50 directories, 95 files
