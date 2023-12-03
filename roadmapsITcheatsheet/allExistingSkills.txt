@@ -1,0 +1,186 @@
+
+###########################
+## Let's see what I know ##
+###########################
+Source: https://roadmap.sh
+-Just figured out that I can click on any of the boxes and they give a more detailed description.
+-Just realized that one can easilly contribute. I have so much to say. This shall be my new meaning of life... and strippers
+-Also host on Azure just to make things ready for employers. --Update-- Free period ended. Never got there.
+-In this file there are all of the available entries listed at the moment of creation of this file. My know-how is evaluated on another file
+
+APIs
+ Authentication
+  BasicAuth-Concept
+  CookieBased-Concept
+  JWT-Concept
+  OAuth-Concept
+   TokenAuth-Concept
+  OpenID-Concept
+   OIDC-Concept
+  SAML-Concept
+  TokenAuth-Basics
+ ConceptOfAPIs
+Authentication
+ BasicsTheory
+  BasicAuth
+  JWT
+  OAuth
+  SessionAuth
+  SSO
+BuildTools
+ LintersAndFormatters
+  ESLint
+ TaskRunners
+  npm-Scripts
+Caching
+ AutomaticWebProxys-Concept
+ CDN-Concept
+ ClientSide
+ ServerSide
+  Memcaching-Basics
+CLI-Apps
+Containers-Basics
+ ContainerStyles
+  DockerContainers-Basics
+ ControllerPlatforms
+  Docker-Basics
+  Kubernetes-Basics
+CRUD-Apps
+CSS
+ Basics
+ Frameworks
+  Bootstrap
+ Layouts
+  BoxModel
+  CSS-Grid
+  Display
+  FlexBox
+  Positioning
+ Preprocessors
+  Sass
+ ResponsiveDesign
+Databases
+ NoSQL
+  MongoDB
+ Relational
+  MariaDBMySQL-Basics
+  MySQL-Basics
+DesktopApplications
+ Flutter			(ÅÅÅ) Briefly passed by. See more. Interesting thing. Multiplatform applications
+ Electron			(ÅÅÅ) Briefly passed by. See more. Interesting thing. Desktop apps that are actually browser instances
+HTML
+ Accessibility
+ Basics
+ BestPractices-Basics
+ FormsAndValidations
+Internet
+ Browsers-Basics
+ DNS-Basics
+ DomainName-Basics
+ Hosting
+  Cloud
+   Azure
+  Local
+   LinuxServers
+   RedundancyConscept
+ HTTP
+JavaScript
+ AJAX (XHR)
+ Constructs
+ DOM-Manipulation
+ ES6+
+ Frameworks
+  (Express)
+  NodeJS
+  React
+  TS-Conscept
+ ModularJS
+ Prototype
+ Scope
+ SyntaxBasics
+ TypeScriptConcept
+Languages
+ JavaScript
+ Python
+Linux
+OperatingSystemsUsageKnowledge
+ GeneralKnowledge
+ I/O-Management
+ MemoryManagement
+ NetworkingBasics
+  Advanced
+ POSIX-Basics
+  pipes	--> Multiple meanings
+  stdin	== 0
+  stdout	== 1
+  stderr	== 2
+ ProcessManagement
+ TerminalUsage
+  Commands
+   curl
+   dig
+   find
+   grep
+   head
+   kill
+   less
+   lsof
+   sed
+   ssh
+   wget
+ ThreddingConcept
+PacketManagers
+ apt
+ dpkg
+ npm
+ProgressiveWebApps
+ APIs
+ Credentials
+ DeviceOrientation
+ DevTools
+ Location
+ Notifications
+ ServerSentEvents
+ Storage
+REST
+ Design
+ Routing
+ Structure
+Testing
+ Manual
+ Integrational??
+ Unit-Concept
+VersionControl
+ Git
+ Hosting
+  GitHub
+WebSecurityKnowledge
+ API-Security
+  BestPractices			(R)
+   N/A
+ Concepts
+  HTTPS-Basics
+  ServerSecurity-Basics
+   Firewalls
+   OpenSSL
+    LetsEncrypt
+   PasswordValidation
+   PortManagement
+   TLS1.2+
+   UpdateAutomation
+  SSL/TLS-Basics
+ Hashing
+  Algorithms
+   Bcrypt
+   MD5				--> Multiple vulnerabilities. Bad.
+   SHA
+
+
+
+
+
+-- DONE: --
+BACKEND_DEVELOPER
+FRONT-END
+FULL-STACK
+

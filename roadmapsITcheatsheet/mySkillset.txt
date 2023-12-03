@@ -1,0 +1,480 @@
+
+
+
+#################################################
+## Let's see what I know and what I don't know ##
+#################################################
+https://roadmap.sh
+-Using the URL above as a reference, here is a listing of things I know and don't know
+
+BACKEND_DEVELOPER:
+ YES:
+  APIs
+   Authentication
+    BasicAuth-Concept
+    CookieBased-Concept
+    JWT-Concept
+    OAuth-Concept
+     TokenAuth-Concept
+    OpenID-Concept
+     OIDC-Concept
+    SAML-Concept
+    TokenAuth-Basics
+   ConceptOfAPIs
+  Caching
+   AutomaticWebProxys-Concept
+   CDN-Concept
+   ClientSide
+   ServerSide
+    Memcaching-Basics
+  Containers-Basics
+   ContainerStyles
+    DockerContainers-Basics
+   ControllerPlatforms
+    Docker-Basics
+    Kubernetes-Basics
+  Databases
+   NoSQL
+    MongoDB
+   Relational
+    MariaDBMySQL-Basics
+    MySQL-Basics
+  Languages
+   JavaScript
+   Python
+  OperatingSystemsUsageKnowledge
+   GeneralKnowledge
+   I/O-Management
+   MemoryManagement
+   NetworkingBasics
+    Advanced
+   POSIX-Basics
+    pipes	--> Multiple meanings
+    stdin	== 0
+    stdout	== 1
+    stderr	== 2
+   ProcessManagement
+   TerminalUsage
+    Commands
+     curl
+     dig
+     find
+     grep
+     head
+     kill
+     less
+     lsof
+     sed
+     ssh
+     wget
+   ThreddingConcept
+  SW-Design-Architechture
+   ArchitechturalPatterns
+    Microservices-Basics
+    Serverless-Basics
+     -CloudServers. Autoscaling.
+   Principles
+    DomainDrivenDesign
+     -NamingPolicyDefinitionExample: Hero.PickWeapon() instead of AbstractObject.IntegrateToDataCollection()				(DDD)
+    TestDrivenDevelopment
+     -SomeTestWriterWizard writes testcases that are requirements. Once met, SW is ready. Resembles a way of thinking in general.	(TDD)
+  Testing
+   Integrational
+   Unit-Concept
+  WebSecurityKnowledge
+   API-Security
+    BestPractices			(R)
+     N/A
+   Concepts
+    HTTPS-Basics
+    ServerSecurity-Basics
+     Firewalls
+     OpenSSL
+      LetsEncrypt
+     PasswordValidation
+     PortManagement
+     TLS1.2+
+     UpdateAutomation
+    SSL/TLS-Basics
+   Hashing
+    Algorithms
+     Bcrypt
+     MD5				--> Multiple vulnerabilities. Bad.
+     SHA
+ NO:
+  APIs
+   Authentication
+    BasicAuth
+    CookieBased
+    JWT
+    OAuth
+    OpenID
+    SAML
+    TokenAuth
+   GraphQL
+   gRPC
+   JSON-APIs
+   REST
+   SOAP
+   HATEOAS
+   OpenAPI-Specs
+  Caching
+   AutomaticWebProxys
+   CDN
+   ClientSide-Advanced
+   ServerSide-Advanced
+    Memcached-Advanced
+    Redis
+  Containers
+   ContainerStyles
+    DockerContainers
+    LXC					--> LinuXContainer. Same as type 2 virtual machine. 1 HW, 1 Kernel, n VirtualMachines/Containers
+   ControllerPlatforms
+    Docker
+    Kubernetes
+  Databases
+   Misc
+    ACID
+    FailureMode
+    Normalization
+    N+1Problem
+    ORMs
+    ProfilingPerformance
+    Transactions
+   NoSQL
+    Cassandra
+    CouchDB
+    DynamoDB
+    Firebase
+    HBase
+    InfluxDB
+    Neo4j
+    Redis
+    RethinkDB
+    TimeScale
+   Relational
+    MariaDB-Advanced
+    MS-SQL
+    MySQL
+    Oracle
+    PostgreSQL
+   ScalingDatabases
+    CAP-Theorem
+    DatabaseIndexes
+    DataReplication
+    ShardingStrategies
+  GraphQL				--> Enables more accurate querying and enhances performance that way. Think: (C vs Python) || (JS vs TS)
+   Apollo
+   RelayModern
+  Languages
+   C#
+   Java
+   PHP
+   Ruby
+  MessageBrokers				--> How 2 microservices / applications communicate with eachother inside cloud internal environment. Same as K8 <forgot-the-name-node/pod>
+   Kafka
+   RabbitMQ
+  OperatingSystemsUsageKnowledge
+   InterprocessCommunication
+   I/O-Management
+   MemoryManagement
+   POSIX-Basics
+    pipes	--> Multiple meanings
+   TerminalUsage
+    Commands
+     awk
+     lsof
+     sed
+     wget
+  ScaleBuilding
+   Difference
+    Instrumentation
+    Monitoring
+    Telemetry
+   MigrationStrategies
+   MitigationStrategies
+    Backpressure
+    CircuitBreaker
+    GracefulDegradation
+    Loadshifting
+    Throttling
+   Observability
+    Logs
+    Metrics
+   TypesOfScaling
+  ServerSentEvents				--> Server pushes data to client-side in a non-secure manner. Fast updating on constantly changing data for an app.	(SSE)
+  SW-Design-Architechture
+   ArchitechturalPatterns
+    Microservices-Advanced
+    MonolithicApps
+    Serverless
+    ServiceMesh
+    SOA
+    TwelveFactorApps
+   LargeSetQuerySearchEngines (Own datasets)
+    Elasticsearch				(ÅÅÅ) Interesting field this AI is. Will it get faster or slower in 1, 3, 5, 10 years?
+    Solr					(ÅÅÅ)
+   Principles
+    CQRS
+    EventSourcing
+    GOF-DesignPatterns
+  Testing
+   Functional
+   Integrational
+   Unit
+  WebSecurityKnowledge
+   API-Security
+    BestPractices
+   Concepts
+    CSP
+    CORS	--> HTTP header that enables loading content from cached sources and not just the original source. Can be overridden.
+    HTTPS-Advanced
+    OWASP-Risks	--> OpenWebApplicationSecurityProject. Source of info to make more secure SW. <3
+    ServerSecurity-Advanced
+     Certs
+     IDS	--> IntrusionDetectionSystem
+     MFA
+     SSL/TLS1.2+
+    SSL/TLS-Advanced
+   Hashing
+    Algorithms
+  WebServers
+   Apache
+   Caddy
+   ExpressWebServer
+   MS-IIS
+   Nginx
+   NodeWebServer
+   UbuntuWebServer
+  WebSockets					--> Instead of (req, res), there is a 2-way communication all the time. Think tunneling.
+
+
+FRONT-END:
+ YES:
+  Authentication
+   BasicsTheory
+    BasicAuth
+    JWT
+    OAuth
+    SessionAuth
+    SSO
+  BuildTools
+   LintersAndFormatters
+    ESLint
+   TaskRunners
+    npm-Scripts
+  CSS
+   Basics
+   Frameworks
+    Bootstrap
+   Layouts
+    BoxModel
+    CSS-Grid
+    Display
+    FlexBox
+    Positioning
+   Preprocessors
+    Sass
+   ResponsiveDesign
+  DesktopApplications
+   Flutter			(ÅÅÅ) Briefly passed by. See more. Interesting thing. Multiplatform applications
+   Electron			(ÅÅÅ) Briefly passed by. See more. Interesting thing. Desktop apps that are actually browser instances
+  HTML
+   Accessibility
+   Basics
+   BestPractices-Basics
+   FormsAndValidations
+  Internet
+   Browsers-Basics
+   DNS
+   DomainName
+   Hosting
+   HTTP
+  JavaScript
+   AJAX (XHR)
+   Constructs
+   DOM-Manipulation
+   ES6+
+   ModularJS
+   Prototype
+   Scope
+   SyntaxBasics
+   TypeScriptConcept
+  PacketManagers
+   apt
+   npm
+  ProgressiveWebApps
+   APIs
+   Credentials
+   DeviceOrientation
+   DevTools
+   Location
+   Notifications
+   ServerSentEvents
+   Storage
+  Testing
+   Manual
+  VersionControl
+   Git
+   Hosting
+    GitHub
+  WebSecurity
+   HTTPS-Basics
+ NO:
+  Authentication
+   JWT
+   OAuth
+   SessionAuth
+   SSO
+  BuildTools
+   LintersAndFormatters
+    Prettier
+   ModuleBundlers
+    esbuild
+    Parcel
+    Rollup
+    Vite
+    Webpack
+  CSS
+   Architechture
+    BEM
+   Frameworks
+    Bulma
+    ChakraUI
+    DaisyUI
+    Mantine
+    MaterialUI
+    RadixUI
+    Tailwind
+   MediaQueries
+   Preprocessors
+    Sass
+    PostCSS
+  DesktopApplications
+   Flutter
+   Electron
+   Tauri
+  GraphQL
+   Apollo
+   RelayModern
+  HTML
+   BestPractices-Advanced
+   SEO-Basics
+  Internet
+   Browsers-Advanced
+   DNS-Deepdive
+  JavaScript
+   EventBubbling
+   FetchAPI
+   Hoisting
+   Shadow-DOM
+   Strict
+   Typescript
+  MobileApplications
+   Flutter
+   Ionic
+   NativeScript
+   ReactNative
+  PacketManagers
+   pnpm
+   yarn
+  ProgressiveWebApps
+   APIsAdvanced
+   Credentials
+   DeviceOrientation
+   DevTools
+   Lighthouse
+   Location
+   Payments
+   PerformanceMetrics
+    BestPractices				(R)
+   PRPL-Pattern
+   PWA
+   RAIL-Model
+   ServiceWorkers
+   WebSockets
+  ServerSideRendering
+   Angular
+    Universal
+   React
+    NextJS
+    Remix		++
+   Svelte
+    SvelteKit
+   VueJS
+    NuxtJS
+  StaticSiteGenerators
+   Astro
+   Elevently
+   GatsbyJS
+   Hugo
+   Jekyll
+   NextJS
+   NuxtJS
+   Remix		++
+   Vuepress
+  Testing
+   DifferenceBetween
+    Functional
+    Integration
+    Unit
+   Tools
+    Cypress
+    Jest
+    Playwright
+    react-testing-library
+  VersionControl
+   Hosting
+    Bitbucket
+    GitLab
+  WebSecurity
+   ContentSecurityPolicy
+   CORS
+   HTTPS-Advanced
+   OWASP-SecurityRisks
+
+
+
+FULL-STACK:
+ YES:
+  CLI-Apps
+  CRUD-Apps
+  CSS
+  Git
+  GitHub
+  HTML
+  JavaScript
+  Linux
+  NodeJS
+  npm
+  React (kind of)
+  RESTfulRouting
+ NO:
+  Ansible
+  AWS
+   EC2
+   Route53
+   SES
+   S3
+   VPC
+  GitHubActions
+  JWT Auth
+  Monit
+  PostgreSQL
+  Redis
+  RESTful APIs
+  Tailwind
+  Terraform
+
+
+ALL_KNOWLEDGE:
+ (R):existingSkills.txt
+
+
+
+
+##############################################################
+
+-In roadmap.sh/frontend?r=frontend-beginner they state that I can get at least a junior spot once I learn Tailwind (CSS) and Jest (Testing)
+
+
