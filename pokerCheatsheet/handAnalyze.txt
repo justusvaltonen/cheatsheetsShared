@@ -1,0 +1,662 @@
+
+######################################################################################################
+## For some reason I find some of these hands interesting and it's fun to analyze them a bit better ##
+######################################################################################################
+
+
+TM2189163409
+6 / 6 players
+Texas
+0,5 - 1, ante 0,15 (0,9 in the pot preflop)
+
+
+
+
+
+
+
+TalentedPokerGod		==> I shall be referred as this if there is a need to identify
+<some anomalities or observations from the time the hand was played>
+###############################################################
+## Example hand ==============================================>
+###############################################################
+
+Hand ID: TM2189163409
+Game mode: Texas, Tournament, Bounty, 6-max
+NumberOfPlayersInTable: 6 / 6
+Blinds: 1-2
+Antes:
+ Per player: 0,15
+ Total in pot: 0,90
+EffectiveStacks: 49,2 BB (Winner)
+ Pre: 49,2 BB
+ Flop: 49,2 - 6,6 = 42,6 BB
+ Turn: 42,6 - 7,3 = 35,3 BB
+ River: 35,3 - 9,6 = 25,7 BB
+Positions:
+ SB:
+ BB:
+ UTG:
+ UTG+n:
+ CO:
+ BTN:
+
+
+###############################################################
+## Template for an interesting hand ==========================>
+###############################################################
+
+Hand ID: 
+Game mode:
+ AdditionalInfo:
+ Tournament:
+  PlayersLeft:
+  PlayersRegistered:
+NumberOfPlayersInTable: 
+Blinds: 
+Antes:
+ Per player:
+ Total in pot:
+EffectiveStacks:		<amount-in-blinds> BB (<name-of-player>)
+ Pre:
+ Flop:
+ Turn:
+ River:
+Positions:
+ SB:
+ BB:
+ UTG:
+ UTG+n:
+ CO:
+ BTN:
+PlayersInTable:
+ Nick: 
+  BountyConvertedToChips: 
+  Hand:
+   RevealedOnStreet:
+  NotesFromHand: 
+  Stack: 
+ Nick: 
+  BountyConvertedToChips: 
+  NotesFromHand: 
+  Stack: 
+ Nick: 
+  BountyConvertedToChips: 
+  NotesFromHand: 
+  Stack: 
+ActionsInTable:
+ Preflop:
+  InvolvedPlayers:
+  Board:
+  Actions:
+  SizeOfPotWhenDone:
+ Flop:
+  InvolvedPlayers:
+  Board:
+  Actions:
+  SizeOfPotWhenDone:
+ Turn:
+  InvolvedPlayers:
+  Board:
+  Actions:
+  SizeOfPotWhenDone:
+ River:
+  InvolvedPlayers:
+  Board:
+  Actions:
+  SizeOfPotWhenDone:
+
+
+-- Full Feature Listing --
+
+Hand ID: 
+Game mode:
+ AdditionalInfo:
+ CashGame:
+ ((CashGame))
+ TournamentGame:
+  TournamentInfo:
+   Field:
+    PlayersLeft:
+    PlayersRegistered:
+    UniqueEntries:
+   MoneyInfoTournaments:
+    BountyMoney:
+     DistributionOfBuyInToPool:
+     IsProgressive:
+    Costs:
+     ForcedAddon:
+     SingleBuyInAmount:
+    DealMaking:
+    ((DealMaking))
+    FinalPrizePool:
+    GuaranteedPrize:
+     Overlay:
+    PayoutDistributionEstimate:
+   TournamentName:
+   StartingStack:
+    StartingStackInChips:
+    StartingStackInBlinds:
+   Time:
+    Blinds:
+    BlindIntervalsMinutes:
+    EstimateOfDuration:
+    StartTime:
+   TournamentOptions:
+   ((TournamentOptions))
+    AnteInUse:
+    BountyInUse:
+    NumberOfRequiredPlayersToStart:
+    Timebank:
+    TurboStructure:
+     TurboDefinition:
+     ((TurboDefinition))
+   TournamentType:
+    MTT:
+    Satellite:
+     NextStep:
+     TargetMainEvent:
+    Sit n' go:
+
+ActionsInTableFormat:
+-++ActionsInTableFormat.Usage++-
+ Preflop:
+  InvolvedPlayers:		
+  Actions:			
+  SizeOfPotWhenDone:		
+ Flop:
+  InvolvedPlayers:
+  Actions:
+  SizeOfPotWhenDone:
+ Turn:
+  InvolvedPlayers:
+  Actions:
+  SizeOfPotWhenDone:
+ River:
+  InvolvedPlayers:
+  Actions:
+  SizeOfPotWhenDone:
+
+AnalyseWhatWentWrong:
+ WhatHappened:
+ WhyHappened:
+ OtherPossibleApproaches:
+ Calculus:
+  WillThisPlayMakeOrLoseMoneyInInfinity:
+
+AnalyseWhatWentRight:
+ WhatHappened:
+ WhyHappened:
+ OtherPossibleApproaches:
+ Calculus:
+  WillThisPlayMakeOrLoseMoneyInInfinity:
+
+
+Board:
+((Board))
+ NormalPopularPokerVariants_Board:
+  PreFlopNoBoardContent:
+  FlopBoardContent:
+  TurnBoardContent:
+  RiverBoardContent:
+ ((OtherBoards))
+  ((SuperDC_Board))
+
+PlayersInTable:
+ Nick: 
+  AvailableStatsProvidedByGG:
+  ((AvailableStatsProvidedByGG))
+   SampleSize:
+    CashGames:
+    Tournament:
+   PreFlop (PF):
+    AttemtToSteal:
+     BTN:
+     CO:
+    Raise:
+    VPIP:
+    3-Bet
+  BountyModeInfo:
+  ((BountyModeInfo))
+  Hand:
+   RevealedOnStreet:
+  NotesFromHand: 
+   AnalyzisObjective:
+   AnalyzisEmotional:
+   EstimatedHandStrength:
+    AgainstFullRange:
+    CurrentSituation:
+  Stack: 
+   AllinOnStreet:
+   ((AllinOnStreet))
+   AmountOfStackRisked:
+
+Positions:
+ SB:
+ BB:
+ UTG:
+ UTG+n:
+ CO:
+ BTN:
+ 
+SettingsSet:
+ ((DealMaking))
+  ((MoneyInfo))
+ ((RecordedLuckEvents))
+ ((SuperDC_Settings))
+
+
+   
+   
+   
+   
+###############################################################
+## Reference Area ============================================>
+###############################################################
+
+ActionsInTable:
++--ActionsInTableFormat.Usage--+
+ < OneOfTheFollowing: [Preflop:, Flop:, Turn:, River:, Ocean] >
+  InvolvedPlayers:			< OnFlop: (* || player on sitout), OnLaterStreets: (PlayersWhoHadCardsOnStartOfStreet)>
+  Actions: 				< UTG-F; UTG+1-F; CO-R:2.2; BTN-RR:4.2; SB-F; BB-Shove:14; CO-Call; BTN-Call; >
+  SizeOfPotWhenDone:			< 43.9 >
+  
+   AllinOnStreet:
+   ((AllinOnStreet))
+    AmountOfPotInvolvedIn:
+    AmountOfSidepotInvolvedIn-1:
+    AmountOfSidepotInvolvedIn-2:
+    AmountOfSidepotInvolvedIn-n:
+       
+  AvailableStatsProvidedByGG:
+  ((AvailableStatsProvidedByGG))
+   SampleSize:
+    CashGames:
+    Tournament:
+   PreFlop (PF):
+    AttemtToSteal:
+     BTN:
+     CO:
+    VPIP:
+     BlindVSBlind:
+      IP:
+      OOP:
+     PreAggressionPortion:
+      WhenInAssumedPosition:
+      WhenOutOfPosition:
+     PrePassiveActionPortion:
+      InPosition:
+       RelatingToPosition:
+       RelatingToPlayerStereotype:
+      OutOfPosition:
+       RelatingToPosition:
+       RelatingToPlayerStereotype:
+    3-BetTendencyPre:
+    4-BetTendencyPre:
+   Flop (FL):
+    VPIP:
+     Aggressive:
+     Passive:
+    C-Bet:
+    R-To-C-Bet:
+    F-To-C-Bet:
+   Turn (TU):
+    VPIP:
+     Aggressive:
+     Passive:
+    C-Bet:
+    R-To-C-Bet:
+    F-To-C-Bet:
+   River (RI):
+    VPIP:
+     Aggressive:
+     Passive:
+    C-Bet:
+    R-To-C-Bet:
+    F-To-C-Bet:
+   OtherStats:
+    BettingPatterns:
+     AnomalitiesInRareEvents:
+      ClickitBack:
+      ExtraClickWhenSomethingSpecial:
+     Commitment:
+      CommittedWhenDraw:
+       AnyDraw:
+       ComboDraw:
+        ActionWhenCommittedCombo:
+         FindingFoldEquityTendency:
+          Adaptive: Yes / No
+           TowardsOpponent:
+           TowardsDynamics:
+          IP:
+           SizeOfBetting:
+            AimsForBalance:
+             AdjustsSizingUsingRNG:
+             AdjustsForSomeUnknownReason:
+            AimsForExploit:
+             FreeReEval:
+             FreeRiver:
+             PotControl:
+            HeadsUp:
+            MultiWay:
+          OOP:
+           CheckRaiseTendency:			< 1 - 100 >
+            HeadsUp:
+            Multiway:
+             RelativeToStack:
+        AnyCombo:
+        GoodLookingCombos:
+        SmartCombos:
+       EstimateOfCommitment:			< 1 - 100 >
+       FlushDraw:
+       StraightDraw:
+       OnlyGood:
+      CommittedWhenInvested:
+      CommittedWhenPair:
+     RelativeToBB:
+     RelativeToNumbers:
+     UnusualBehaviour:
+      TooBig:
+      TooSmall:
+      WrongSpots:
+    FireAndIce: < 100 = Fire, -100 = Ice >
+    ShowDown:
+     BluffingTendencyEvaluation:
+     NonShowDownPortion:
+     RelativeHandStrengthAtShowDown:
+     WentToShowdownPortion:
+     WonAtShowdownPortion:
+     WonAtShowdownChips:
+      EstimateOfReturnPerShowDown:
+      MoneyGainedAtShowDown:
+    RecentForm:
+     LastTenSessions:
+     LastMonth:
+     LastYear:
+    TiltTendency:
+     ActivatesAfterLoss:
+      CallCheck:
+      RaiseReRaise:
+     ParticipatesNextHandAfterLoss:
+     WithdrawsAfterLoss:
+    TimingTells:
+     FastPlay:
+     SlowThinkingInEasySpot:
+     SlowThinkingInHardSpot:
+         
+Board:
+))Board((
+ Category:
+  Omaha:
+   DrawPotential			- ssx && 67x
+    JT-combo				- always hits.
+   Dry					- Qs, 7d, 3h
+   Paired				- 99 > is safer for aggressor, 99 <= danger for aggressor
+   ScareCards - AK			- Constitutes a lot of peoples raising range
+   Straight				- Exploit by using potential ranges
+    Low
+    Mid
+    High
+   Two-Town				- You have backup or trouble
+  Texas:
+   DrawPotential			- ssx && 67x				==> Not as dangerous in tournament texas, but multiways can cause harm
+    JT-combo				- always hits.				==> True also when playing with 2 cards
+   Dry					- Qs, 7d, 3h				==> Crappy pairs are harder to bluff, but easier to extract
+   Paired				- 99 > is safer for aggressor, 99 <= danger for aggressor	==> Also true in texas, but not as simple as in omaha
+   ScareCards - AK			- Constitutes a lot of peoples raising range			==> Bet when you see one of these
+   Straight				- Exploit by using potential ranges				==> Not easy in shallow tournament texas
+    Low					- Wheel possibility builds my courage to do a semi-bluff
+    Mid					- Protect made hands with big bets. Use this mentality to counter that thought
+    High				- If you don't have it, your opponent does.
+   Two-Town				- You have backup or trouble when doing a draw also in texas
+ ))OtherBoards((
+  StudGames_Board:
+   CanadianStud_Board:
+    Player_N:
+     StreetOneC_Open
+     StreetTwoC_Open
+     StreetThreeC_Open
+     StreetFourC_Open
+   Seven_Board:
+    Player_N:
+     StreetOneC_Open
+     StreetTwoC_Open
+     StreetThreeC_Open
+     StreetFourC_Open
+     StreetFiveC__OpenAndExtraHiddenCard
+  ((SuperDC_Board))
+
+  BountyModeInfo:
+  ))BountyModeInfo((
+   BountyConvertedToChips: 
+   BountyPercentageFromBuyIn:
+   BountyAlreadyWon:
+   
+ CashGame:
+ ))CashGame((
+  Ante:
+  Blinds:
+  MaxBuyIn:
+  MinBuyIn:
+  Options:
+   Currency:
+   FakeMoney:
+   Fast:
+   FunnyHats:
+   TeamGame:
+    Structure:
+   TerroristMode:
+   
+   DealMaking:
+   ))DealMaking((
+    Enabled:
+    Rules:
+     AvailabilityChooseOne:
+      AllMustApprove:
+      IndividualDeciding (Feature Doesn't Exist):
+      MajorityDecides:
+     ICM-Based:
+      All || FixedAmount       
+     OnlyOnFT:
+     
+DynamicsAnalysis:
+))DynamicsAnalysis((
+ PvP:
+ Tournament:
+  BlindsForce:
+  BubbleForce:
+  CombinationOfManyThings:
+  PositionForce:
+      
+  MoneyInfo:
+  ))MoneyInfo((
+   Bounty:
+    DistributionOfBuyInBounty:
+    IsProgressive:
+   BuyIn:
+    AvailablePurchaseMethods:
+     Currencies:
+     Points:
+     Tickets:
+     Tokens:
+     X-Variable:
+    BreakdownOfDistribution:
+     Bounty:
+     PrizePool:
+     Rake:
+     SeriesCommunityPool:
+     X-Variable:
+   DealMaking:
+    ((DealMaking))
+   FinalPrizePool:
+   GuaranteedPrize:
+    Overlay:
+   PlacesPaid:
+   Rebuy:
+    Addon:
+     AmountOfChipsCanBeAdded:
+     PriceOfAddon:
+    AmountOfChipsRebuy:
+    DoubleRebuyIsEnabled:
+    RebuysAreRaked:
+     RakeAmountOnRebuy:
+    Price:
+   PayoutDistributionEstimate:
+   
+RecordedLuckEvents:
+ EnableLuckEvents:
+ ))RecordedLuckEvents((
+  DoomSwitchPropabilityRate:		< 1 - 100 >
+  EnableLoggingOfLuckEvents:
+ IndividualEvents:
+  LVL1: <mild-luck>
+  LVL2: <haha>
+  LVL3: <i-can-dodge-bullets-and-suckout-good>
+  LVL4: <runner-runner-nothing-funner>
+  LVL5: < combo: setup - multiway - no outs - miracle - huge pot - opponents will lose sanity over these >
+  function reverse_polarity(RecordedLuckEvents.IndividualEvents.LVL{[1 - 5]};
+ RunningGood:
+  RecieveCertificatesOfLuck:
+   PlayWithoutFailingForFiveHundredHands: "This is my day"
+   RunGoodForAWeek: "This is my week"
+   StatisticallyLucky: "Winning 95 out of 100 events that are concidered lucky is a thing I will never forget"
+   TheHorseShoe: "Some of us are just born lucky" 
+
+RecordedLuckEvents:
+ EnableLuckEvents:
+ ))RecordedLuckEvents((
+  DoomSwitchPropabilityRate:		< 1 - 100 >
+  EnableLoggingOfLuckEvents:
+ IndividualEvents:
+  LVL1: <mild-luck>					- Flipping is working for me - Good shape
+  LVL2: <haha>						- Huge setup in my favour --> Flush vs Flush
+  LVL3: <i-can-dodge-bullets-and-suckout-good>
+  LVL4: <runner-runner-nothing-funner>
+  LVL5: < combo: setup - multiway - no outs - miracle - huge pot - opponents will lose sanity over these >
+  function reverse_polarity(RecordedLuckEvents.IndividualEvents.LVL{[1 - 5]};
+ RunningGood:
+  RecieveCertificatesOfLuck:
+   PlayWithoutFailingForFiveHundredHands: "This is my day"
+   RunGoodForAWeek: "This is my week"
+   StatisticallyLucky: "Winning 95 out of 100 events that are concidered lucky is a thing I will never forget"
+   TheHorseShoe: "Some of us are just born lucky" 
+
+ TournamentOptions:
+ ))TournamentOptions((
+  BubbleProtection:
+  Rebuy:
+   Addon:
+    AmountOfChips:
+    Price: 
+   RebuyTime:
+    InLevels:
+    InOtherTimeFormat:
+   EnableDoubleRebuy:
+   MaximumRebuys:
+  Re-Entry:
+   CanForfeitStack:
+   CanAddToExistingStack:
+  Z-OtherTags:
+   FlippingOnly:
+    BadBeatStory:
+   Invitational:
+    Age:
+    Code:
+    Gender:
+    Link:
+    Nationality:
+   IsFakeMoneyGame:
+   IsFreeroll:
+   IsSpecial:
+ Type:
+  Satellite:
+   TargetMainEvent:
+   NextStep:
+  Sit n' go:
+   NumberOfRequiredPlayers:
+
+   TurboDefinition:
+   ))TurboDefinition((
+    IsTurbo:
+     Hyper: 3min
+      NameOfTurbonessExeedingExpectations:  
+      
+      
+      
+
+###############################################################
+## SuperDC Area ==============================================>
+###############################################################
+
+ SuperDC_Board:
+ ))SuperDC_Board((
+  *illeri:
+   BoardOne:
+   BoardTwo:
+   BoardThree:
+  Badeucey:
+   NormalBadeucey:
+   ModifiedVersionBadeucey:
+    NumberOfHiddenCards:
+    NumberOfVisibleCards:
+  Pyramid:
+   Preflop:
+   Flop:
+    RowOneFive:
+    RowTwoFour:
+    RowThreeThree:
+   Turn:
+    RowFourTwo:
+   River:
+    RowFiveOne:
+  TripleDrawLowball:
+   Draw1:
+   Draw2:
+   Draw3:
+  
+   
+ SuperDC_Settings:  
+ ))SuperDC_Settings((
+  AllowedGames:
+  DeckType:
+   FiveSuit:
+    RecalculationOfStrengthsNeeded
+   ModifiedFeatures:
+    AlteredHandRankDefinitions:
+    Badugi:
+     NumberOfCardsDealt
+     NumberOfCardsFaceUp
+     NumberOfRounds
+     NormalRanking:
+      OrderInCaseOfTieMoveDown:
+       MostCardsInHandFormation
+        CompareWorstCardInFormationSmallIsGood
+         CompareSecondWorst
+          CompareThirdWorst
+           CompareRemainingCard
+     ShortDeck: Flush > FullHouse;
+    Antilooping:
+     AntiloopingTriggerCards:
+    RemovedSuits:
+    WildCards:
+   Regular:
+   Stripped:
+    CrabsRemoved:
+    ThirtySix:
+    Other:
+  WinConditionModifications:
+   PointSystemOnComboGames:
+    EachConditionEvaluatedGeneratesOnePoint:
+     EnableSplitting:
+      Disabled:
+       PointsAutogenerate:
+       PurestWins:
+       SomeOtherSystem:
+        DescriptionOfSystem:
+      Enabled:
+    MultiWayMatters:
+     OnShowDownMustRevealCards:
+   WorstHandWins:
+    MustUseStrongestCombo:   
+   
+   

@@ -1,0 +1,35 @@
+
+
+
+########################################
+## Categorizes under tournament modes ##
+########################################
+
+TexasTournament:
+akkauntvpluse		== Calls showe of 12BB from SB (1 behind) without any need to do so. Has J8o
+Andinho10		== C-Bet fast with AA
+bomr2023		== Maniac or on tilt.
+ccbbchris		== H1: CO open 4BB with QQ; H2: 3-way after round check on flop, donks full pot on turn. H3: 4BB open from HJ
+Collin Capone		== Limps from SB a lot against BB
+LENDAFLAVIO (bra)	== UTG R, Me(MP) flat, 1 / 3 stack re-raise with QQ with 30bb.
+Mariowan		== UTG raise 3BB, A4o; BTN:Call; BB Shove 15.4BB; Mariowan showe 41,2BB; Bounty was very low. History saved
+NgocVinh		== BTN open 3BB with ??? and MP open 2,5BB with KK
+TomRC			== Big Stack with stats: VPIP: 44, PFR: 28, ATS: 45, 3BET: 15, Samplesize: 178. Interesting hand saved
+Vinnymarr (can)		== Isolate with a suicide KT
+
+
+OmahaTournament:
+Chipsintheair		== Check-Call OOP with air. Possibly a misclick. Hand saved as a .png in handhistory dir
+DaveIsildur		== SB korotus AQx95x vs. UTG limper. On megatilt and running hot.
+k1taeff			== Curious / suspicious (many times rightfully)
+shieh			== Called on turn an allin bet with just a flushdraw. Pot was 2,5bb and bet was 29,3bb. Hand history saved
+
+
+
+########################################
+## Categorizes under cashgame - modes ##
+########################################
+
+
+
+

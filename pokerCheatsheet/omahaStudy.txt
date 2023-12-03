@@ -1,0 +1,250 @@
+
+
+
+
+-- Interweb sources --
+
+https://www.bestpokercoaching.com/plo-6-max-plo10-coaching-session-with-coach-kyyberi/		--> Some video I didn't watch yet
+upswingpoker.com
+pokervip.com
+Youtube
+ / #PokerStatistician
+  / "Pot Limit Omaha Probabilities and Ranges"
+  / "Poker Statistics: Pot Limit Omaha Starting Hands Tiers"
+
+
+
+=============================================================
+
+-- Statistical things --
+
+Rules of thumb:
+-Omaha with 4 cards is 6 * combos that are available in texas more or less
+
+
+
+
+
+Sytax:
+C						== Combinations
+ C(sizeOfSet, howManyThingsWeWantFromTheSet)
+P						== Probability of some thing
+ P(PocketAcesPLO)
+
+RedefinedWords:
+Good						== Describes strength of a hand. Not sure how to define since I don't know the thoughts of youtube guy. Good < Great
+Great						== Comparison between other abstract terms. Good < Great
+
+
+
+
+
+
+How often do pocket aces appear?
+
+Source #1
+1 / 39 == 0.025641026
+--> 2.56%, Not sure where the answer comes from, but one guess is:
+--> (Combos where 2 are in a set of 4) * (Combos where 2 are in a set of 48) / Combos where 4 are in a set of 52
+--> C(4,2) * C(48,2) / C(52,4)
+--> How to calculate, is a mystery. This example assumes that AAA is not a valid hand as aces
+
+Source #2	- Bad and no explanation
+31,44% / 13 == 2.418461538
+--> 2,42%, doesn't include AAA or AAAA, Not at all sure where the math comes from in this one
+
+Source #3
+4/52 * 3/51 * 6 == 6/221 ==> 0.027149321
+--> 2,71%, If any AA is good then this should apply and be valid
+
+4 / 52 ==> 1 / 13		--> Hit an ace the first time
+3 / 51 ==> 1 / 17		--> Hit the ace second time. A bit off since if fails then has 3 / 50, again if fails gets 3 / 49
+
+13 * 17 == 221			--> Correct answer should be about 1 / 221, so this is an interesting result
+
+6 * 13 == 78			--> Non-relating most likely, but just wanted to roll the numbers a bit. Don't know why we should be obsessed with multiplying by six
+6 * 17 == 102			--> Non-relating most likely, but just wanted to roll the numbers a bit
+
+3 * 4 == 12
+51 * 52 == 2652
+2652 / 12 == 221		--> Another way to reach the same number as before. This is propably the magic number of propability to get aces in Holdem
+
+Source #4
+Total possible starting hands:		6 497 400 ( /24 = 270 725 combos)
+Exactly 2 aces:				6 768 (2.4999538%)
+Exactly 3 aces:				144	--> To 192
+Exactly 4 aces:				1
+At least 2 aces:			6 913 (2.5535137%)
+Compare to holdem * 6 ==> 6/221 = 2.714932%
+
+
+
+Random semi-useless trivia:
+
+Number of starting hands (not combos and no suits are taken in concideration):		16 432
+Maximum wrap hits of times:								68%
+3-card maxwrap hits of times:								60%
+Three pairs to full house:								24%
+Two pairs to full house:								16.5%
+Against avg hand equitys:
+ AAKK DS										73%
+ AAKK rainbow										68%
+ AA77 DS										72%
+ AA77 rainbow										67%
+ AAJT DS										76%
+ AAJT rainbow										71%
+ JT98 DS										56%
+ JT98 rainbow										49%
+ 
+Hit the turn 2.22% * number_of_outs
+Hit your draw on turn or river: number_of_outs * 2 * (2.27 logX, where X increases based on your outs by a small fraction)
+
+=============================================================
+
+-- Useful trivia for future math, but not fact checked --
+
+Source: Youtube / #PokerStatistician / "Pot Limit Omaha Probabilities and Ranges"
+Scenario: PLO-4
+Do the calculus the validate. The guy in the video is not in any way convincing and this seems like lazy math - that is ok if somewhat correct
+Also there is all the info available to deduct the information needed. Just watch the video and think. We do have to assume that the abstract formulas are correct though
+
+## Starting hands
+let anyAA = GettingAces()				== ~2.5% 	||	1 / 40
+ anyAA.handIsRainbow()					== ~12.77%	||	1 / 8
+ anyAA.handHasSingleSuitHelper()			== ~74.46%	||	3 / 4
+ anyAA.handHasDoubleSuitHelper()			== ~12.77%	||	1 / 8
+
+let anyHand = GetAllHandCombos()
+ anyHand.isDoublePair()					== ~1.04%	||	1 / 96
+ anyHand.isDoubleSuit()					== ~13.48%	||	1 / 7
+ 
+let singleA = anyHand.GetOnlyOneAce()
+ singleA.aceIsSuited()					== ~15.01%	||	1 / 7
+
+getting a rundown:					== ~1.23%	||	1 / 81
+
+
+## Example ranges
+
+1) From the video: Nit/Fish UTG Range -- We use !NFUR_1 from now on since there is no reason why not.
+def 7, 8 = Good, Great;
+!NFUR_1 = [
+"AAxx", "Ka Kb Xa Xb", "Ka Kb Na Nn -7", "KaKbXcXd -8", "Qa Qb Na Nb -7", "Qa Qb Na Nc -8", "Ja Jb Na Nb -8", "XaXbYaYb", "XaXbYaYc -7",
+"XaXbYcYd -8", "rundown-ds", "AaNaNbNb -8", "Aa, 3-broadways where 1 suits with ace"
+]
+  ==> About 7%
+
+2) From the video: Ivey UTG Or Nit/Fish Cutoff Range -- We use !IUONFCOR_1
+!IUONFCOR_1 = [
+"TTXX++", "XXYY", "rundown", "rundown+1s-1gap", "XdXYdZ", "rundown+ds-2gap", "VVWX+ds-1gap", "AaNaNnNn", "KXXX+ds-7", "3-broadway+ss"
+]
+  ==> About 40%
+  
+
+-- Quotes from the video --
+
+
+
+
+=============================================================
+
+-- To avoid tilting notes to self --
+
+Evaluation order:
+1. Nuttiness
+2. Connectivity
+3. Suits you sir
+--> Missing one of the most important: Playability in your situation. Mid-bucket hand with 35bb in an active table can lead to many situations. Bad AA UTG is trouble since all thinks you have AA.
+
+Categorize things:
+isA_high()
+is_wrappy()
+ has_gaps()
+ has_big_gaps()
+is_masked()
+works_multiway()
+early_strong() --> button_strong()
+has_good_story_value()
+has_dangler()
+broadway_musical()
+has_jtxx_and_is_playable()
+blocks_own_draw()
+has_pair()		--> Hi, mid, lo?
+<all possible suite querys>
+<how large of a portion of all playable hands some category represents>
+<would some nit guy open the selected category from UTG?>
+<if you can't give an example of the range of a category, you need to refactor to smaller categories>
+
+
+Dos and Dont's:
+-Don't FPS if that is what you're doing
+-Pay attention
+-UTG openers have aces most of the time
+-Anyone 3-betting usually has aces. Plan for all of the streets
+-One way is to play hands that you could go allin with in the first place.
+
+-Early:
+ -Avoid multiway
+ -Select good hands
+ -Try to find an opening to jam
+-Mid:
+ -Don't call UTG raisers
+ -Don't get squeezed
+ -Do get squeezed if that's your plan ==> Play multiway hands and don't be afraid to invest a lot
+
+
+=============================================================
+
+-- Categories --
+
+Boards
+StartingHands
+ PlaysCoverageOfFlopsByRank
+  LowRank
+   -DiscardUnlessForced
+   HeadsUp
+    -Good to have a backup out to keep sane. More on this later when I learn the math first.
+  MediumRank	(JT is magic for action junkies)
+   Straights
+    CanGoBothWays		--> Good to know how to read your opponent when playing these or will miss value or lose by herocalling. Good idea is to know how to raise.
+   Suites
+    CanEnablePassiveMode	--> If your opponent can't bluff you out, they will passivate themselves. Bad and Good thing.
+  OnlyHighRank	(broadway)
+   Straights
+    HitsNutsWhenHits
+   SuitesWithAce
+    HitsNutsWhenHits
+ PairsA 
+
+
+-- Polarized vs. Smooth Equity (Connectivity) --
+-For post analysis a good categorization method
+
+
+=============================================================
+
+-- Keywords to make a search --
+PLO Solver
+PLO preflop
+PLO top 25% combos
+PLO preflop charts
+Omaha preflop tool
+PLO Starting hand chart
+How big of a % is AAxx of a playable range of hands?
+
+
+=============================================================
+
+-- Building a better understanding --
+
+-Make sample flops. How often structures appear? What are the balances in these structures?
+-Define a playable MP range and see how big of a portion is aces
+
+
+=============================================================
+
+
+
+
+
+

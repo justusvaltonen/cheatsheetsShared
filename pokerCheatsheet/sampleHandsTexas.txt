@@ -1,0 +1,454 @@
+
+##########################
+## (1) Hand that is sad ##
+##########################
+
+Hand ID: TM2189163409
+Game mode: Texas, Tournament, Bounty, 6-max
+NumberOfPlayersInTable: 6 / 6
+Blinds: 1-2
+Antes:
+ Per player:			0.15
+ Total in pot:			0.90
+EffectiveStacks:		49.2 BB (Winner)
+ Pre:				49.2 BB
+ Flop:				49.2-6.6 = 42.6 BB
+ Turn:				42.6-7.3 = 35.3 BB
+ River:				35.3-9.6 = 25.7 BB
+Positions:
+ SB:				Gen1
+ BB:				SuperCoolPokahMatzterWhoGotUnlucky
+ UTG:				EvilOpponentWhoTookMyTools
+ UTG+n:				Gen-n
+ CO:				Gen-n
+ BTN:				Gen-n
+PlayersInTable:
+ BountyConvertedToChips:	StartingAmount so guessing 1 / 4 of starting stack
+ Hand:				As, Ad
+ Nick:				SuperCoolPokahMatzterWhoGotUnlucky
+ Stack:				134.4 BB
+PlayersInTable:
+ BountyConvertedToChips:	StartingAmount so guessing 1 / 4 of starting stack
+ Hand:				Jh, Th
+ Nick:				EvilOpponentWhoTookMyTools
+ Stack:				49.2 BB
+
+eow = EvilOpponentWhoTookMyTools;
+scp = SuperCoolPokahMatzterWhoGotUnlucky;
+
+ActionsInTable:
+ Preflop:
+  InvolvedPlayers:		*
+  Actions:			eow-R:2.2bb; 4X-F; scp-RR:6.6bb; eow-Call:4.4bb;
+  SizeOfPotWhenDone:		14.5bb
+ Flop:
+  InvolvedPlayers:		eow, scp;
+  Board:			Td, 8h, 6s
+  Actions:			scp-R:7.3; eow-Call:7.3;
+  SizeOfPotWhenDone:		29bb
+ Turn:
+  InvolvedPlayers:		eow, scp;
+  Board:			Td, 8h, 6s,   Tc
+  Actions:			scp-R:9.6; eow-Call:9.6;
+  SizeOfPotWhenDone:		48.1bb
+ River:
+  InvolvedPlayers:		eow, scp;
+  Board:			Td, 8h, 6s,   Tc,   Qs
+  Actions:			scp-R:Showe(25.7); eow-Call:25.7;
+  SizeOfPotWhenDone:		99.5bb
+
+
+AnalyseWhatWentWrong:
+ WhatHappened:
+ WhyHappened:
+ OtherPossibleApproaches:
+ Calculus:
+  WillThisPlayMakeOrLoseMoneyInInfinity:
+
+
+
+##########################################################################################################################################
+
+############################
+## (2) Hand that is happy ##
+############################
+
+Hand ID: TM76481181
+Game mode: Omaha, Tournament, 6-max
+NumberOfPlayersInTable: 4 / 6
+Blinds: 0.5-1.0
+Antes:
+ Per player:			0.125
+ Total in pot:			0.5
+EffectiveStacks:		27.2 BB (Gen-2)
+ Pre:				27.2 BB
+ Flop:				32.7 BB
+ Turn:				30.2 BB
+ River:				26.5 BB
+Positions:
+ SB:				hostile
+ BB:				dvd
+ CO:				Gen-1
+ BTN:				Gen-2
+PlayersInTable:
+ BountyConvertedToChips:	
+ Hand:				Qh, 8c, 6s, 6h
+ Nick:				hostile: Chipsintheair
+ Stack:				32.7
+PlayersInTable:
+ BountyConvertedToChips:	
+ Hand:				Tc, 5s, 2s, 2d
+ Nick:				dvd
+ Stack:				55 BB
+
+ActionsInTable:
+ Preflop:			*
+  InvolvedPlayers:		hostile, dvd;
+  Actions:			2X-F; hostile-Limp:0.5bb; dvd-Check;
+  SizeOfPotWhenDone:		2.5 BB
+ Flop:
+  InvolvedPlayers:		hostile, dvd;
+  Board:			Ad, 3c, 4h
+  Actions:			hostile-Check; dvd-R:2.5bb; hostile-Call:2.5bb;
+  SizeOfPotWhenDone:		7.5bb
+ Turn:
+  InvolvedPlayers:		hostile, dvd
+  Board:			Ad, 3c, 4h,   4c
+  Actions:			hostile-Check; dvd-R:3.7bb; hostile-Call:3.7bb;
+  SizeOfPotWhenDone:		14.9 BB
+ River:
+  InvolvedPlayers:		hostile, dvd;
+  Board:			Ad, 3c, 4h,   4c,  7c
+  Actions:			CheckDown;
+  SizeOfPotWhenDone:		14.9 BB
+
+
+AnalyseWhatWentWrong:
+ WhatHappened:
+ WhyHappened:
+ OtherPossibleApproaches:
+ Calculus:
+  WillThisPlayMakeOrLoseMoneyInInfinity:
+
+
+##########################################################################################################################################
+
+############################
+## (3) Hand that is happy ##	--> Setup this
+############################
+
+Hand ID: TM
+Game mode: Texas, Tournament, 6-max
+NameOfEvent: Sunday Hyper 15$
+ MoneyInfo:
+  Bounties: 2
+  Dirstibution: Top 15%
+  PaidToEnter: 15$
+  Won: 29.45
+   Result: 120 / 1150
+NumberOfPlayersInTable: 6 (sitting) / 6 (max)
+Blinds: 0.5-1.0 (constant)
+Antes:
+ Per player:			0.125 (varies) ~= 1 / 7 BB
+ Total in pot:			0.75 (aboveValue X (sitting))
+EffectiveStacks:		. BB (smallestStack)
+ Pre:				. BB
+ Flop:				. BB
+ Turn:				. BB
+ River:				. BB
+Positions:
+ SB:				hostile-1;	notes;		StackCategory;
+ BB:				dvd;		dynamics;	StackCategory;
+ UTG:				Gen-1;		activityNotes;
+ UTG+n:
+ HJ:
+ CO:				Gen-2;		{ATS:0; VPIP;}	StackCategory;
+ BTN:				Gen-3;		{ATS:0; VPIP;}	StackCategory;
+PlayersInTable:
+ BountyConvertedToChips:	"PlaceHolder"
+ Hand:				
+ Nick:				hostile-1: <PlayerName>
+ Stack:				. BB
+PlayersInTable:
+ BountyConvertedToChips:	"PlaceHolder"
+ Hand:				
+ Nick:				dvd
+ Stack:				. BB
+
+ActionsInTable:
+ Preflop:			*
+  InvolvedPlayers:		hostile, dvd;
+   Category:
+   Change:
+  Actions:			2X-F; hostile-Limp:0.5bb; dvd-Check;
+   Category:
+   Change:
+  SizeOfPotWhenDone:		2.5 BB
+   StackToPot:
+ Flop:
+  InvolvedPlayers:		hostile, dvd;
+   Category:
+   Change:
+  Board:			Ad, 3c, 4h
+   Category:
+  Actions:			hostile-1-Check/Call/R/RR/F:; dvd-R:2.5bb; hostile-Call:2.5bb;
+   Category:
+  SizeOfPotWhenDone:		. BB
+   StackToPot:
+ Turn:
+  InvolvedPlayers:		hostile-1, dvd
+   Category:
+   Change:
+  Board:			Ad, 3c, 4h,   4c
+   Category:
+  Actions:			hostile-Check; dvd-R:3.7bb; hostile-Call:3.7bb;
+   Category:
+  SizeOfPotWhenDone:		14.9 BB
+ River:
+  InvolvedPlayers:		hostile, dvd;
+   Category:
+   Change:
+  Board:			Ad, 3c, 4h,   4c,  7c
+   Category:
+  Actions:			CheckDown;
+   Category:
+  ShowdownCounterChange:
+  SizeOfPotWhenDone:		14.9 BB
+
+
+AnalyseWhatWentWrong:
+ WhatHappened:
+ WhyHappened:
+ OtherPossibleApproaches:
+ DocumentYourThoughts:
+  NewThings:
+  NothingLearned:
+ Calculus:
+  WillThisPlayMakeOrLoseMoneyInInfinity:
+
+AnalyseWhatWentRight:
+ WhatHappened:
+ WhyHappened:
+ OtherPossibleApproaches:
+ DocumentYourThoughts:
+  NewThings:
+  NothingLearned:
+ Calculus:
+  WillThisPlayMakeOrLoseMoneyInInfinity:
+
+
+
+
+
+
+
+
+############################
+## (4) Hand that is happy ##	--> Setup this
+############################
+
+Hand ID: TM--
+Game mode: Omaha, Tournament, 6-max
+NameOfEvent: Omaholic Bounty Sunday Special 5.40$, 56-PLO
+ MoneyInfo:
+  Bounties:
+   Winnings:		3.43$
+   Quantity:		vv
+  WinDirstibution:	Top 10%
+  Guaranteed:		10 000$
+  PaidToEnter:		5.40$
+   BountyShare:		2.5$
+   PrizePoolShare:	2.5$
+   Rake:		.25$ + .15$
+   StartingStack:	25 000
+    Valuation:		12 500 c == 2.5$
+  Won: 			11.62$ Total
+   Result: 198 / 2093
+ Time:
+  Blinds:
+   BlindIntervalsMinutes:	7 min - 10 min
+  EstimateOfDuration:		7 h 9 min
+  LateRegOnLevel:
+  LateRegEndsAfterLevel:
+  StartTime:
+NumberOfPlayersInTable: 6 (sitting) / 6 (max)
+Blinds: 0.5-1.0 (constant)
+Antes:
+ Per player:			(varies), 1 / 6 BB
+ Total in pot:			1.0 (aboveValue X (sitting))
+
+
+
+
+############################
+## (5) Hand that is happy ##	--> Setup this
+############################
+
+Hand ID: TM--
+Game mode: Texas, Tournament, 8-max
+NameOfEvent: 56-KO: $5.40 Bounty Hunters Sunday Main
+ MoneyInfo:
+  Bounties:
+   Winnings:		15.62$
+   Quantity:		7
+  WinDirstibution:	Top 10%
+  Guaranteed:		50 000$
+  ITM-Position:		1 400
+  PaidToEnter:		5.40$
+   BountyShare:		2.5$
+   PrizePoolShare:	2.5$
+   Rake:		.25$ + .15$
+   StartingStack:	25 000
+    Valuation:		12 500 c == 2.5$
+  Won: 			26.18$ Total
+   Result: 627 / 13 309
+ Time:
+  Blinds:
+   BlindIntervalsMinutes:	7 min - 10 min
+  EstimateOfDuration:		9 h 2 min
+  LateRegOnLevel:
+  LateRegEndsAfterLevel:	15
+  StartTime:			19.30
+  FinishTime:			23.50
+
+
+
+
+
+
+##########################################################################################################################################
+##########################################################################################################################################
+##########################################################################################################################################
+##########################################################################################################################################
+
+							Templating again
+
+##########################################################################################################################################
+##########################################################################################################################################
+##########################################################################################################################################
+##########################################################################################################################################
+
+############################
+## (X) Hand that is happy ##	--> Setup this
+############################
+
+Hand ID: TM--
+Game mode: Omaha / Texas, Tournament / Cash game, 268910-max
+NameOfEvent: <Omaholic Bounty Sunday Special 5.40$, 56-PLO>
+ MoneyInfo:
+  Bounties:
+   Winnings:
+   Quantity:
+  WinDirstibution:	Top X%
+  Guaranteed:		X$
+  ITM-Position:
+  PaidToEnter:		X$
+   BountyShare:
+   PrizePoolShare:
+   Rake:
+  Won: 
+   Result: x / y
+ Time:
+  Blinds:
+   BlindIntervalsMinutes:	7 min - 10 min
+  EstimateOfDuration:		7 h 9 min
+  LateRegOnLevel:
+  LateRegEndsAfterLevel:
+  StartTime:
+NumberOfPlayersInTable: 4 (sitting) / 6 (max)
+Blinds: 0.5-1.0 (constant)
+Antes:
+ Per player:			0.125 (varies)
+ Total in pot:			0.5 (aboveValue X (sitting))
+EffectiveStacks:		. BB (smallestStack)
+ Pre:				. BB
+ Flop:				. BB
+ Turn:				. BB
+ River:				. BB
+Positions:
+ SB:				hostile-1;	notes;		StackCategory;
+ BB:				dvd;		dynamics;	StackCategory;
+ UTG:				Gen-1;		activityNotes;
+ UTG+n:
+ HJ:
+ CO:				Gen-2;		{ATS:0; VPIP;}	StackCategory;
+ BTN:				Gen-3;		{ATS:0; VPIP;}	StackCategory;
+PlayersInTable:
+ BountyConvertedToChips:	"PlaceHolder"
+ Hand:				
+ Nick:				hostile-1: <PlayerName>
+ Stack:				. BB
+PlayersInTable:
+ BountyConvertedToChips:	"PlaceHolder"
+ Hand:				
+ Nick:				dvd
+ Stack:				. BB
+
+ActionsInTable:
+ Preflop:			*
+  InvolvedPlayers:		hostile, dvd;
+   Category:
+   Change:
+  Actions:			2X-F; hostile-Limp:0.5bb; dvd-Check;
+   Category:
+   Change:
+  SizeOfPotWhenDone:		2.5 BB
+   StackToPot:
+ Flop:
+  InvolvedPlayers:		hostile, dvd;
+   Category:
+   Change:
+  Board:			Ad, 3c, 4h
+   Category:
+  Actions:			hostile-1-Check/Call/R/RR/F:; dvd-R:2.5bb; hostile-Call:2.5bb;
+   Category:
+  SizeOfPotWhenDone:		. BB
+   StackToPot:
+ Turn:
+  InvolvedPlayers:		hostile-1, dvd
+   Category:
+   Change:
+  Board:			Ad, 3c, 4h,   4c
+   Category:
+  Actions:			hostile-Check; dvd-R:3.7bb; hostile-Call:3.7bb;
+   Category:
+  SizeOfPotWhenDone:		14.9 BB
+ River:
+  InvolvedPlayers:		hostile, dvd;
+   Category:
+   Change:
+  Board:			Ad, 3c, 4h,   4c,  7c
+   Category:
+  Actions:			CheckDown;
+   Category:
+  ShowdownCounterChange:
+  SizeOfPotWhenDone:		14.9 BB
+
+
+AnalyseWhatWentWrong:
+ WhatHappened:
+ WhyHappened:
+ OtherPossibleApproaches:
+ DocumentYourThoughts:
+  NewThings:
+  NothingLearned:
+ Calculus:
+  WillThisPlayMakeOrLoseMoneyInInfinity:
+
+AnalyseWhatWentRight:
+ WhatHappened:
+ WhyHappened:
+ OtherPossibleApproaches:
+ DocumentYourThoughts:
+  NewThings:
+  NothingLearned:
+ Calculus:
+  WillThisPlayMakeOrLoseMoneyInInfinity:
+
+
+
+
+
+
+
+

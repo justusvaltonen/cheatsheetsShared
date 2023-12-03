@@ -1,0 +1,81 @@
+
+========================================================================================================================================
+	StartingRanges:
+		Against 1 opponent					Against 3 opponents
+		------------------					-------------------
+1. Top 5%	== 88+, AKo+, AQs					99+, AKo+, AJs+
+2. Top 10%	== 66+, AJo+, KTs+, A9s+				77+, AJo+, KQo+, KTs+, A9s+, QJs
+3. Top 15%	== 55+, A9o+, KJo+, QTs+, K9s+, A7s+			66+, ATo+, KJo+, G9s+, K9s+, A5s+
+4. Top 20%	== 55+, A7o+, KTo+, Q9s+, K8s, A4s, QJo			55+, A9o+, KTo+, J9s+, Q8s+, K7s+, A3s+, QJo
+5. Top 25%	== 44+, A7o+, K9o+, QTo+, Q9s+, K6s+, A*s, JTs, A5o	55+, A8o+, K9o+, QTo+, J8s+, Q8s+, K5s+, A*s, JTo, T9s
+6. Top 50%	== 22+, K*o+, Q5o+, J8o+, T7s+, J5s+, Q*s+, T9o, 98s	22+, A*o+, K5o+, Q7o+, J8o+, T8o+, 75s+, 86s+, 96s+, T5s+, J*s+
+
+========================================================================================================================================
+	Push vs Fold (9 players sitting):
+A) (MP)
+AntePerPlayer = 0,125 * bb;	// 1.125 bb
+Hand = KJo;
+OurBlinds = [8a, 10b, 12c, 14d, 16e, 18f, 20g];
+Position = 5 / 9;
+-----------
+a = 25%			Y	Folders (o): T9, JT, Q9, K8, A6		Folders (s): J9, Q8, K5, 33, 22
+b = 21,9%		Y	Folders (o): JT, QT, K9, A6, 33		Folders (s): J9, Q8, K6, 33, 22
+c = 19,2%		Y	Folders (o): QT, K9, A7, 44		Folders (s): JT, Q8, K7, A3
+d = 16,4%		Y	Folders (o): KT, A7			Folders (s): Q9, K8, A4
+e = 14,6%		N	Folders (o): KT, A8			Folders (s): QT, K8, A6
+f = 13,6%		N	Folders (o): KT, A9			Folders (s): QT, K8, A6
+g = 11,3%		N	Folders (o): KQ, A9			Folders (s): K9, A7
+----------------------
+========================================================================================================================================
+	Push vs Fold (9 players sitting):
+B) (BTN)
+AntePerPlayer = 0,125 * bb;	// 1.125 bb
+Hand = KJo;
+OurBlinds = [8a, 10b, 12c, 14d, 16e, 18f, 20g];
+Position = 9 / 9;
+-----------
+a = 46,9%		Y	Folders (o): K2, Q6, J7, T8, 98		Folders (s): 97, T6, J5
+b = 43,6%		Y	Folders (o):	Folders (s):
+c = 40,3%		Y	Folders (o): K4, Q7, J8, 22		Folders (s): T7, J6, Q3, 22
+d = 36,7%		Y	Folders (o): Q8	Folders (s): Q5
+e = 36,3%		Y	Folders (o):	Folders (s):
+f = 34,5%		Y	Folders (o):	Folders (s):
+g = 33%			Y	Folders (o): A2, K6, Q8, J9, 22		Folders (s): J8, Q6, K3, 22
+----------------------
+========================================================================================================================================
+	Push vs Fold (9 players sitting):
+C) (SB)
+AntePerPlayer = 0,125 * bb;	// 1.125 bb dead moneyz in pot
+Hand = ?;
+OurBlinds = [8a, 10b, 12c, 14d, 16e, 18f, 20g];
+Position = 1 / 9;
+-----------
+==> Range that can be shoved
+a = 81%
+b = 77,4%
+c = 71,9%
+d = 65,6%
+e = 62,6%
+f = 59%
+g = 54,4%
+----------------------
+========================================================================================================================================
+	Push vs Fold (9 players sitting):
+D) (UTG)
+AntePerPlayer = 0,125 * bb;	// 1.125 bb dead moneyz in pot
+Hand = ?;
+OurBlinds = [8a, 10b, 12c, 14d, 16e, 18f, 20g];
+Position = 3 / 9;
+-----------
+==> Range that can be shoved
+a = 19,8%
+b = 16,1%
+c = 13,7%
+d = 12,2%
+e = 10,1%
+f = 9,4%
+g = 7,4%	==> 88+, QJs, KTs+, AQo+	--> 17 / 169 --> 10 mixed (8s and 2o), 7 pairs
+----------------------
+========================================================================================================================================
+
+

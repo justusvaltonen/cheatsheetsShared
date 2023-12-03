@@ -1,0 +1,342 @@
+
+#######################################################
+## Starting my journey from the beginning once again ##
+#######################################################
+https://www.cardplayer.com/poker-tools/odds-calculator/texas-holdem		--> Basic odds calculator with a GUI. Has omaha too.
+https://www.888poker.com/poker/poker-odds-calculator				--> No support for ranges
+https://beastsofpoker.com/poker-odds-calculator/				--> More games, no ranges
+https://toolbox.mehvix.com/poker-range/						--> Shows what hands are included in top X%
+https://calcpark.com/poker-hand-range-calculator				--> Same with a bit more features. Still not good.
+
+https://upswingpoker.com/best-poker-odds-and-equity-calculators/		--> Comparing tools
+	https://www.pokerstrategy.com/poker-software-tools/equilab-holdem/	--> Don't use this on pokerstars, but otherwise, ok.
+	https://www.thepokerbank.com/tools/software/pokerstove/			--> Extinct project
+	https://www.cardrunnersev.com/						--> If not working, then build your own with this as an example. Only win
+_____________
+-- Keepers --
+-------------
+https://www.pokerhandrange.com/							--> Only range GUI, but against multiple opponents.		(1)
+https://www.push-or-fold.com/							--> Push-Fold. Very good					(2)
+https://www.cardplayer.com/poker-tools/odds-calculator/texas-holdem		--> Basic odds calculator with a GUI. Has omaha too.		(3)
+
+__________
+-- Memo --
+----------
+	StartingRanges:
+		Against 1 opponent					Against 3 opponents
+		------------------					-------------------
+1. Top 5%	== 88+, AKo+, AQs					99+, AKo+, AJs+
+2. Top 10%	== 66+, AJo+, KTs+, A9s+				77+, AJo+, KQo+, KTs+, A9s+, QJs
+3. Top 15%	== 55+, A9o+, KJo+, QTs+, K9s+, A7s+			66+, ATo+, KJo+, G9s+, K9s+, A5s+
+4. Top 20%	== 55+, A7o+, KTo+, Q9s+, K8s, A4s, QJo			55+, A9o+, KTo+, J9s+, Q8s+, K7s+, A3s+, QJo
+5. Top 25%	== 44+, A7o+, K9o+, QTo+, Q9s+, K6s+, A*s, JTs, A5o	55+, A8o+, K9o+, QTo+, J8s+, Q8s+, K5s+, A*s, JTo, T9s
+6. Top 50%	== 22+, K*o+, Q5o+, J8o+, T7s+, J5s+, Q*s+, T9o, 98s	22+, A*o+, K5o+, Q7o+, J8o+, T8o+, 75s+, 86s+, 96s+, T5s+, J*s+
+
+	Multipliers for combos:
+NotPair vs Pair				==> 16/6 == 2.6667
+Offsuite vs Pair			==> 12/6 == 2
+2 different cards: Suited vs Offsuit	==> 1 vs 3
+
+	Push vs Fold (9 players sitting):
+A) (MP)
+AntePerPlayer = 0,125 * bb;	// 1.125 bb
+Hand = KJo;
+OurBlinds = [8a, 10b, 12c, 14d, 16e, 18f, 20g];
+Position = 5 / 9;
+-----------
+a = 25%			Y	Folders (o): T9, JT, Q9, K8, A6		Folders (s): J9, Q8, K5, 33, 22
+b = 21,9%		Y	Folders (o): JT, QT, K9, A6, 33		Folders (s): J9, Q8, K6, 33, 22
+c = 19,2%		Y	Folders (o): QT, K9, A7, 44		Folders (s): JT, Q8, K7, A3
+d = 16,4%		Y	Folders (o): KT, A7			Folders (s): Q9, K8, A4
+e = 14,6%		N	Folders (o): KT, A8			Folders (s): QT, K8, A6
+f = 13,6%		N	Folders (o): KT, A9			Folders (s): QT, K8, A6
+g = 11,3%		N	Folders (o): KQ, A9			Folders (s): K9, A7
+----------------------
+
+B) (BTN)
+AntePerPlayer = 0,125 * bb;	// 1.125 bb
+Hand = KJo;
+OurBlinds = [8a, 10b, 12c, 14d, 16e, 18f, 20g];
+Position = 9 / 9;
+-----------
+a = 46,9%		Y	Folders (o): K2, Q6, J7, T8, 98		Folders (s): 97, T6, J5
+b = 43,6%		Y	Folders (o):	Folders (s):
+c = 40,3%		Y	Folders (o): K4, Q7, J8, 22		Folders (s): T7, J6, Q3, 22
+d = 36,7%		Y	Folders (o): Q8	Folders (s): Q5
+e = 36,3%		Y	Folders (o):	Folders (s):
+f = 34,5%		Y	Folders (o):	Folders (s):
+g = 33%			Y	Folders (o): A2, K6, Q8, J9, 22		Folders (s): J8, Q6, K3, 22
+----------------------
+
+C) (SB)
+AntePerPlayer = 0,125 * bb;	// 1.125 bb dead moneyz in pot
+Hand = ?;
+OurBlinds = [8a, 10b, 12c, 14d, 16e, 18f, 20g];
+Position = 1 / 9;
+-----------
+==> Range that can be shoved
+a = 81%
+b = 77,4%
+c = 71,9%
+d = 65,6%
+e = 62,6%
+f = 59%
+g = 54,4%
+----------------------
+
+D) (UTG)
+AntePerPlayer = 0,125 * bb;	// 1.125 bb dead moneyz in pot
+Hand = ?;
+OurBlinds = [8a, 10b, 12c, 14d, 16e, 18f, 20g];
+Position = 3 / 9;
+-----------
+==> Range that can be shoved
+a = 19,8%
+b = 16,1%
+c = 13,7%
+d = 12,2%
+e = 10,1%
+f = 9,4%
+g = 7,4%	==> 88+, QJs, KTs+, AQo+	--> 17 / 169 --> 10 mixed (8s and 2o), 7 pairs
+----------------------
+______________
+-- Discover --
+--------------
+-How does a hand compare against 25% range?		--> Noticing some movement in (1) based on players in, so getting closer. One option is just to make a table
+-Push/Fold tends to tip to push if we're low on chips. This also happens when we have a lot of chips (not true). Find sweetspot. Inspect positional affects aswell.
+-See pokercraft for some details. I'm lucky, but still not winning. See if history can be saved. --> Couldn't find a way. Don't know how long it lasts
+-See myStats and try to find patterns. Improve by a mile.
+-Do analysis on my omaha gamestyle. Insanity the stats are.
+-Calculate a decent strategy for "All-in or Fold Holdem" and start printing.
+
+______________
+-- Analysis --
+--------------
+_______________
+ANALYSIS.RANGES
+MyComfortableRange {
+38 / 169 =~ 4.447X or 22,485%
+Range forms from minimum of: A9o, KTo, QJo, JTs, Q9s, K9s, A6s
+--> 13 pairs, 25 left. Multiplier of about 2.
+--> Playing 22 loses to 12. 25 are flipping
+--> This is my 11bb comfort-zone: ish shovel when doing 6-max, UTG+2 I'm guessing. Most likely way off.
+},
+
+Playing my comfortable range {
+A)
+22 vs A9o (different suits)	=> 22 == 53%		+3
+22 vs A9o (same suits)		=> 22 == 52%		+2	avg. +2,5	X3 == +7,5
+22 vs A9s (any)			=> 22 == 50%					X1 == +-0
+
+B)
+22 vs KTo (different suits)	=> 22 == 50,5%		+0,5
+22 vs KTo (same suits)		=> 22 == 50%			avg. +0,25	X3 == +0,75
+22 vs KTs (same suits)		=> 22 == 48%		-2
+22 vs KTs (different suits)	=> 22 == 47,5%		-2,5	avg. -2,25	X1 == -2,25
+
+C)
+22 vs JTs (different suits)	=> 22 == 46%		-4
+22 vs JTs (same suits)		=> 22 == 46,5%		-3,5	avg. -3,75	X1 == -3,75
+
+D)
+22 vs K9o (same suits)		=> 22 == 51,5%		+1,5
+22 vs K9o (different suits)	=> 22 == 52%		+2	avg. +1,75	X3 == +5,25
+22 vs K9s (same suits)		=> 22 == 49,5%		-0,5
+22 vs K9s (different suits)	=> 22 == 49%		-1	avg. -0,75	X1 == -0,75
+===										=====
+9 + -13,5 == -4,5 (bad stat)							13,5 + -6,75 == +6,75 (good stat)
+--> 6,75 / 4 == 1.6875 (correct stat)
+--> 22 beats my range by 1.6875% when not counting pairs.
+
+
+A)
+--> Counting avg from 20%
+22 vs 33 (same suits)		=> 22 == 19%		-1			X1 == -1
+22 vs 33 (different suits)	=> 22 == 20,25%		+0,25			X3 == +0,75
+
+22 vs 55 (same suits)		=> 22 == 17,75%		-1,25			X1 == -1,25
+22 vs 55 (different suits)	=> 22 == 19%		-1			X3 == -3
+
+22 vs 77 (same suits)		=> 22 == 17,50%		-2,5			X1 == -2,5
+22 vs 77 (different suits)	=> 22 == 18,75%		-1,25			X3 == -3,75
+
+22 vs TT (same suits)		=> 22 == 17,50%		-2,5			X1 == -2,5
+22 vs TT (different suits)	=> 22 == 18,75%		-1,25			X3 == -3,75
+
+22 vs JJ (same suits)		=> 22 == 17,50%		-2,5			X1 == -2,5
+22 vs JJ (different suits)	=> 22 == 18,75%		-1,25			X3 == -3,75
+
+22 vs KK (same suits)		=> 22 == 17,50%		-2,5			X1 == -2,5
+22 vs KK (different suits)	=> 22 == 18,75%		-1,25			X3 == -3,75
+
+22 vs AA (same suits)		=> 22 == 17,25%		-2,75			X1 == -2,75
+22 vs AA (different suits)	=> 22 == 18,50%		-1,50			X3 == -4,5
+--> -34,5 + 0,75 == -33,75
+--> -33,75 / 14 (testing sample size including multiplier) =~ 2,5
+--> For each pair there is, 22 loses about (20% - 2,5% => 17,5%) 82,5% vs 17,5%
+--> There are 12 pairs bigger than 22 (not counting in the one combo of remaining 22) that beat my 22 by about 82,5-17,5.
+--> There were 25 non-pairs in the range. 25 X 1.6875(% advantage for each non-pair combo) == 42.125 (advantage to 22 from non-pairs)
+--> Since we have a multiplier of 2.6667 because possible card combinations, we get a number of +112.335 for pairs. Calling this DuckStrength_VS_nonPairs(+112.335)
+--> 82,5(dominating pair) X 12 (amount of dominating pairs) == 990. Calling this DuckStrength_VS_Pairs(-990).
+--> 112,335 - 990 == -877.665. Calling this DuckStrength_VS_All(-877.665)
+--> We play 38 hands and play against our own range. Since we picked 22 already, we have 37 left to play against.
+--> DuckStrength_VS_All(-877.665) / HandsLeftInRange(37) == DuckStrengthPerResistance(-23.72).
+--> Sounds totally possible that we're losing 23,73% equity each time we push with 22 against our own range. No way I'm certain anymore.
+
+990 / 112,335 == 8.8129 (not important, but just a fun looking number)
+}
+-How does this compare to blinds then? We can make up some of the losses of trusting ducks too much by compensating from won blinds (no one calls)
+_____________________
+ANALYSIS.RANGES.BLINDS
+RulesOfExperiment:
+1. We are always at Button
+2. Opponent plays only with my bad range ~22,485% specified earlier.
+3. There can't be a 3-way
+4. Amount of Blinds we have is marked with: double myBlinds;
+5. Opponents always have more and we're playing infinite game
+6. Antes are 1 BigBlind in total, hence the pot is 2,5 BigBlinds
+7. Hand we play is marked with: str myHand;
+
+Case_1 {
+str opponentRangePercent = "22,485%";
+str myHand = "2c2d";
+double myBlinds = 15;
+double DuckStrengthPerResistance = -23.72 / 100;	//Amount we lose eq each battle fought. Converting to decimals instead of percentages.
+int simulatedHands = 100;				//How many times we run the rng. Easier to pick a number that is not infinity.
+
+--> About 55% of the time we autogain 2,5bb. In 100 hands we gain 137,5bb if we only count the times we steal.
+--> We go to battle 45 / 100 since we have 2 possible opponents (2 * 22,485 == 44,97) with each playing the preset range.
+--> We lose 45 X (-0,2372 X myBlinds) == -160.11bb
+--> We bleed our chips with the pace of: -160.11 + 137.5 == -22.61 per 100 hands.
+}
+
+Case_2 {
+str opponentRangePercent = "22,485%";
+str myHand = "2c2d";
+double myBlinds = 10;
+double DuckStrengthPerResistance = -23.72 / 100;	//-0.2372
+int simulatedHands = 100;
+
+double noresistanceWin = 137.5;
+double resistanceWin = DuckStrengthPerResistance * 45 * myBlinds;	// -106.74
+double resultAfterHundredHands = noresistanceWin + resistanceWin	// +30.76
+
+//Making profitz of almost 31 bb / 100 h
+}
+
+Case_3 {
+str opponentRangePercent = "22,485%";
+str myHand = "2c2d";
+double myBlinds = 8;
+double DuckStrengthPerResistance = -0.2372;	//-23.72 / 100
+int simulatedHands = 100;
+
+double noresistanceWin = 137.5;
+double resistanceWin = DuckStrengthPerResistance * 45 * myBlinds;	// -85.392
+double resultAfterHundredHands = noresistanceWin + resistanceWin	// +52.108
+//Winning tons
+}
+
+Case_4 {
+str opponentRangePercent = "22,485%";
+str myHand = "2c2d";
+double myBlinds = 12;
+double DuckStrengthPerResistance = -0.2372;	//-23.72 / 100
+int simulatedHands = 100;
+
+double noresistanceWin = 137.5;
+double resistanceWin = DuckStrengthPerResistance * 45 * myBlinds;	// -128.088
+double resultAfterHundredHands = noresistanceWin + resistanceWin	// +9.412
+//Small profit
+}
+
+Case_5 {
+str opponentRangePercent = "22,485%";
+str myHand = "2c2d";
+double myBlinds = 13;
+double DuckStrengthPerResistance = -0.2372;	//-23.72 / 100
+int simulatedHands = 100;
+
+double noresistanceWin = 137.5;
+double resistanceWin = DuckStrengthPerResistance * 45 * myBlinds;	// -138.762
+double resultAfterHundredHands = noresistanceWin + resistanceWin	// -1.262
+//Small loss
+}
+--> We can say that even a few blind difference in our stack can make a huge difference if our all-in is good or bad.
+
+
+SmartPlayersGTOrange {
+
+}
+
+____________________________
+ANALYSIS.SINGLEHAND_VS_RANGE
+str hand_1;
+str hand_2;
+double range;
+
+Case_1 {
+  range = 25%;		==> 55+, A2s+, K5s+, Q8s+, J8s+, T9s+, A8o+, K9o+, QTo+, JTo+	--> 41 non-pairs, 10 pairs
+  hand_1 = [A) 92o, B) J8o, C) KTo, D) 43o];
+  
+  --> Turned out to be a handful with current tools. Later alligator.
+}
+_______________
+ANALYSIS.COMBOS
+-Any different card combos:
+AaBn => 4
+AbBn => 4
+AcBn => 4
+AdBn => 4
+==
+16
+	-Offsuits:
+	Ah 3xJ
+	As 3xJ
+	Ac 3xJ
+	Ad 3xJ
+	==
+	12
+-PairCombos:
+8a8b
+8a8c
+8a8d
+8b8c
+8b8d
+8c8d
+==
+6
+
+_____________
+ANALYSIS.SELF
++++16.04.2023+++
+-Not sure if stats are only about current laptop or all computers used combined
+-Notes are stored locally. Maybe not. Click on "pokercraft" to open up a decent statistics tool.
+Mode: Tournament
+  SampleSize: 3,232
+  VPIP: 25%
+  PFR: 15%
+  ATS: 31%
+  3Bet: 8%
+  SortByStreet:
+    Flop:
+      CB:		67%	== C-Bet		==> Possibly decent
+      FCB:		52%	== Fold to C-Bet	==> No idea
+      CCB:		26%	== Call to C-Bet	==> Missing details
+      RCB:		22%	== Raise to C-Bet	==> I can see the ideal being in a wide range
+    Turn:
+      CB:		37%	== C-Bet		==> Dropping half away, so 50% bluff on flop or some kind of trap / board change to "always worse".
+      FCB:		50%	== Fold to C-Bet	==> Seems in balance
+      CCB:		29%	== Call to C-Bet	==> Depends on a lot of things
+      RCB:		21%	== Raise to C-Bet	==> Healthy to have such a range. Is the range healthy, I don't know yet.
+    River:
+      WT:		14%	== Went To showdown	==> Don't know how things usually play out
+      WSD:		34%	== Win at showdown	==> I want more. I should stop playing shitty cards.
+      TAF:		21%	== Total Aggression Frequency: Given the possibility, how often player bets / raises.	==> Needs analysing.
+
+
+
+
+
+
+
