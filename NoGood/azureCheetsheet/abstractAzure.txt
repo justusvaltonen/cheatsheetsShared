@@ -1,0 +1,19 @@
+
+
+https://learn.microsoft.com/en-us/azure/active-directory-b2c/overview				(1)
+https://www.geeksforgeeks.org/microsoft-azure/							(2)
+
+
+
+
+
+
+
+(1)
+-Includes references to SSO problem
+
+(2)
+-Plenty of, if not all things that come with azure
+
+
+
