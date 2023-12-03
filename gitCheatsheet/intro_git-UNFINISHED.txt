@@ -1,0 +1,36 @@
+
+_______________
+Intro to intro:
+-Local computers / Client computers / Computers that are used for coding are referred as PC_<number>. For example PC_1.
+-Computers that host a repository shall be referenced as SR_<number>. Usage in scripts will be confusing most likely. I try to do my best. Shortened from Server Remote.
+-Linux machines should have git installed on many distros, but not all. At least in APT the monstrosity can be referred as git.
+-Windows machines don't have git installed by default. One possible tool to use git is "git bash". Most if not all commands work as they do with linux.
+-There are many ways that git can be implemented and this is the MVP manual. One could segment the repositories in a way that accidental overwrites could be eliminated mostly.
+-Doing a bad update on a product may need returning to the previous version and that is where git comes in.
+
+____________________________________
+Using GitHub as a remote repository:
+-Create an account if you don't have one already. Use graphical interface to post some files. UI is not the best in the world, but can be learned.
+-Make sure that MFA is enabled so your account won't be captured when doing training.
+-Check file: terminology_git.txt in this repo for info on what is going on with all the namings.
+
+1) Share some files and folders on your repository created.
+2) Get access tokens if you want to share more or make changes to existing files.
+2.1) Using github.com GUI, go to your account icon and from the dropdown menu find 'settings'. Go all the way down and find 'developer settings'. For manual interacting, use fine grained access tokens.
+2.2) Find out about permissions and choose the correct ones. Note that the permissions can accidentaly create an opportunity to hijack your account. Do things properly when testing is done.
+3) Using PC_1 write on CLI on path where you want your local version to be at on PC_1: git clone <string to SR_1>
+-Should be found under a green dropdown menu on on GUI. Using HTTPS version for now. Example:
+git clone https://github.com/justusvaltonen/cheatsheetsShared.git
+
+4) The full repository should be cloned now to your path. Change something and apply the change on SR_1 aswell by running:
+git add <changed-file>
+git commit -m "Some text that will be logged. What was changed description basically"
+git push
+
+4.1) Username and password will be prompted. Username is the same that can be seen in github.com next to the cat icon when you are logged in. Password is your token created earlier.
+4.1.1) Copy + Paste passwords should be avoided. Using environment variables or secrets files is preferred. Not sure how, but supposedly the capture of clipboard or some other feature is more likely.
+-When pushing to GitHub or any remote for that matter with PC_<any>, do not push your accesstokens in any format. To exclude the files that contain these tokens, use .gitignore.
+
+
+
+

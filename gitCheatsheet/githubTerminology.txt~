@@ -35,7 +35,6 @@ Status			==
 Tag		        == Stored in /refs/tags/<my-tag-name> - Are used to mark a specific point in history.
 Token			== Used to access to the repositories. Used by apps and people.
   PersonalAccessToken   == The method that is used to connect our locals with github. Uses HTTPS. PAT
-Username                == Can mean github username or the real name of you as in author.
 Working tree    == The whole project
 
 

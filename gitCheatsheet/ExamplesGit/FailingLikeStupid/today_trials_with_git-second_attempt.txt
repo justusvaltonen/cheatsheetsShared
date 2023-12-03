@@ -1,0 +1,134 @@
+
+Created:	03.12.2023
+################################################################################################
+-This file describes my learning with git and github.
+-Story is told as commandline commands and maybe a bit of GUI usage aswell
+
+################################################################################################
+
+***I am at my home-pc command line***
+1)
+git pull https://github.com/<username>/<reponame>.git
+    --> Asks for username and password, so not the correct move. I haven't setup accesskeys yet. No more password authentication. Tokens need to be used...
+    --> Going to github and googling for instructions on setting up your own 'fine grained access tokens' will cause confusion if this is your first time...
+
+2)
+git remote add original https://github.com/<username>/<reponame>.git
+    --> No complains. Seems ok.
+    --> Remote is a repository somewhere else than your home network. Now it refers to github.
+    --> Using the add is good or bad. Because I'm 'original', I try to alias that in to my UI.
+
+3)
+git remote -v
+    --> Displays that the URL has indeed being set to 'original' alias.
+
+4)
+git clone https://github.com/<username>/<reponame>.git
+    --> Asks for username and password and says that I have no write access: 403
+    --> I must have misconfigured my token. I need to go to github/settings/developersettings to add more power!
+
+5)
+https://docs.github.com/en/rest/overview/permissions-required-for-fine-grained-personal-access-tokens?apiVersion=2022-11-28
+    --> Maybe setting up the permissions according to this guideline helps. Annoying as hell. See pull requests on the right and figure if that helps
+
+6)
+git clone https://github.com/<username>/<reponame>.git
+    --> When I use the classic token, I get to pull the things. Doesn't seem right to me.
+    --> Somehow the dir is now nested inside another root, so I have .git ./<reponame>/.git and this pisses me off.
+
+7)
+git add git_abstract_copyfortesting.txt
+    --> The testfile I was supposed to push
+    --> Eventually this succeeded, not when I was initially doing this. Starting over happens too often...
+
+8)
+git commit -m "only to see structure of push"
+    --> Because I haven't setup my email and other things, I get nowhere. I get the message:
+
+--------------------------------------------------------------------------------------------
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got '*******************')
+--------------------------------------------------------------------------------------------
+
+
+***Still on my home-pc***
+9)
+git config --global user.email "<your-mail-here>"
+git config --global user.name "<Author Name>"
+    --> I use my personal mail and my real name. At this point I don't know why it matters.
+
+10)
+git commit -m "only to see structure of push"
+
+[master (root-commit) 2fb7b48] only to see structure of push
+ 1 file changed, 39 insertions(+)
+ create mode 100644 git_abstract_copyfortesting.txt
+    --> I thought that I made master go away. Master is flattering, or so it sounds.
+    --> Really it's the default name that your branch uses. I wasn't aware of it at this time.
+
+11)
+git log
+commit 2fb7b4830d80c13a1e31b18df18d7ff6e0a119d0 (HEAD -> master)
+Author: <Author Name> <your-mail-here>
+Date:   Tue Nov 28 11:11:40 2023 +0200
+
+    only to see structure of push
+    --> What the hell is this HEAD? Why is it shouting?
+    --> It has something to do with tracking of local state of your repository or not. At least things are happening.
+
+12)
+git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	<reponame>/
+
+nothing added to commit but untracked files present (use "git add" to track)
+    --> Weird that I have something I'm not tracking.
+    --> This adding of some files needs to be done to tell git what to send to the server. For some reason I didn't realize this. Resting is important.
+
+13)
+git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+    --> Till this day I don't understand why the remote repository wasn't configured on my pc.
+    --> Usually after cloning or whenever a .git (hidden) dir is created, all that is needed comes with that.
+
+14)
+git remote show
+original
+    --> This command displays the alias that I earlier specified.
+    --> I was under the impression that the remote repository was bound now. Most likely 'original' referred to my local repository
+
+15)
+git push original
+    --> Had at least some sort of an effect
+    --> It looked to the untrained eye that pushing was done and it was. Only it was to my local version and not the remote...
+
+-----------------------------------------------------
+-On GUI there is some action. I can't seem to figure out what the GUI want's me to do..
+-There has been an upload to github, but when I try to pull to another location, the previously verified push is not included
+
+    --> I don't fully understand what happened here. It may be that some version info gets posted, but the files themself are not moving.
+    --> This is a story of failing badly because lacking experience. At least I know a bit better now what there is to be done.
+
+
+

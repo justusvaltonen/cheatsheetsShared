@@ -1,0 +1,25 @@
+
+man:
+hosts_access
+hosts_options
+networks
+ifconfig
+ufw
+sftp
+sshd
+sshd_config
+openssh
+iptables
+
+path:
+/etc/login.defs
+/etc/networks
+/etc/request-key.conf
+
+commands:
+sudo systemctl status ssh
+systemctl status sshd
+sudo ufw allow ssh
+systemctl restart sshd
+journalctl -u ssh
+

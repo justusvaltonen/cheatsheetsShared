@@ -1,0 +1,2 @@
+
+https://stackoverflow.com/questions/35853986/git-easiest-way-to-reset-git-config-file

@@ -1,0 +1,21 @@
+
+Created:	02.12.2023
+################################################################################################
+
+Using a windows 10 and gitbash:
+init.defaultbranch=defaultbranchname
+user.email=justusvaltonen@gmail.com
+user.name=Justus Valtonen
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.url=https://github.com/justusvaltonen/cheatsheetsShared.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.officialbranch.remote=origin
+branch.officialbranch.merge=refs/heads/officialbranch
+
+################################################################################################
+## End of File
+################################################################################################
+

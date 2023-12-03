@@ -4,24 +4,7 @@ Created:	30.08.2023
 
 
 -- Alphabetical with small description:
-git add <somefilename>										--> Adds files to a temporary staging area called "index". Interesting flags: -A
-git branch -M mestarioksa									--> Renames the branch I guess? M is for Move
-git branch divarioksa										--> Creates a new branch. Give no options to get a list of all branches. Flags: -r
-git branch -d turhaoksa										--> Deletes branch: turhaoksa, but makes sure it's merged to current branch first. Use -D to force delete.
-git checkout											--> Inspect and modify commits.
-git clone											--> Make a copy of a repo to somewhere.
-git clone ssh://bandit30-git@localhost:2220/home/bandit30-git/repo				--> Clone a repo to current location
-git commit -m "Hello, Git"									--> Commit with a message.  Interesting flags: --amend, --reset-author, -m, -a
-git commit -a											--> No need to do add on all files. Commits all changed files. No new files are committed.
-git diff											--> Shows what has changed in files of those files that haven't been added.
-git diff --cached										--> Shows what is about to be committed. Result of difference of git add.
-git fetch											--> Download objects and references from external sources
-git help -a											--> List all available commands.
-git help -c											--> Config options
-git init											--> Sets the repository/workspace root folder to current path.
-git log												--> Shows last commit. Flags: "-p --stat --summary" are worth noticing
-git merge anotherbranch										--> Merge current branch with anotherbranch
-git pull											--> Do a fetch and integrate with another repo
+
 
 git remote add sailytys https://github.com/justusvaltonen/<reponame-here>.git			--> Possibly sets the downstream URL
 git remote set-url sailytys https://github.com/justusvaltonen/<reponame-here>.git		--> Possibly sets the upstream URL. There is a possibility that the URL with SSH connection was needed here.

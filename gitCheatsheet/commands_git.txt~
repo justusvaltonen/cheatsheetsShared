@@ -1,0 +1,90 @@
+
+Created:	30.08.2023          Updated: +++03.12.2023+++
+################################################################################################
+_________________________
+Possible sources of info:
+https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-linux-server        --> You may want to use SSH for your git
+https://www.geeksforgeeks.org/git-tutorial/                                                                             --> Extensive
+https://www.youtube.com/watch?v=kHkQnuYzwoo&t=302s
+
+Youtube:
+CampusStack
+EdGoad
+Victor Geislinger - Setting up SSH keys for github
+
+#########################################################################################
+
+COMMANDS:
+add                                 == Add a file to staging area that possibly goes by the name of 'index' also.
+branch                              == Handling the branches. Normal stuff is done with other commands though.
+  -M <new-name>                                         == Renames a branch. Move is implied with M.
+  <choose-branch-name>                                  == If no flags are used, creates a new branch that is used as a parameter.
+  -d <branch-name>                                      == Deletes some branch, but makes sure it's merged with current working branch. To force a deletion: -D
+checkout                            == See and modify commits. Needs some permissions to do so.
+clone                               == Clone some repo to your local for example.
+commit                              == Before pushing, but after adding.
+  -m "<message>"                                        == Use a message to be logged when pushing is succesfully done.
+  -a                                                    == Automatically tells git to see if a file is changed. Takes away the need to add files when making changes.
+                                                        == Setting doesn't see new files.
+config                              == Config your local and global settings on git. When used with the flag -e, it will enable editing. EMACS warning.
+  Good idea is to config name and email or things stop working.
+    git config --global user.email "you@example.com"
+    git config --global user.name "Your Name"
+    git config -l                                       == Shows current configs
+    git config --global credential.helper cache         == Next password that is inserted, will be cached in the memory
+    git config --global --unset credential.helper       == Undo the previous command. Also clears the cache.
+diff                                == Widely used diff tool. Not at all sure how this works. Shows difference between was and is.
+git-credentials                     == If you want to automate your access for a longer period, you can do this on a machine-base level.
+fetch                               == Download stuff from a repo.
+gitk                                == Some reposity browser command. Not sure if works by default.
+help                                == Use the -a flag. Help pages. Use -c for config options fields.
+init                                == Inits a repo? to currentpath.
+log                                 == Some history information can be found with this.
+merge <another-branch>              == Combine branches.
+pull                                == Getting the latest updates on currently used repo from internet. No need to do full clone.
+push                                == Uploads where ever is defined.
+  -v -u <remote-name> <branch-name>                     == Using more verbose output pushes.
+  ssh://[user@]host.xz[:port]/path/to/repo.git/         == SSH can also be used to push
+remote                              == Manages the remote server relating things. Not only a command, but has more meaning to it. Repos need to be tracked first.
+  -v                                == Shows your current remote routes.
+  rename <old-alias> <new-alias>                        == Renames the alias that is being used.
+  First sets the push destination and the second pull destination. Not sure what the alias exactly refers to:
+    git remote set-url original https://<username>@github.com/<username>/<reponame>.git
+    git remote add <alias> https://<username>@github.com/<username>/<reponame>.git
+show-branch                         == Supposedly shows current branch under edit
+show                                == Shows "objects"?
+stash                               == Put some code aside. Like recyclebin.
+status                              == Shows files tracked and staging area... Most likely
+switch <branchname>                 == Switches branches. Very important. By default is always assuming some BS Branch
+tag                                 == Possibly has something to do with GPG. Misleading if true
+upstream                            == Adds tracking reference somewhere
+worktree                            == If one has a lot to manage.
+
+
+
+MEANINGS:
+commit                              ==
+HEAD                                ==
+master                              == Default name of a branch
+mergetool                           == You get to choose what tool you want to use
+origin                              == Just a name. Default alias of some place where stuff was cloned from. Usually at least is URL
+password                            == Password that used to be text, but now is a token... that is text, but can be managed more easilly from github
+personal access token               == The method that is used to connect our locals with github. Uses HTTPS. PAT
+remote                              == Some URL that is not my own computer. Github repo for example.
+staging                             == Before commit files are in staging.
+username                            == Can mean github username or the real name of you as in author.
+
+
+
+GITHUB ON GUI:
+Settings/DeveloperSettings/PersonalAccessTokens/
+
+ORDER OF THINGS:
+Pull() == Fetch() + Merge()
+Track() + Remote()
+
+#########################################################################################
+
+
+
+
