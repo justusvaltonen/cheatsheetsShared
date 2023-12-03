@@ -1,0 +1,15 @@
+
+Created:	03.12.2023
+################################################################################################
+
+-Before running scripts here and in general, read what they do so there will be no unpleasant surprises
+-These are made for demonstration purposes and don't really accomplish much.
+-You need to add absolute path preferrably to a couple of them to work.
+-One approach is to use environment variables. Relative paths can be used, but are hard to maintain.
+-You need to add permissions before scriptfiles can be run. Use command:
+chmod +x <filename>.sh
+	--> This will allow execution for a script. Not saying they will work unmodified...
+
+################################################################################################
+## End of File
+################################################################################################
