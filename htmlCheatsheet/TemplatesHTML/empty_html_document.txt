@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+## This is what VSCode gives with ! + Tab
+
+======================================================================
+Line:			Explanation:
+----------------------------------------------------------------------
+1			== Defining type of the document for the browser. This syntax is related to HTML5. Previous versions it wasn't so simpple
+2			== Used by search engines and browsers. There might be some issues when embedding text from somewhere else if the languages don't match. See jkorpela.fi
+3			== Start of head. Here some properties are defined. Will not show directly in the page. There are so many things that can go here..
+			   Each meta section is used when categorizing to <base>, <link>, <script>, <style> or <title> is not the way to go.
+4			== Very standard charset at this time (2023), there is windows-1252 for example as an alternative. The current line is the standard for HTML5
+	ALT:	<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1">		--> In HTML4
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">		--> In HTML4
+		<meta charset="ISO-8859-1">							--> In HTML5
+5			== Some HTTP header is being emulated with this entry. http-equiv="X-UA-Compatible" is the http header emulation, while content="IE=edge" tells to use the latest version of IE
+6			== When using name, some action is implemented on all of the page. When in metadata, name is the "key" and content is the "value". Viewport things are very handy since resolutions vary.
+			   The name can include: application-name (if the page runs an application), author, description (bookmarking default place to look), generator (something), keywords, referrer (something to do with HTTP)
+7			== Title matters for SearchEngineOptimization.
+
+

@@ -1,0 +1,23 @@
+
+########################################
+## All sorts of silly hacks or tricks ##
+########################################
+
+-- Getting info out of files:
+Inspiration:
+-Can't seem to get the original creation date from some files. It's important so I can keep up with some old documents where I forgot to add a date to the mix.
+-The problem is that I'm dealing with .txt files. It seems that these files don't hold that much info about the file themself. All the metadata is handled by the FileSystem/OperatingSystem.
+exiftool targetFile.suffix
+file targetFile.suffix
+identify -verbose targetFile.suffix
+ls -lisanh targetFile.suffix
+stat targetFile.suffix
+
+
+
+
+
+
+
+
+

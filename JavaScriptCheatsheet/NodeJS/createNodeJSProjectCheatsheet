@@ -1,0 +1,78 @@
+
+cd <wanted-project-root>
+sudo apt update && upgrade -y
+sudo apt install nodejs
+sudo apt install npm		--> Not sure if neccessary
+npm init
+npm i <somePackage>
+
+npm i -g <another>		--> May need configuring permissions in /usr/local/lib/node_modules
+npm link <another>
+
+npm install			--> Fetches needed stuff based upon dependencies
+npm install express --save
+
+npm i nodemon			--> For serverusage. Check that the package name is correct
+npm i axios			--> Don't remember what this does
+npm i ejs			--> Enables ejs to be used with express
+mkdir views
+
+npm i bcrypt
+sudo apt install mongodb-org	--> May need some tweaking first. https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-ubuntu-20-04
+npm i figlet
+npm i mongoose			--> https://www.npmjs.com/package/mongoose
+npm i uuid			--> https://www.npmjs.com/package/uuid
+
+
+################################################################
+
+cd <wanted-project-root>
+sudo apt update && upgrade -y
+sudo apt install nodejs
+sudo apt install npm
+npm init		--> Provide your info
+npm i express
+npm i -g nodemon
+npm i axios
+npm i ejs
+mkdir views		--> This is for ejs + express
+npm i bcrypt
+npm i cjs		--> Not so sure about this, see: npm i cjs-module https://www.npmjs.com/package/cjs-module	--> Don't install unless you have to
+
+curl -fsSL https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
+--> Possibly gets some authentication from mongo
+
+apt-key list
+--> Shows list of update keys. May need sudo
+
+echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
+--> Adds the mongo repo to updatelist
+
+sudo apt update
+sudo apt install mongodb-org
+sudo systemctl start mongod.service
+sudo systemctl status mongod.service
+sudo systemctl enable mongod
+mongo --eval 'db.runCommand({ connectionStatus: 1 })'
+
+npm install figlet
+
+npm i mongoose
+npm i uuid
+
+
+################################################################
+
+To be installed:
+-postman
+-react?
+-jsreport
+
+GiveMeAJoke
+Node-Group-Chat
+
+################################################################
+TLS:
+letsencrypt.org
+
+

@@ -1,0 +1,110 @@
+
+##############################################################################
+## Idea was to install wine on my Kali machine so I could play online poker ##
+##############################################################################
+
+https://www.youtube.com/watch?v=lOSezUq0-T8				--> OK indian guy. (1)
+https://techviewleo.com/how-to-install-wine-on-kali-linux/		--> (2) No video way
+
+https://www.youtube.com/watch?v=o2HUNRPUDkU				--> Bottles (3)
+https://www.youtube.com/watch?v=VqDgrHCPWG8				--> Bottles (4)
+
+##############################################################################
+##############################################################################
+(1)
+-It's possible that everything doesn't work as it would in original windows machine, because of permissions.
+-Remember NOT to sudo / root install for no reason. Some things need sudo to get installed however.
+-If for some reason you don't get wine to work, there is at least one alternative: Bottles
+
+____________
+--Commands--
+------------
+sudo apt update					--> Checks for latest updates and loads them. Uses repo lists specified somewhere in /etc/
+sudp apt upgrade -y				--> Updates all neccessary thingies
+sudo apt dist-upgrade -y			--> If the OS is missing something
+cat /etc/os-release				--> Gives some info on your system
+sudo reboot					--> Totally possible that some things may need rebooting
+sudo apt update
+sudo apt install wine				--> The correct name of the package we want
+wine --version					--> Displays things in (A1). Guy on the video didn't get any warnings / errors while taking a look at the version.
+winecfg						--> Starts up wine. Also starts up to wine (A2). Some hidden dir is created that possibly acts as my windows drive. After a while of loading, a configuration window appears.
+						--> Check out the ~/.wine folder for some interesting things. After you start the configuration, go check the following: (B)
+wine ./someExecutable.exe			--> Executes an installer for example. Knows how to run .exe files. Your C drive is mapped by default to ~/.wine/drive_c, so there most likely will install
+						--> My problem now is finding the .exe from somewhere. Can't seem to download it from the official website.
+
+##############################################################################
+
+(2)
+____________
+--Commands--
+------------
+sudo apt update
+sudo dpkg --add-architecture i386		--> For some reason 32-bit shit is needed and this enables the thing
+dpkg --print-foreign-architectures		--> Displays if you succeeded on the last command
+sudo apt-get install wine32:i386
+sudo apt update && sudo apt -y full-upgrade
+sudo reboot
+sudo apt install wine
+wine --version					--> Hopefully doesn't give errors / warnings
+winecfg						--> On success, it's possible that something relating to mongo and gecko wants to be installed
+
+
+##############################################################################
+		BOTTLES			(3) (4)
+##############################################################################
+-Missing GUI :(
+
+
+##############################################################################
+##############################################################################
+				References
+##############################################################################
+##############################################################################
+
+-- (A1) --
+it looks like wine32 is missing, you should install it.
+as root, please execute "apt-get install wine32:i386"
+wine-8.0 (Debian 8.0~repack-4)
+--> I'm running 64-bit system, but it's totally possible that a 32-bit version is needed for some reason
+--> The last line most likely implies about the installation that uses the full 64-bits... I don't know anymore.
+
+-- (A2) --
+it looks like wine32 is missing, you should install it.
+as root, please execute "apt-get install wine32:i386"
+wine: created the configuration directory '/home/<my_username>/.wine'
+MESA-INTEL: warning: Haswell Vulkan support is incomplete
+MESA-INTEL: warning: Haswell Vulkan support is incomplete
+MESA-INTEL: warning: Haswell Vulkan support is incomplete
+MESA-INTEL: warning: Haswell Vulkan support is incomplete
+0048:err:ole:StdMarshalImpl_MarshalInterface Failed to create ifstub, hr 0x80004002
+0048:err:ole:CoMarshalInterface Failed to marshal the interface {6d5140c1-7436-11ce-8034-00aa006009fa}, hr 0x80004002
+0048:err:ole:apartment_get_local_server_stream Failed: 0x80004002
+0050:err:ole:StdMarshalImpl_MarshalInterface Failed to create ifstub, hr 0x80004002
+0050:err:ole:CoMarshalInterface Failed to marshal the interface {6d5140c1-7436-11ce-8034-00aa006009fa}, hr 0x80004002
+0050:err:ole:apartment_get_local_server_stream Failed: 0x80004002
+0050:err:ole:start_rpcss Failed to open RpcSs service
+wine: failed to open L"C:\\windows\\syswow64\\rundll32.exe": c0000135
+wine: configuration in L"/home/<my_username>/.wine" has been updated.
+
+-- (B) --
+-While in the config window of wine:
+Applications
+ WindowsVersion: Windows 10		==> Should be good
+Drives
+ C:	* ../drive_c			==> Letter C points to ~/.wine/drive_c actually
+ Z:	* /				==> Letter Z points to our linux root dir
+Libraries				==> If there is some need to override existing libs, this is the place to do it.
+
+##############################################################################
+########		Uninstalling Wine				######
+##############################################################################
+sudo apt remove wine
+sudo apt-get remove wine32:i386
+--> The folder ~/.wine still exists
+
+##############################################################################
+
+-Seems that I have failed. Couldn't download the GGSW and don't exactly know how to use wine efficiently. Bottle was also a bit too much for me. Maybe later
+
+
+

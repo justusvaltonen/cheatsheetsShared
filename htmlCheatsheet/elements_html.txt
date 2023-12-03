@@ -1,0 +1,64 @@
+
+#######################################
+## What do the elements in HTML5 do? ##
+#######################################
+
+
+-- Head Specific Elements:
+<head>			== Specifies all sorts of behind the scenes information. Instructions on how a browser should handle something and sourcing and such.
+<base>			== Where the root of the page is planted. Always under <head> and <head> can only have 1 <base>. DOM keyword: HTMLBaseElement.
+<meta>			== DOM: HTMLMetaElement. No closing element. Metadata part.
+<script>		== Embed JavaScript, some other language or JSON to HTML. In DOM: HTMLScriptElement. Can be put to body aswell if a tag is specified.
+<title>			== Defines what shows in your browsers top-bar. Also SearchEngineOptimizers use this.
+
+-- Body elements:
+<a>			== Creates links to all sorts of URI:s and even more. What ever you can link, you can <a>... almost.
+<audio>			==
+<area>			== Using shapes interactively
+<aside>			== Puts things in 2 columns
+<button>		== Functionality
+<canvas>		== Draw something for example
+<code>			== Highlights small part of the text to let the user know this is something special
+<dialog>		== Put a layer element somewhere. Has builtin JS methods
+<div>			== Common container
+<dl>			== Description List.
+<embed>			== Embeds some external media to the document. Think of a video
+<footer>		== Bottom of page usually
+<form>			== Insert something and use http-requests to control stuff.
+<header>		== Use this on each page of your site for consistency
+<hr>			== Horizontal rule
+<iframe>		== Embed a map for example from an external source
+<img>			==
+<input>			== You can write something here
+<label for="moro">	== Labeling elements
+<li>			== List item
+<link>			== Links to external source. Uses href to specify where. If has an attribute of type=body-ok then can be used in body. In DOM: HTMLLinkElement
+<math>			== Enables math syntax
+<nav>			== Navbar. Different methods to apply
+<ol> / <ul>		== Ordered / Unordered list. Inside instances of <li>
+<p>			== Paragraph is block-level
+<picture>		==
+<small>			== Displays smaller text
+<style>			== Apply CSS to individual areas.
+<sup>			== m2 ==> m<sup>2<sup/> and looks a lot better
+<table>			== Creates a container that can be modded, if one knows how
+<td>			== Table data cell
+<tr>			== Row
+
+
+-- Examples and additional info:
+<a href="https://www.mozilla.com">Mozilla</a>				--> Links to absolute path/url
+<a href="//example.com">Scheme-relative URL</a>				--> Schema-relative
+<a href="/en-US/docs/Web/HTML">Origin-relative URL</a>			--> Origin relative
+<a href="./p">Directory-relative URL</a>				--> Path relative
+
+<a href="mailto:nowhere@mozilla.org">Send email to nowhere</a>		--> This is how to send emails
+
+<a href="tel:+49.157.0156">+49 157 0156</a>				--> Couple of telefon number demos
+<a href="tel:+1(800)555-0123">(800) 555-0123</a>
+
+<p>
+  Paint by holding down the mouse button and moving it.
+  <a href="" download="my_painting.png">Download my painting</a>
+</p>
+

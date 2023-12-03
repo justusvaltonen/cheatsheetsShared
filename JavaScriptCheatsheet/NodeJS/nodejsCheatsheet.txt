@@ -1,0 +1,228 @@
+
+##################################################################
+## Listing useful NodeJS commands. Trying to keep things native ##
+##################################################################
+nodejs.org		--> Choose your version of node and see the docs for more info. Get version by typing node in console
+npmjs.com		--> Repo of all sorts of packages. Search for what you look for
+ejs.co
+
+_________
+Commands:
+
+C)
+console.log(process)	--> Prints your very useful process object that contains a lot of stuff
+console.dir(app)	--> May or may not be express syntax. Gets same sort of stuff as logging process. List of commands available for app. May also be the definition of app
+
+E)
+
+F)
+fs.<some-command>	--> Most likely needs require syntax to source. FileSystem.
+
+M)
+module			--> Module object
+module.exports		--> Thing we want to export out of a file
+module.exports.someFunction = someFunction	--> Exports someFunction. You can log module
+
+N)
+node			--> Opens your node commandline. Type .exit instead of exit to exit
+
+npm			--> Node package manager. Essential. Note that wherever you install a package, there will be a node_modules created with all dependencies.
+npm audit		--> Runs security audit
+npm init		--> Creates package.json to current dir and asks for some values to put there.
+npm i			--> Reads package.json from ./ and tries to install all the dependencies.
+npm i <something>	--> Installs a package called something to current location. Search in npmjs.com
+
+P)
+Postman			--> Tool for inspecting our req and res and even sending some data.
+
+
+
+_________
+Examples:
+-Default file in examples is always myTest.js if not stated otherwise
+
+1.
+{
+ const myArgs = process.argv.slice(2);
+ for (let example in myArgs) {
+  console.log(`Some argument: ${example}`);
+ }
+}
+--> If called with node myTest.js one two three four
+Prints:
+Some argument: one
+Some argument: two
+Some argument: three
+Some argument: four
+--> 3 things that are built-in: process, process.argv, slice()
+
+2.
+Synchronous means order. Asynchronous is anarchy
+
+3.
+ArrowFunction example:
+const add = (x, y) => x + y;
+const square = x => x * x;
+module.exports.square = square;
+
+file2.js {
+ const mytest = require('./myTest.js');
+ console.log(mytest.square(3));
+ console.log(module);
+}
+
+4. You can assign values with ':'
+const someObject = {
+ key: value,
+ anotherKey: anotherValue,
+ thirdTime: isTheCharm
+}
+module.exports = someObject;
+
+5. When sourcing a whole dir, node looks for index.js file that should have things required in it.
+const wholedir = require('./somedir');
+console.log(wholedir);
+--> Assuming somedir has index.js inside it that has module.exports.someStuff, the content of that export gets displayed
+
+6. Default folder to look for is always ./node_modules when requiring
+const something = require('tuesday')	--> Assumes that there is a node module dir by the name of tuesday in ./node_modules/
+
+
+7. Global package install
+npm i -g <somePackage>			--> Makes a thing available anywhere with the following syntax
+npm link <somePackage>
+/usr/local/lib/node_modules		--> Default global path to your packages
+
+const abab = require('<somePackage>');
+
+8. Package.JSON
+Is inside each of node_modules. Has dependencies, info, metadata
+Version can be specific "1.2.3.4", Around "~2.0.5", At minimum "^6.6.6"
+If we have package.json in our project root, each time we install a package (node module), neccessary info is added there
+If you share your stuff, keep your package.json dependencies clean if not in use
+
+9. Github stuff
+Getting a project from github doesn't have node_modules in it most likely. It does have package.json most likely where dependencies are listed.
+Running npm i without any arguments, installs all the dependencies.
+
+
+________
+EXPRESS:
+-Serverside app for JS-world
+
+1. Basics
+-Contact your running express server through localhost:3000
+
+const express = require("express");
+const app = express();			--> Syntax that starts the server
+const port = 3000;			--> Default for express
+
+console.dir(app);
+
+app.use(() => {
+	console.log("All inbound traffic should trigger this");
+})
+
+app.listen(port, () => {
+	console.log(`Port: ${port}`);
+})
+
+
+
+2. Request and Response objects
+-We have different methods and properties under res for example. See express docs
+-Using res.send we can send back http response to who ever contacts our server
+-Each request can only have one response. In the following example only the first res.send triggers.
+
+app.use((req, res) => {
+	console.log("All inbound traffic should trigger this");
+	console.dir("Here is the req object in all it's glory", req);
+	res.send("We got your request");				--> Viewed in browser we can see this text. Automatically defined as http
+	res.send('<h1>Big topic here</h1>				--> In browser is concidered as h1 type headline. Automatically defined as HTML
+	res.send({ name: "Sir drinkalot" });				--> Don't know how is viewed in browser. Postman recognices as an object of type JSON
+})
+
+
+3. Custom routing
+-Matches only get requests (used in browsers)
+app.get('/', (req, res) => {
+	res.send("The root of pages");
+});
+
+-Post request (for example submit username and password)
+app.post('/', (req, res) => {
+	res.send("Using post request this time");
+}
+
+-Doing a default response for get routes. Do this as the last entry if all else fails.
+app.get('*', (req, res) => {
+	res.send("Possibly something is missing or can't be accessed at the moment");
+}
+
+
+4. Pattern matching 339:ExpressPathParameters	ÅÅÅ
+-Not sure if we can change subreddit with anything. Possibly yes.
+-We have a property in our req object that is defined by the user of the browser
+-Connecting to localhost:3000/r/anything prints to console { subreddit: anything } object.
+
+app.get('/<something-here or maybe needs to be r>/:subreddit', (req, res) => {
+	console.log(req.params);
+	res.send(`Meaningless internet here`);
+}
+
+-Need to take a look about the const object and how it behaves, since it's unclear at the moment
+app.get('/r/:subreddit', (req, res) => {
+	const { subreddit } = req.params;
+	res.send(`<h1>Browsing the ${subreddit} page</h1>`);
+}
+
+-Call with localhost:3000/r/abcd/lkjh
+app.get('/r/:subreddit/:sometext', (req, res) => {
+	const { subreddit, sometext } = req.params;
+	res.send(`<h1>Browsing the ${subreddit} page slash ${sometext}</h1>`);
+}
+
+
+5. EJS
+
+const express = require('express');
+const app = express();
+const port = 3001;
+
+app.set('view engine', 'ejs');
+--> Letting express know we use ejs and things that come along with it.
+
+app.set('views', path.join(__dirname, '/views'));
+--> Setting a standard where views folder is looked for. The dir where this file is /views. __dirname is current file folder
+--> This fixes some bugs that may result later on if not taken care of properly.
+
+app.get('/', (req, res) => {
+	res.render('<pagename>.ejs');		--> Looks from views folder by default
+});
+
+app.listen(${port}, () => {
+	console.log("Checking if someone is listening");
+});
+
+
+______________________
+ExpressSpecificSyntax:
+res.render('home.ejs');	--> Assuming that ejs is installed correctly
+-Module called path
+
+____________
+GeneralTips:
+-Setup views file to isolate things
+-Use get-routes with render.
+-When getting a bit more experience, try to keep things in order.
+-Use IDs instead of straight URLs to avoid bugs
+-Export + Require your files
+-When doing post routing, you need to have some app.use params in place.
+-When doing post routing, your HTML may need to have name field to be setup in a similar manner than your schema says or will bugout when combining with forms.
+
+
+
+
+
+
+

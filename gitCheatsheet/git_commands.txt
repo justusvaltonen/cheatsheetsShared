@@ -1,0 +1,53 @@
+
+Created:	30.08.2023
+################################################################################################
+
+
+-- Alphabetical with small description:
+git add <somefilename>										--> Adds files to a temporary staging area called "index". Interesting flags: -A
+git branch -M mestarioksa									--> Renames the branch I guess? M is for Move
+git branch divarioksa										--> Creates a new branch. Give no options to get a list of all branches. Flags: -r
+git branch -d turhaoksa										--> Deletes branch: turhaoksa, but makes sure it's merged to current branch first. Use -D to force delete.
+git checkout											--> Inspect and modify commits.
+git clone											--> Make a copy of a repo to somewhere.
+git clone ssh://bandit30-git@localhost:2220/home/bandit30-git/repo				--> Clone a repo to current location
+git commit -m "Hello, Git"									--> Commit with a message.  Interesting flags: --amend, --reset-author, -m, -a
+git commit -a											--> No need to do add on all files. Commits all changed files. No new files are committed.
+git diff											--> Shows what has changed in files of those files that haven't been added.
+git diff --cached										--> Shows what is about to be committed. Result of difference of git add.
+git fetch											--> Download objects and references from external sources
+git help -a											--> List all available commands.
+git help -c											--> Config options
+git init											--> Sets the repository/workspace root folder to current path.
+git log												--> Shows last commit. Flags: "-p --stat --summary" are worth noticing
+git merge anotherbranch										--> Merge current branch with anotherbranch
+git pull											--> Do a fetch and integrate with another repo
+
+git remote add sailytys https://github.com/justusvaltonen/<reponame-here>.git			--> Possibly sets the downstream URL
+git remote set-url sailytys https://github.com/justusvaltonen/<reponame-here>.git		--> Possibly sets the upstream URL. There is a possibility that the URL with SSH connection was needed here.
+git remote -v											--> Shows some info on your methods of connectivity
+git remote set-url sailytys git@github.com:justusvaltonen/<reponame-here>.git			--> Creates an alias that refers to an url
+git remote rename sailytys alkupera								--> Renames an alias instead of modifying the repo. Scope is on local computer.
+
+git push -v -u <remote-name> <branch-name>							--> Push to remote
+git push ssh://[user@]host.xz[:port]/path/to/repo.git/						--> Should do the trick also
+git show											--> Show all sorts of objects
+git stash											--> Stash some code somewhere for later use
+git status											--> Shows there is no files tracked yet
+git switch											--> Switch branches
+git tag												--> Manage tag-objects that are encrypted with GPG
+git worktree											--> Manage multiple workingtrees
+
+gitk												--> Repository browser. Commits results of a merge.
+
+
+
+-- Backend commands:
+git config											--> Repository or global settings. Interesting flags: --global --edit
+git remote											--> Manage tracked repositories. Interesting flags: -v, set-url origin <yourrepourlhere>
+git difftool											--> Toolset to investigate
+git fsck											--> Connectivity checking for DBs
+git show branch											--> View branches
+
+
+

@@ -1,0 +1,19 @@
+{
+  "name": "shitty-forms",
+  "version": "1.0.0",
+  "description": "Minimal viable product to report working hours ended up being a fullstack test.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "shitty",
+    "forms",
+    "report"
+  ],
+  "author": "Justus Valtonen",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

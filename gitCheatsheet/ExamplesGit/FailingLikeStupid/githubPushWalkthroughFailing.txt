@@ -1,0 +1,84 @@
+
+Created:	Jun 2023
+################################################################################################
+
+########################################################################
+## Trying to keep myself organized by using github as a document bank ##
+########################################################################
+
+-Go to github.com and sign in
+-Add new repository. Name is cheatsheets and the repo is private
+-Address for the repo is: https://github.com/justusvaltonen/cheatsheets.git
+-The following is a copypaste from github webpage:
+
+echo "# cheatsheets" >> README.md
+ --> Creates a readme file and appends to the empty file the line: # cheatseets
+
+git init
+ --> Getting a message (message_1) as output. Inits current location as root for your files.
+
+git add README.md
+ --> Adds the new file to a list of followed and possibly to be pushed files. No sending yet. Adding is called staging.
+
+git status
+ --> Shows status of your files added and not added, starting from your path where you did git init
+
+git commit -m "first commit"
+ --> Commits to be pushed the files that are added. You can set a message here that will be visible
+
+git branch -M mastery
+ --> Not sure. See git-branch for more info
+
+git remote add origin https://github.com/justusvaltonen/cheatsheets.git
+ --> I'm guessing this sets the source to a remote location. Because the URL starts with https, we can see that we don't use SSH, but HTTPS as remote url type
+
+git remote set-url origin https://github.com/<owner>/<repository>.git
+git remote -v
+ --> Should display the remote repository url. You now replace your password with your personal access token.
+
+git remote set-url origin git@github.com:<owner>/<repository>.git
+ --> Enables SSH authentication again if that is wanted.
+ --> In these examples "origin" refers to some remote repository name
+ --> You can see what is in use with git remote -v
+
+git remote rename origin somename
+ --> Keep in mind that the remotes name will be affected on your local machine, not neccessarily on the github.
+
+git remote add remoterepositorynameone https://github.com/<username>/<repositoryname>
+git remote -v
+ --> Should add remote repository for you to use.
+
+git push -u <remote-name> <branch-name>
+git push -u origin mastery
+ --> Gives (message_2)
+ --> Once the steps to set up access tokens are done, this works. Insert the access token when asked for a password
+ --> -u == For every branch that is up to date or successfully pushed, add upstream (tracking) reference, used by argument-less git-pull(1) and other commands. So no idea.
+
+########################################################################
+
+(message_1)
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint:   git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint:   git branch -m <name>
+Initialized empty Git repository in <path-in-local-computer>/.git/
+
+(message_2)
+Username for 'https://github.com': justusvaltonen@gmail.com
+Password for 'https://justusvaltonen@gmail.com@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/justusvaltonen/cheatsheets.git/'
+
+
+
+
+
+
+

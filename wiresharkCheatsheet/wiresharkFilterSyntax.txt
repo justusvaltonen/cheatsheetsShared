@@ -1,0 +1,24 @@
+
+# How to filter your massive captures
+# man wireshark-filter
+
+ARP				--> Protocol
+dns				-->
+dhcp				--> Protocol
+ftp				--> Shows you stuff that uses ftp
+http				--> All available info shown in clear text
+http2				--> You can inspect these. We can see that digicert is for example one CA that is contacted at least some times
+ip.addr==123.123.123.123	--> Shows in and outgoing
+icmp				-->
+quic				--> ???
+sslv2				--> SSl
+tcp.port==22			--> All relating to port 22 (ssh)
+tlsv1.3
+
+____________
+RandomNotes:
+-You can start typing something in to the filter field and it gives you suggestions
+-When inspecting http connections, we can even see some hashes and keys.
+-OCSP is some sort of a protocol
+
+

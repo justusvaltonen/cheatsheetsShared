@@ -1,0 +1,26 @@
+
+#####################################################################################
+## What are attributes that you can always add to elements, even if with no effect ##
+#####################################################################################
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes
+
+
+class=""				== Enables CSS and JS linking
+id=""					== Has to be unique on document scope. Enables linking scripts and CSS for example
+itemid=""				== Globally unique
+itemprop=""				== Usage through name:value combos.
+part=""					== Some trickery with CSS
+spellcheck=""				== Check for bad grammar
+style=""				== Use CSS for testing things
+title=""				== Enables advisory texts to be written for parent element
+translate=""				== Should a text field be converted automatically, or is it locked
+
+
+
+
+Event handlers				== Very nice functionality. If someone clicks on something, something happens.
+
+
+
+

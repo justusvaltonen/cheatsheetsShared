@@ -1,0 +1,54 @@
+
+##############################
+## List of programs in Kali ##
+##############################
+https://resources.infosecinstitute.com/topic/kali-linux-top-5-tools-for-digital-forensics/		(1) Good looking source of information
+https://www.caine-live.net/										(caine)
+https://www.sleuthkit.org/index.php									(sleuth)
+https://wiki.sleuthkit.org/index.php?title=Autopsy_User%27s_Guide					(autopsy)
+https://github.com/botherder/androidqf									(androidqf) QuickForensics
+
+
+
+A)
+Android-SDK				--> Enables features to play with when using rooted phones. Installs on Kali
+androidqf				--> Some tool that enables fast forensics gathering from a phone	(androidqf)
+Autopsy					--> Analyse computer usage after usage					(autopsy)
+ PhotoRec				--> Recover deleted things from hard-drives
+ Sleuth Kit				--> Feature inside Autopsy						(sleuth)
+
+B)
+Backdoor-Factory			--> man backdoor-factory. Creating exploitable stuff deliberately. Good to investigate.
+
+C)
+CAINE					--> Containers / Distros made for one particular intel.			(caine)
+Cellebrite UFED				--> Mobile forensics
+
+D)
+Dradis					--> Some reporting tool. Aimed for pentesting, but seems to have more useablility aswell
+
+F)
+FTK Imager				--> Create images out of your computer / phone
+
+G)
+Guymager				--> Generate duplicates of some device
+
+L)
+Lynis					--> Do an auditing scan on your unix-based system.
+
+M)
+Metasploit-Framework			--> msf<suffix>, for example msfconsole. man metasploit-framework
+
+R)
+Registry Recon				--> Inspect windows registrys
+
+S)
+Scylla					--> Intel gathering tool. Better than some others
+
+V)
+Volatility				--> Analyse from memory
+
+X)
+Xplico					--> Alternative to wireshark
+
+

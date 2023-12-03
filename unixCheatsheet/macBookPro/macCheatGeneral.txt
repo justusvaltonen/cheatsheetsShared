@@ -1,0 +1,16 @@
+
+##################
+## Mac commands ##
+##################
+n' shit...
+
+-MAC doesn't have apt. Some alternative may be homebrew:
+brew install <some-program-name-that-you-want-to-install>
+--> brew install curl
+
+-In mac, open a terminal with 'flower' + T.
+
+
+
+
+

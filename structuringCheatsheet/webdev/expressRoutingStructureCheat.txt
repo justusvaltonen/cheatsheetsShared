@@ -1,0 +1,30 @@
+
+########################
+## From Webdev Sensei ##
+########################
+
+-Idea is to group some routes together based on some logic
+
+<projectRoot>/routes/shelters.js {
+ const express = require('express');
+ const router = express.Router();
+ 
+//Things that use GET or POST
+ /shelters
+ /shelters/:id
+ /shelters/:id/edit
+ 
+ module.exports = router;
+}
+
+<projectRoot>/index.js {
+ const something = require('./routes/shelters.js');
+ app.use('/someprefixname', something);
+}
+
+<projectRoot>/routers/admin.js {
+ router.use(somesyntaxhellhere);
+ router.post('/something');
+ router.get('/somethingElse');
+ //It is possible to route all traffic through router.use line. Idea is to try to do a check of authenticy and authority. At the time of creation, I was in #484
+}

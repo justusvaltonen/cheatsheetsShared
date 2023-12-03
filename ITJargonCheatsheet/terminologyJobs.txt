@@ -1,0 +1,305 @@
+
+#################################################################################
+## This document contains a cheatsheet of terminology used in job applications ##
+#################################################################################
+https://en.wikipedia.org/wiki/Continuous_integration					(0.1.0)
+https://en.wikipedia.org/wiki/Continuous_delivery					(0.2.0)
+https://en.wikipedia.org/wiki/DevOps							(1.0.0)
+https://en.wikipedia.org/wiki/SOLID							(1.0.5)
+https://en.wikipedia.org/wiki/Operating_system						(2.0.0)
+https://en.wikipedia.org/wiki/List_of_operating_systems					(2.0.1)
+https://en.wikipedia.org/wiki/Real-time_operating_system				(2.1.0)
+https://en.wikipedia.org/wiki/Unikernel							(2.1.1)
+https://en.wikipedia.org/wiki/Single_address_space_operating_system			(2.1.2) Sort these later
+https://en.wikipedia.org/wiki/Cooperative_multitasking					(2.1.3)
+https://en.wikipedia.org/wiki/Minix_3							(2.2.1) Fixes bugs by itself
+https://en.wikipedia.org/wiki/Monolithic_kernel						(2.2.2)
+https://en.wikipedia.org/wiki/Windows_Embedded_Compact					(2.3.1)
+https://en.wikipedia.org/wiki/Embedded_system						(3.1.0)
+https://en.wikipedia.org/wiki/Embedded_operating_system					(3.2.0)
+https://en.wikipedia.org/wiki/Context_switch						(6.5.1)
+https://en.wikipedia.org/wiki/Preemption_(computing)					(6.5.2)
+https://en.wikipedia.org/wiki/Rate-monotonic_scheduling					(6.5.2.A)
+https://en.wikipedia.org/wiki/Round-robin_scheduling					(6.5.2.B)
+https://en.wikipedia.org/wiki/Fixed-priority_pre-emptive_scheduling			(6.5.2.C)
+https://en.wikipedia.org/wiki/Earliest_deadline_first_scheduling			(6.5.3)
+https://en.wikipedia.org/wiki/Tree_traversal						(6.5.4)
+https://en.wikipedia.org/wiki/Yield_(multithreading)					(6.6.6)
+https://en.wikipedia.org/wiki/Representational_state_transfer				(7.0.1)
+https://en.wikipedia.org/wiki/SOAP							(7.0.2)
+https://en.wikipedia.org/wiki/Ansible_(software)					(8.0.1)
+https://en.wikipedia.org/wiki/JavaScript						(9.0.0)
+https://en.wikipedia.org/wiki/Vue.js							(9.1.0)
+https://en.wikipedia.org/wiki/Software_as_a_service					(10.1.1)
+https://en.wikipedia.org/wiki/Business_rule_management_system				(10.2.1)
+https://en.wikipedia.org/wiki/Business_rules_engine					(10.2.2)
+https://en.wikipedia.org/wiki/ECMAScript						(13.1.1.3) standards/web/sw/ecma
+https://en.wikipedia.org/wiki/Clojure							(23.1.3) 23=personalIntrests 1=languages 3=clojure because lazy evaluation and charasteristics.
+
+http://firehol.org/									--> Firewall Interface thing
+https://fi.wikipedia.org/wiki/Aiven							--> Some finnish company working with something to do with the cloud
+
+
+Android
+ Kotlin
+ React Native			== Development tool for Android
+Ansible				== Some toolset for IaC (Infrastructure As Code). Possibly autodeploys things. Something like Kubernetes possibly. (8.0.1)
+Agile				== What the name implies. SCRUM is a part of Agile. Small FUNCTIONAL teams. Seems professional to me.
+ SCRUM				== Scrum team is: ProductOwner, DevTeam, ScrumMaster
+ SOLID				== (1.0.5) Seems to me that this seems just common human brain usage.
+ApacheKafka			== OpenSourcePlatform. It's a server with a GUI.
+Apple
+ iOS
+ Swift				== Language for appleshit
+Browsers
+ ListOfBrowsers
+  Chrome
+  Firefox
+ Standards
+  ECMAScript3
+BusinessLogic			== Route and rules for data movement between a DB and UI. Alternative term: DomainLogic
+ BRMS				== Business Rule Management System. (10.2.1)
+  BusinessRulesEngine
+  CoreApplicationCode
+  Repository			== Rules are here and thus are separate from the core application.
+  RuntimeEnvironment		== Apps run here
+  Tools				== For people to config their things
+Clojure				== Language that is translated to fit JS, Java or .NET worlds. Default is Java. Syntax uses a lot of parantheses for example: (something here) 
+ ClojureScript			== Makes JS out of Clojure
+  ECMAScript3			== Standard for browsers + JS
+  ClojureCLR
+Cloud
+ AWS
+ Azure
+  AAD
+  Blobs
+  CLI
+  Database
+   CosmosDatabaseFamily
+  IAM
+  RBAC
+  SecurityGroups
+  ServiceBus
+  VirtualMachines
+ GCP
+  Firebase			== Might be an alternative to GCP. Both are done by Google. Firebase is more expensive.
+   FirebaseDatabase
+CompaniesOfIntrest
+ Aiven				== Some company working with DB design in cloud possibly. Competitors: Confluent, DataDog, Snowflake. Cross cloud provider database enabler. They got to it before me!
+Databases
+ MongoDB
+ PostgreSQL
+ SQL
+DevOps				== Software development && IT-Operations. Spinoff from Agile. Model created by SW-Engineers, with SW-Engineers in mind.
+ VersionControl
+  GIT
+  TFVC				== TeamFoundationVersionControl. Most likely MS.
+DeliveryModels
+ BaaS				== Backend as a Service
+ DaaS				== Desktop As A Service. Cloud provider has a virtual machine that runs and you can access it.
+ DomainDrivenDesign		== Not sure if means anything, but OOP
+ IaaS				== Infrastructure As A Service. Provider offers: storage, network, servers and virtualization.
+ IaC				== Infra As Code.
+ PaaS				== Platform As A Service. IaaS+SaaS.
+ SaaS				== Software As A Service. Only 1 version of the SW. No custom preferences to customers. Provider sees everything
+  CI / CD			== Continous Integration / Continuous Delivery.
+    Continous Integration	== Merge small things to Main-branch. Test locally. Conflict handling may be a workload without the correct tools.
+      Make tools		== Some settings that exist to build the whole project from one source repository.
+    Continuous Delivery		== Deploy SW to the full product using the same deployment process (K8). Needs some human interaction. Not marketed so well.
+    Continuous deployment	== Totally automating the deployment of new features
+  CI / CD pipeline		== Same as CI / CD practice (protocol). In DevOps, this is used.
+Docker
+ Containers
+Facebook - Meta
+ ReactNative			== Create apps for android and apple
+Firewalls
+ Linux
+  Abstract			== Netfilter (kernel) => iptables (API / controller for Netfilter) => FireHOL (API for iptables)
+  ApplicationFirewall		== LinuxApplicationFirewall (LAF). https://linux-application-firewall.org/
+   Douane			== Uses kernel abilities.
+   OpenSnitch			== Idea is to block or allow based on the application that is making a request. Runs on userland.
+  KernelFirewall
+   Netfilter
+  RegularFirewall
+   Firestarter			== Linux firewall with a GUI
+   FireHOL			== No GUI. I guess this is just an API for iptables. Syntax is bash.
+ WebApplicationFirewalls	== WAF.
+  Coraza			== Enterprise use.
+  Lua-Resty-WAF			== OpenRestyStack
+  ModSecurity			== Apache, IIS, Nginx
+  NAXSI				== Nginx, Anti XSS & SQL injection.
+HAProxy				== Loadbalancer + ReverseProxy for linux. Works on L4 (TCP) and L7 (HTTP)
+Headhunter
+Integration			== Multiple meanings
+ OwnershipChange		== This is basically it.
+  BuyCompetingCompany
+  BuyFutureProspectCompany
+ CI or ContinousIntegration	== VersionControl.
+ IT-Integration			== Same as SystemIntegration. Redhat website says its mindless yargon. Correction: you can sell your shit when you want change
+ SystemIntegration		== Same as IT-Integration. Synonym to network protocol layers.
+  Hub-and-Spoke-Model		== Hub is a hub. Spoke is a client.
+  ESB				== EnterpriseServiceBus. Route everything through one point
+ITIL				== InformationalTechnologyInfrastructureLibrary. List of common practises.
+ ITAM				== IT Asset Management. For example HW lifecycle planning.
+ ITSM				== IT Service Management. Wiki says that there is an infinite loop of pass the customer between ITSM and ITIL
+Jenkins				== Tool built in Java that takes care of CI / CD pipelines somehow.
+Kubernetes
+Leading Models
+ People
+ Production
+  JustInTime			== JIT.
+   Kanban			== Provide quality to next process stage. Ask only what you need. Provide only what is asked. Stabilize production. Use for finetuning.
+  TPS				== Toyota Production System. Avoid overproduction for products with a finite lifecycle. Use data to estimate your production needs.
+   Lean				== Developed from TPS.
+Monitoring
+ Prometheus			== Network monitoring tool. Used in collaboration with Grafana.
+Networking
+ Firewall
+ LoadBalancer			== Works inside LAN. Masks backend servers. Webserver is the "entrypoint" that is visible. Loadbalancer multithreads to multiple servers.
+ Proxies			== Internet => ReverseProxy => WebServer || VMinCloud req(getMeData) => ForwardProxy (getMeData) => Internet (has the data)
+  Forward-Proxy
+  Reverse-Proxy			== Caches content. Does magic with LB:s to make things smooth. Can handle TLS things. Can mask backend server IP for example.
+ Router
+ Switch
+  Multi-Layer
+Puppet				== Some additional tool that creates a new language that then is converted to another language that then is put as an argument to deployment script. Waste of time it seems.
+Protocols
+ Connectivity
+  DHCP				== L7
+  DNS				== L7
+  ExpressRoute
+  HTTP				== L7
+  HTTPS				== L7
+  IPSec
+  Samba
+  SSH				== Runs on ApplicationLayer (L7)
+ FileTransfer
+  FTP
+  FTPoverSSH
+  FTPS
+  SFTP				== SSH FileTransferProtocol
+ Networking
+  ICMP				== Pinging. L3
+  TCP				== Packets. TransportLayer (L4)
+  UDP				== Streaming. TransportLayer (L4)
+ Security
+  SSL				== L7
+  TLS				== L7
+REST				== REpresentationalStateTransfer. Some abstract thing that holds things inside it. Separates Client and the Server. All data needed to respond is kept inside the request. Not storing return addresses.
+ REST API			== API call that takes as arguments all required info to make a request. No previously sent data can be used.
+ RESTfulRouting			== Get, Post, Patch, Delete from HTTP + all of CRUD.
+RobotFramework			== Looks like running some scripts.
+RPA				== RoboticProcessAutomation. Robots making.
+RTOS				== RealTimeOperatingSystem. Mostly FIFO or at least close to it. Think functional programming. No multitasking.
+  Types
+    Hard RTOS			== Less Jitter than Soft RTOS. Always performs.
+    Soft RTOS			== More Jitter than Hard RTOS. Performs most of the time.
+    Event-Driven		== Switches tasks only for higher priority
+    Time-Sharing		== Switches tasks on a time base. Also called "Round Robin". Better at multitasking. Can give false assumptions that a user or a process is the sole user of the OS.
+    Embedded System		== (3.1.0) Used to control some physical happening.
+      EmbeddedOperatingSystem	== The thing that makes one node of an embedded system.
+  Jitter			== Variance of a task being executed on a RTOS system. Jitter is kept as a minimum.
+  FlybackTime			== Also called "Critical Response Time". How long it takes to fetch a new highest priority task and set it's status to running.
+  				== Good system should only need to run 5 - 20 instructions at max to ready a queue-entry for execution. For Highest-Priority task, this number should be 5 - 30.
+  				== These numbers don't apply for bigger, modern, complex systems. Linked list way should be un-useable on these.
+  Algorithms for scheduling	== When going get's too much, use better task scheduling...
+    Cooperative scheduling	== All agree to spend only some resources and then let the other one go
+    Preemptive scheduling	== Superadmin scheduler enables task switching (context switching)
+      Rate-monotonic scheduling	== TLDR, for more info, read: (6.5.2.A)
+      Round-robin scheduling	== Has no priorities for scheduler, all are equal. See: (6.5.2.B)
+      Fixed-priority pre-emptive scheduling	== Always high priority first.
+    Earliest deadline first scheduling		== This seems semi-easy all-arounder. Possibly not the best for everywhere. I can see lots of bugs if not monitored.
+    Stochastic digraphs		== Using some randomness distribution to find good ways. For RTOS, I would skip this one. Stochastic == Random.
+Scrum				== There is a gameplan. Scrummaster takes care of potential distractions. Transparency is the goal. https://fi.wikipedia.org/wiki/Scrum
+SOAP				== SimpleObjectAccessProtocol. Possibly an alternative to REST. Abstract thing.
+Staging Environment		== Pre-production environment
+JavaScript			== Language that runs just-in-time compiled
+ Angular			== JS Framework millä tehdään yhden sivun web applikaatioita. Voidaan rakentaa vaikka CLI: https://angular.io/guide/cli-builder. AngularJS is the old version and Angular is the new. Coupled with TS
+ Cypress			== Testing framework
+ Jest				== Testing framework
+ jQuery				== Makes CSS tag calling from DOM elements different in syntax. Seems smart at first glance, but since everything can be done without it, most likely will be passing away
+ React				== Frontend bundle things in sort of reusable classes
+ Redux				== Framework that is usually used in React. I believe this is just a structuring component.
+ RxJS				== Some sort of addon. Has something to do with promises vs async
+ TypeScript			== JS with datatypes features
+ Vue				== Singlepage Applications
+WatchdogTimer			== Gives reset if something seems laggy
+Webservers
+ Apache
+ NodeJS
+
+
+Languages
+ C
+  Objective-C			== Spinoff from C. Multiuse. OOP. Mainly for Apple
+ Go
+ Java
+  Scala
+ JavaScript
+  React
+  TypeScript
+ Lisp
+  Clojure
+
+_________________________
+-- Good things to note --
+-------------------------
+-- (0.1) --
+-Every bug-fix commit should come with a test case.
+-Test in a clone of the production environment.		==> Assuming the production environment works
+-Make it easy to get the latest deliverables		==> Why not make test environments generally available for the end-client to test on.
+
+-- (2.0.1) --
+-Here you can find some sorting hints and a list of OperatingSystems
+
+-- (2.1.0) --
+-RTOS have puzzles with memory. Memory needs to be freed after use. Reusing the same memoryblock over and over again, causes corruption. There are some known fixes, but it's not that easy.
+-Good practise is to allocate all memory needed at compile time. Things should be able to run forever.
+-Linked lists are a "no-no" in RTOS because possible slowness.
+-Using fixed size block memory allocation in these systems, disables the bad memory spacing problem.
+
+-- (2.1.1) --
+-Unikernel type of an OS is one that uses a fixed size "library" as definition of itself. Can be imagenized easilly and moved around. If I understand correctly, scaling happens with external addons.
+
+-- (2.1.2) --
+-Single address space operating system == SASOS.
+
+-- (2.1.3) --
+-Cooperative multitasking. Running processes are never forced to quit by the OS. If one wants to multitask, they need to have all processes on an agreement that they will take their time and after a period some other gets to use the resources. Other way is that if there is a logical blockage happening, control of resources is passed.
+-There is a process scheduler, but it's job is only to start processes and let control be passed back and forth voulentarily.
+-Sounds like a beautiful system.
+-"Cooperative multitasking is used with await in languages, such as JavaScript or Python, that feature a single-threaded event-loop in their runtime."
+-"This contrasts with operating system cooperative multitasking as await is scoped only to the function or block, meaning other tasks may run concurrently in other parts of the code while a single function is waiting."
+-"In most modern languages, async and await are implemented as coroutines."
+--> Assuming we can have code running outside the current stackpointer place. In multithredding the things are divided to different areas and thus this should be possible.
+
+-"As a cooperatively multitasked system relies on each process regularly giving up time to other processes on the system, one poorly designed program can consume all of the CPU time for itself, either by performing extensive calculations or by busy waiting; both would cause the whole system to hang. In a server environment, this is a hazard that makes the entire environment unacceptably fragile."
+--> Implementation needs to be good for this to work.
+--> If there is no need for speed, but instead good, the efficiency will rise using this.
+
+-- (2.2.1) --
+-"In monolithic kernels, device drivers reside in the kernel. Thus, when a new peripheral is installed, unknown, untrusted code is inserted in the kernel. One bad line of code in a driver can bring down the system."
+--> Linux uses a monolithic kernel. Fix for the bug is: "Limit drivers' memory access"
+
+-"Survive bad pointers", "Dereferencing a bad pointer within a driver will crash the driver process, but will have no effect on the system as a whole. The reincarnation server will restart the crashed driver automatically."
+-"In monolithic kernels, dereferencing a bad pointer in a driver normally leads to a system crash". Hmm... on wich end?
+--> I am a computer. Am I monolithic?
+
+-"Tame infinite loops":
+"If a driver gets into an infinite loop, the scheduler will gradually lower its priority until it becomes idle. Eventually the reincarnation server will see that it is not responding to status requests, so it will kill and restart the looping driver. In a monolithic kernel, a looping driver could hang the system."
+--> Not going to hang, so I'm not monolithic. Waiting for loops to appear then...
+
+-"In monolithic kernels, a buggy driver can access I/O ports belonging to another device."
+
+-- (6.5.1) --
+-Context switching. Switch between processes assuming that the running process is not done yet. For this to happen, state needs to be saved.
+-These bouncys are computationally heavy. Good area of research if one gets more interested in IOT things and virtualizations.
+
+-- (6.5.2) --
+-PreemptionScheduler is like a superadmin with most privilages. Can cause one sidedlly context switching.
+
+-- (6.6.6) --
+-Yielding in CS means that the scheduler sends a process to the end of the queue of that priority
+
+
+

@@ -1,0 +1,15 @@
+
+############################
+## Making a script global ##
+############################
+
+1. See what your echo $PATH output is. For me it included /usr/local/sbin/
+2. Make your script that you make global by putting it in that folder.
+
+-In the current folder there is some input that can be used as a demonstration. It includes the output of export -p
+-The program that was added as global is named myEnv. It takes as input an argument and displays lines from that argument that have project or default in it.
+-Illustrator works as following: myEnv myFile
+-You need to add executeable rights to the script with chmod +x or by adding 1 to privilages of those who you want to make the script available for.
+-You may need to use sudo to be able to copy the script to the /usr/local/sbin dir.
+
+

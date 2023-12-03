@@ -1,0 +1,58 @@
+
+Wordstream.com									== Seems to be a resourceful site about SEO at least
+https://www.wordstream.com/meta-keyword						== R) Not that important since other mechanisms are in use. No matter, making things right.
+https://www.wordstream.com/long-tail-keywords					== Some points on making longer keywords count
+https://www.wordstream.com/blog/ws/2015/04/30/seo-basics			== R) Many things. I don't fancy all, but there might be something to this. Good read. Not so much. Very time consuming.
+https://www.wordstream.com/blog/ws/2016/05/10/google-ctr			==
+https://www.wordstream.com/blog/ws/2018/06/13/off-page-seo			== When someone elses things affect yours
+https://www.wordstream.com/blog/ws/2019/12/03/seo-copywriting			== Someone is creating this nonsense as a job. You can actually get paid for this BS? Who will pay?
+https://www.wordstream.com/blog/ws/2021/07/27/seo-metrics			== Metrics that define success
+https://www.wordstream.com/blog/ws/2014/05/15/google-analytics-tips		== Quite old info, but it seems these are quidelines not so much relating to SEO or some metrics.
+
+
+
+Google.com OR Helpful tools							== Since optimizing is done for google, it's a good idea to read what they have to say about the topic.
+https://www.google.com/search/howsearchworks/					== Looks like an annoying advertisement.
+https://developers.google.com/search/docs/appearance/structured-data		== Some tool to test your leaks
+https://pagespeed.web.dev/							== Some tool to test the speed of your site or something
+https://search.google.com/test/mobile-friendly					== Tool to measure mobile friendlyness.
+https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls
+https://developers.google.com/search/docs/crawling-indexing/robots/intro	== Robots.txt allows you to deny some crawling
+https://developers.google.com/search/docs/crawling-indexing/block-indexing	== Also does meta attribute noindex
+
+https://www.xml-sitemaps.com/							== Creating sitemaps
+https://developers.google.com/search/blog/2014/10/best-practices-for-xml-sitemaps-rssatom
+https://code.google.com/archive/p/sitemap-generators/wikis/SitemapGenerators.wiki
+
+
+Security:
+https://www.wordstream.com/blog/ws/2023/02/09/what-is-an-ssl-certificate	== Looks to be legit info about SSL/TLS
+https://www.hubspot.com/products/cms/ssl					== If you use hubspot, you get a Cert for your site for free. Letsencrypt.org gives one for free anyways.
+
+
+Unsorted
+https://www.quicksprout.com/does-url-structure-even-matter-a-data-driven-answer/
+https://moz.com/learn/seo/url
+https://moz.com/blog/how-to-defeat-duplicate-content-next-level
+https://www.singlegrain.com/seo/website-redesign/				== Good idea to take a look at
+https://www.greengeeks.com/blog/html-tags-for-seo/
+https://www.semrush.com/blog/meta-keywords/
+https://neilpatel.com/blog/html-tags-for-seo/
+https://www.redefineyourmarketing.com/blog/do-you-need-to-know-html-for-seo
+https://stackoverflow.com/questions/3812143/how-many-keywords-are-ideal-for-the-meta-keywords-tag
+https://www.searchenginejournal.com/meta-tags-what-you-need-to-know-for-seo/468015/
+https://www.searchenginejournal.com/web-design-mistakes-hurt-seo/382959/
+https://schema.org/docs/gs.html							== Another grouping tool / mechanism to help
+https://searchengineland.com/library/google/google-seo
+https://www.wordstream.com/blog/ws/2022/03/31/website-graders			== Rate my website services list
+
+
+
+PageRankRelated:
+https://www.portent.com/blog/seo/pagerank-without-math.htm			== About PageRank
+https://moz.com/blog/how-pagerank-works-why-the-original-pr-formula-may-be-flawed
+
+
+
+Hmm... I feel like I'm being played..
+

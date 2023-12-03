@@ -1,0 +1,23 @@
+
+https://www.kali.org/docs/virtualization/install-virtualbox-host/
+
+
+-- Adding a couple of repository keys to trusted list --
+curl -fsSL https://www.virtualbox.org/download/oracle_vbox_2016.asc|sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/oracle_vbox_2016.gpg
+curl -fsSL https://www.virtualbox.org/download/oracle_vbox.asc|sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/oracle_vbox.gpg
+
+-- Specifying some debian version that is stable to some definitions --
+echo "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian bullseye contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
+sudo apt update
+
+-- Adding autoupdate feature for virtualbox for compatibility with linux kernel --
+sudo apt install -y dkms
+
+-- Install VirtualBox with extension pack that is a good thing to have --
+sudo apt install -y virtualbox virtualbox-ext-pack
+
+-- Stat with the command --
+virtualbox
+
+
+

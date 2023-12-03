@@ -1,0 +1,55 @@
+
+++++++++++++++++++++++++++++++++
++ Some paths in the filesystem +
+++++++++++++++++++++++++++++++++
+
+/boot/                  --> Contains files neccessary to boot your system
+
+/etc/                   --> Gerally a place where you can find some configurations for stuff. System wide configs. Home dir contains personal configs
+/etc/apt/               --> Things that relate to apt packet manager tool. Includes your source repos of where you get the updates
+/etc/dbus-1/		--> DBUS enables applications to communicate with one-another. Here are settings for dbus
+/etc/group (group-)     --> List of users in groups. Also see gshadow
+/etc/login.defs         --> Good file to configure. All sorts of useful info and settings
+/etc/motd               --> Quote of the day
+/etc/NetworkManager/NetworkManager.conf		--> Configure network manager things. Google for more
+/etc/os-release         --> Has some OperatingSystemInformation
+/etc/passwd             --> Info about users. Last one corresponds to login shell
+/etc/protocols          --> IP protocols default info from some authority
+/etc/resolv.conf        --> Where to get DNS info. This behaviour can be altered by some other program
+/etc/services           --> List of internet service protocols and default ports as well as some description
+/etc/shadow             --> Secure userAccount information. See man shadow. Passwords here in a cryptic form
+/etc/shells             --> What shells you have in your system
+/etc/ssh/sshd_config    --> Place for your ssh (server) configurations
+/etc/sudo.conf          --> Configuration file for sudo
+/etc/sudoers            --> More configuration regarding sudo. If you want to add something, add to sudoers.d dir instead
+/etc/sysctl.conf        --> Here we can set some system variables
+/etc/sysstat/           --> Configure for how long to keep system-level logs
+/etc/systemd/           --> Shows settings at the time of first install possibly !!!
+
+/media/myUsername/      --> Contains mountable media like an USB-stick
+
+/mnt/                   --> Is supposed to be a place where one can mount external discs
+
+/proc/                  --> Info about hardware and deep layer system information. See cpuinfo for example to see stuff. See also meminfo !!!
+/proc/schedstat         --> Some processor scheduling info maybe. Multithreadding stuff
+/proc/bus/input/        --> Keyboard stuff
+/proc/sys/dev/mac_hid   --> Has some mouse configuration/information
+
+/root/                  --> Home dir for root user
+
+/tmp/                   --> When something fails, things are saved here for future processing
+
+/usr/share/doc/		--> Sort of contains a list of installed programs. These are documentations.
+/usr/share/man/		--> Is another source for documentary
+
+/var/backups/dpkg.status.0      --> Holds the current? installation status !!!
+/var/cache/             --> Possibly holds the current version info of updates. When apt update is done, these are things that get updated.. maybe !!!
+/var/log/apt/           --> Information about updates run through apt
+/var/log/auth.log       --> Login attempts. grep -i failed to see if any unsuccessfull.
+/var/log/installer      --> Again some more logs regarding to system
+/var/log/lastlog        --> Login info. Most likely for serverstuff only
+/var/log/wtmp or btmp   --> Where the command last gets it's info.
+/var/run/utmp           --> Current login sessions
+
+
+

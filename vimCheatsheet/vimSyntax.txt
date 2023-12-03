@@ -1,0 +1,66 @@
+
+https://linuxize.com/post/how-to-copy-cut-paste-in-vim/
+https://vim.rtorr.com/
+$> vimtutor
+
+copy==y
+--> yy==whole line
+--> 3yy==3 lines
+--> yw==to the start of next word
+--> yiw==CopyCurrentWord
+paste==p
+delete==d
+delete char under cursor==x
+
+_____________
+Command-Mode:
+/		--> Search. Use in combo with n or N and maybe set: ic
+?		--> Search in reverse
+%		--> Go to the corresponding paratheses (in coding) () {} []
+Ctrl+]		--> When you see |something| you can place selector on top of something to get info on the matter
+Ctrl+o		--> Go to the place you started your search
+Ctrl+i		--> Go back in searches-locations
+Ctrl+r		--> Redo
+Ctrl+G		--> Your place inside the doc and some file status
+Ctrl+ws		--> Split window
+Ctrl+ww		--> Switch window
+Ctrl+wq		--> Quit window
+Ctrl+wj		--> Cursor to top window
+Ctrl+wk		--> Cursor to bottom window
+G		--> End of file
+gg		--> Start of file
+i		--> Insert
+K		--> Open man page for the thing under cursor
+n		--> Search with the last keyword
+N		--> Same as n, but reversed search
+R		--> Goes in replaceMode
+r<x>		--> Replace thing under selector with the thing that is inside <>, so x
+o		--> Make fresh newline and go to insert-mode
+u		--> Undo last
+U		--> Remake one whole line
+v		--> Visual mode to select a portion of text. Then use y to yank and p to paste the selection
+
+________
+Terminal:
+vimtutor	--> Starts a tutoring program to learn vim
+
+________
+Options:
+:help ruler	--> Find out about some mouseTrackingProperty
+:h keyword	--> Help on the subject keyword
+:clo		--> Close current pane
+:!ls		--> Do ls from inside vim
+:r		--> Reads a file and places content under the selector
+:r !ls		--> Makes ls and puts the content under selector
+:s/old/new	--> Subtitution. Without additions, only subs the first occurance
+:s/old/new/g	--> All occurances in the current line
+		--> See vimtutor 4.4 substitute for more
+:set mouse=a	--> Enable mouse
+:set ic		--> Ignore case. Toggles the option. :set noic puts the option off. Use the word no in front of other settings also to put them off
+:set is		--> Show also partial matches
+:set hls	--> Highlight search
+:ter		--> Open a terminal window
+:w myFileName	--> Saves using myFileName filename
+
+
+

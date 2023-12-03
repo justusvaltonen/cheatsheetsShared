@@ -1,0 +1,25 @@
+
+======================================================================
+
+What attributes elements can have. Only a few listed:
+alt			== If the primary function of an element fails for some reason, this is what happens then.
+as			== as="font"
+blocking		== In <link> you can stop rendering for example till the time that a font has been loaded.
+charset			== When in meta, defines what should be used.
+crossorigin		== crossorigin="anonymous"
+description		== Used in meta. Google hits preview this text
+display			== Choose: block or inline
+download		== Attempts to download something
+href			== Links to some URL
+http-equiv		== When in meta, some info is given that impersonates a HTTP-header
+itemprop		== When in meta, the data is user-defined. All sorts of extra fancy features available
+method			== Refers to http methods.
+name			== When in meta, document-level metadata that is applied to the whole page is applied. Under this is for example 'viewport' that is very essential in modern days.
+rel			== Important: rel=preload
+search			== Used in <input type="search"> to find stuff
+sizes			== sizes="114x114"
+src			== External script
+type			== type="image/png" - Refers to MIME type
+viewport		== Used in meta. What portion of the window the page can be seen
+
+

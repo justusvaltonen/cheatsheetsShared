@@ -1,0 +1,15 @@
+
+
+======================================================================================================================================
+https://developer.mozilla.org/en-US/docs/Web/CSS/Alternative_style_sheets
+
+"The user can choose which style sheet to use by choosing it from the View > Page Style menu. This provides a way for users to see multiple versions of a page."
+<link href="default.css" rel="stylesheet" title="Default Style" />
+<link href="fancy.css" rel="alternate stylesheet" title="Fancy" />
+<link href="basic.css" rel="alternate stylesheet" title="Basic" />
+
+======================================================================================================================================
+
+
+
+

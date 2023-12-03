@@ -1,0 +1,19 @@
+
+##All sorts of useful info here
+
++++Tested+++
+((i++))				--> Enables incrementing
+source $fullPath		--> Enables sourcing from other files. Using . usually works as a replacement for source
+echo -e "\nSomething";		--> -e Enables use of \n and possibly other non-printables aswell
+
+
++++NotTested+++
+./someCommand.sh &		--> Makes the command run in the background. At least the output is different
+-eq				--> Checks for datatype
+==				--> Checks for value
+read				--> Enables reading from user input. Enables interactive programs
+
+
+
+
+

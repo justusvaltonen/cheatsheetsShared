@@ -1,0 +1,25 @@
+
+#################################
+## Checklist for win7 to win10 ##
+#################################
+
+https://pureinfotech.com/upgrade-to-windows-10-from-windows-7/		(1)
+https://www.wikihow.com/Find-Your-Windows-7-Product-Key			(2.1)
+https://www.youtube.com/watch?v=BC_G3hcU8bA				(3)	--> Good video if works
+
+
+(1)
+-Disable antivirus (scepticle about this one)
+-Disconnect printer and other devices
+-Check that SP1 installed for win7
+-Implied that mediacreationtool would be the answer
+-
+
+(2.1)
+-Product-key is 25-digit
+-Get the old key by doing the following on cmd:
+wmic path softwarelicensingservice get OA3xOriginalProductKey
+
+-You can also get the key from a sticker on your computer or by using ProductKey || ShowKeyPlus SW.
+-If no help, read (2.1) further to extract it from the registry
+

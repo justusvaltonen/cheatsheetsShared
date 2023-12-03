@@ -1,0 +1,41 @@
+
+Created:	28.8.2023
+################################################################################################
+
+
+Branch			==
+  Main				== Typical name used for a branch. Doesn't mean anything by itself.
+  Master			== Same as Main. Typical branch name.
+
+Checkout		== Return to state of last commit
+Clone			== Make a clone of some folder that is in some server. Folder is called repository.
+Commit			== Confirm that you want to make changes to the external folder. This needs to be done before push.
+Fetch			== Get stuff and include references to other repositories
+HEAD			== The current status pointer or masterbranch status pointer. Goes hand-by-hand with index.
+Index			== When added files with add command, things go to "index" AKA. "staging area"
+Init			== Create some hidden files to current path that enable usage of git. Specifies current path as the root of your workspace
+Gitconfig		== File with your configs. Should be in /etc/gitconfig or ~/.gitconfig. One should also see the .git dir that gets created on git init.
+Gitignore		== Blacklist some files that you don't want to send.
+Git-Shell		== Restricted access shell for gitting.
+License			== Some legals on how your code can be used by others
+Object			== Can be many things in git context
+  Blob			==
+  Commit		==
+  Tag			==
+  Tree			==
+
+Patch			== See git apply
+Pull			== Get the latest version of your current working branch
+Push			== Apply your changes in code and send them to some other place than your local computer.
+Remote			== Some repository that is hosted somewhere else than your local computer. Define with URL. You can only push to remote.
+
+Repository		== Some server that holds your code. Also remote means the same thing.
+  Origin			== Typical name for a Repository in the manuals.
+
+Staging			== Pre save. Including to be committed. Same as index.
+Status			==
+Tag			== Stored in /refs/tags/<my-tag-name> - Are used to mark a specific point in history.
+Token			== Used to access to the repositories
+Working tree		== The whole project
+
+

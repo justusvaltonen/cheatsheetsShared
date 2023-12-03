@@ -1,0 +1,22 @@
+
+https://devconnected.com/how-to-list-services-on-linux/
+--> The whole site is golden
+
+https://www.linode.com/docs/guides/start-service-at-boot/
+--> Stuff about systemd with examples
+
+https://www.networkworld.com/article/3694157/understanding-linux-file-system-types.html
+--> New stuff. Haven't read. Decent site alltogether
+
+https://www.geeksforgeeks.org/how-to-use-glances-to-monitor-remote-linux-in-web-server-mode/
+--> Some OpenSource monitoring tool installation and basic usage
+
+https://thehackernews.com/
+--> Some source of info
+
+https://resources.infosecinstitute.com/topics/general-security/
+--> Looks like a legit source
+
+
+
+

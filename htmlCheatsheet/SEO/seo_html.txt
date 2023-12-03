@@ -1,0 +1,88 @@
+
+=========================================================================================
+https://www.wordstream.com/meta-keyword
+
+1) SEO looks for  "Title Tags" and "Meta Descriptions"  nowdays
+2) Words need to reflect the content of your page
+	--> This is the question I'm looking answers for. How is it calculated?
+3) Don't use more than 10 keywords
+4) Not sure if one should include or leave out common miss-spellings of keywords.
+5) Using some longer strings may actually come in handy if you get it right
+6) Use of plurals may be useful
+7) If you can find out what are the search words that lead people to your site, it would be cool. Analytics and logging of these searches may be tricky
+8) Do you have the knowledge what your competition uses to get customers in? Do you sound the same or do you have nyances on your descriptions?
+
+=========================================================================================
+
+-Use Title Tags.
+-Fine-Tune Meta Description Tags.
+-Don't Underestimate Header Tags.
+-Add Alt Tags in Images.
+-Building Links.
+-Add Open Graph Tags.
+-Twitter Card Tags.
+-The Robots Tag.
+
+=========================================================================================
+https://www.wordstream.com/blog/ws/2015/04/30/seo-basics
+
+1) Keep your site healthy and links alive
+2) Keep your domain in good reputation
+3) You can place your keywords in your title tag. - I don't know. Sounds spammy
+4) Title tag should be 55 - 60 chars
+5) Use meta descriptions wisely. They will show up on google searches.
+6) Use alt attribute on your loading things
+7) Use sensible URL-Structure
+8) If you use a navbar, the links in there should be important
+9) Not for search engine, but for decency, keep your unneccessary crap outside of the page
+10) Make your site friendly for mobile devices
+11) Keep your response headers up-to-date with correct codes
+12) Don't redirect for no reason.
+13) Identify and get rid of duplicate content. There are webcrawler tools for this
+14) Creating sitemaps helps in many aspects
+15) You need TLS for your site for security
+
+Searchengine logic:
+-If you get referenced by CNN, it makes you important
+-If you reference CNN aggressively, it tells that CNN is important to you
+-If some page is referenced from anywhere a lot, the page is going to raise your ranking for the whole site.
+
+General notes:
+-Are you applying for international, local or app store search engines?
+
+=========================================================================================
+https://www.wordstream.com/blog/ws/2021/07/27/seo-metrics
+
+Important metrics are:
+1) Organic traffic		== Traffic that is redirected from search results
+2) Click-through rate (CTR)	== Ratio of how often your link is clicked when seen.
+  "If your CTR is low, it may mean your title or meta description is not engaging, or the content isn’t relevant to what the user is looking for"
+  -Get the metrics using Google Search Console: Performance
+3) Exit rate			== Ratio of page viewers see this page as the last page of your site before leaving
+4) Pages per session		== How many pages are visited on arrival to your site
+5) Average page load time	== This one is important especially outside of finland.
+6) Core Web Vitals		== Some google service. Google more
+7) Backlinks and referring domains	== If someone with good reputation is linking your page, it's valuable
+8) Top keywords ranked		== Volume that is attracted based on your keywords
+9) Pages crawled per day	== If crawling is made fast, rankings go up
+
+Debateable metrics:
+1) Conversions			== While this doesn't always tell the whole story, when doing sales, generating sales is important IMO.
+2) Bounce rate			== When a person lands on your page, they leave without clicking any links. What if they found what they were looking for, and left.
+
+-While this seems useless for webdevelopment perspective, this may give some insight to applying for jobs.
+
+=========================================================================================
+Terminology:
+CTR			== Click-Through Rate
+Exit rate		==
+Exit page		== Last page before leaving your site
+Meta noindex		==
+Meta nofollow		==
+PageRank		== Not used so much anymore, since exploiting. 
+Redirect 301 or 302	==
+SERP			== Search Engine Result Pages.
+WebmasterTools		== Old name. Is now Google Search Engine
+
+
+

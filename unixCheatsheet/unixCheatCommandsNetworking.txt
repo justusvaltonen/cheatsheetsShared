@@ -1,0 +1,78 @@
+
++++++++++++++++++++++++++++++++++++++++++++
++ This will be structured in the future.. +
++++++++++++++++++++++++++++++++++++++++++++
+https://linuxconfig.org/configuring-virtual-network-interfaces-in-linux		--> How to create VNIC
+https://en.wikipedia.org/wiki/Transparent_Inter-process_Communication		--> Service-based management. Think firewalls with some other rulesets than regular
+https://www.baeldung.com/linux/network-interface-configure			--> Config interfaces
+https://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking	--> RedHat version of Great explanation
+
+
+bridge				--> Tool for bridging. See man bridge
+ethtool				--> Configure all sorts of cool stuff. See ethtool
+ip add          		--> Other version of ifconfig
+ip link				--> Shows links
+ip link set name		--> When creating virtual NIC, you can rename with this
+ip maddr			--> Multicast address info
+ip neigh			--> Shows topologically neighbouring addresses
+ip route		        --> Some routing tables
+ip tunnel			--> Shows active tunnels
+iptables			--> Utility that has networking management stuff
+nc				--> NetCat
+nmap				--> To discover hosts on network
+rsync				--> Remote sync files. If one needs to use a DB for example
+ss -l				--> Shows linstening sockets. See man ss for more info
+
+sudo nmap -sP 192.168.1.0/24	--> Discover hosts on the network
+sudo arp-scan -l		--> Discover hosts on local network. Noisy
+
+curl -4 icanhazip.com		--> Whatsmyip output
+___________________________
+ufw	--> UbuntuFirewall:
+---------------------------
+The command needs root privilages. After first example, we assume all commands have sudo in front.
+sudo ufw status		--> Shows current rules
+
+Run in ~/.ssh
+sftp -v -i <privateKey> <user>@<hostOrIP>
+ssh -v -i <privateKey> <savedHostConfig>
+
+Run at host when logged as sftp:
+get <somefile>			--> Fetches to current location. Use ! to see local machine.
+
+
+
+___________________________
+Better Struckture Listing:
+___________________________
+
+atop				--> Better than top, different from htop
+curl -4 icanhazip.com		--> Outputs same as whats my ip google search
+dig				--> DNS lookup tool.
+firewalld			--> Said to be alternative to ufw
+htop				--> More h4x| interface to top
+iostat				--> CPU monitoring and I/O monitoring.
+ip				--> Shows landing page of ip family
+ipsec				--> Guessing something to do with VPN
+lsof				--> List files belonging to processes
+mtr				--> Said to combine traceroute and ping
+netstat				--> Networking things
+nft				--> NetworkFirewallTables. Tool like ufw or iptables
+nmap				--> Tool for network scanning
+nmon				--> Tool to inspect current system
+ping				--> Basic pinging tool
+route -n			--> Shows some routing info
+sar				--> System reporting tool
+scp				--> SecureCoPy. Don't know how secure. Guessing pretty secure. SSH stuff.
+sysctl net.ipv4.ip_forward	--> Shows your IP-Forwarding status
+tcpdump				--> Tool that Wireshark utilizes I believe. Get NIC traffic to a file.
+top				--> Process list. Crappy version of htop
+traceroute			--> Shows some routing info. Amount of hops to a point for example
+ufw				--> Ubuntu Firewall. Uncomplicated FireWall
+vmstat				--> Virtual Memory STATistics tool
+
+
+
+
+
+

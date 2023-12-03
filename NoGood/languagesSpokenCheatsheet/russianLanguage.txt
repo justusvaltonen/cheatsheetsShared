@@ -1,0 +1,63 @@
+
+_____
+Who?:
+Ani		Oni		== They
+Eti				== Those
+Eto		Eto		== It, [ zto eto znazit ] == What does it mean?
+Menya				== Me
+Mui		Mbl		== We
+Nashu		Nawy		== Our
+Vsyo				== All
+Vui		Vbl		== You
+Ya				== I
+
+________
+Endings:
+Domoi				== To home
+Koshku		Kowky		== One cat
+* + a				== Feminine, (ona)
+
+***MultipleOfSomething
+Taryelki			== Plates
+
++++Time
+++PastTime
+Bili		BblLi		== Was
+Rabotla		Rabotala	== Worked (some sort of past action)
+Vidyeli				== Saw
+Yela		elo		== Was eating
+++CurrentTime
+Gotovitb			== To cook, [ Mama lyubit gotovitb poka ya na rabote ]
+Idy				== Going, [R idy domoi]
+Idyote				== Going, [Are you going home]
+Rabotayu			== Working
+Zitayet				== Reading
+
+________
+Animals:
+Olenya				== Deer
+Vyelki				== Squirrels / Proteins
+
+______
+Words:
+Dengi				== Money
+Morkov				== Carrots
+Nikogda				== Never
+Ot				== From
+Otlizno				== Excellent
+Poka				== While
+Redko				== Rarely
+Stranye				== Country
+Shivotnoe			== Animal
+Vsigda				== Always
+________
+Details:
+Oni gotovili rblby		== They were cooking fish
+Mbl gotovili cyp dlye Mambl	== We were cooking soup for mom
+Yabloko yelo sobaku		== Apple was eating a dog
+Shivotnoe elo yeizo		== The animal was eating an egg
+_________
+Unsorted:
+Bbl idyotye domoi ili v shkolye
+	== Are you going home or to school?
+

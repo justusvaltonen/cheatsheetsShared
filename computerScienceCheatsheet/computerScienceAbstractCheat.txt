@@ -1,0 +1,141 @@
+
+#####################################################################
+## Putting up different terminology and references about CS topics ##
+#####################################################################
+https://en.wikipedia.org/wiki/Computer_science					--> Follow the trail. Was not my landingpage, but plenty of useful shit here
+
+https://en.wikipedia.org/wiki/Tree_traversal					--> (1) How a binary tree may work with an implementation. Recursion implementation included.
+https://en.wikipedia.org/wiki/Tree_(data_structure)				--> (1)
+https://en.wikipedia.org/wiki/Binary_search_tree				--> (1.1)
+https://en.wikipedia.org/wiki/Binary_expression_tree				--> (1.2)
+https://en.wikipedia.org/wiki/Graph_theory					--> (2)
+https://en.wikipedia.org/wiki/Lazy_evaluation					--> (7) Seems normal precedence, but not strictly apparently. New stuff in the JavaScript section
+https://en.wikipedia.org/wiki/Turing_completeness				--> (13.4) If some math can be done with a program, possibly using recursion method.
+https://en.wikipedia.org/wiki/Computable_function				--> (13.5) Same as Recursive possibly
+https://en.wikipedia.org/wiki/Database_index					--> (35.4)
+https://en.wikipedia.org/wiki/Big_O_notation					--> (51.1)
+https://en.wikipedia.org/wiki/Fuzzy_logic
+
+https://en.wikipedia.org/wiki/Lint_(software)
+
+#####################################################################
+-- Abstract or unsorted --
+
+Databases
+ Index (35.4)
+ -Improves speed of retrieving with the expense of storage (to maintain database structure). Adds more write operations by nature
+ -Using different ways to structure the data in the beginning, helps for performance, at least in some occations
+  Types
+   Bitmap index				--> Doing some bitmagic to filter up the correct index.
+   Dense index				--> Separate file that has pointers to database memoryaddresses
+   Primary index			--> Has all the pointers to all of the tables in a DB. Think of as a main function that holds all maps to all functions and vars inside
+   Reverse index			--> ReverseStringed indexes. Easier to handle changes with things being upside down.
+   Secondary index			--> Possibly a variable that was once up to date. Got value from at the time when was run, from some indexed entry. Not sure at all about this one.
+   Sparse index				--> If things are organised as block, this guy points to beginning of a block. Think pointer to an array of pointers.
+ 
+Infinite trees
+ -Treating some sets as infinite and using propabilities to analyze.
+
+Linter
+ -When you write bad code there is an error. Linter is the one that catches the mistake and gives you the output
+
+Morris in-order traversal using threading (1)
+ -Doesn't use recursion
+ -Esoteric shit happening again. Not sure if we're talking about computers anymore
+ 
+Multithreadding
+ -Divide a task to many pieces and perform the task scattered
+
+TreeTraversal
+ Orders
+  Depth-first (DFS)
+   Implementation
+    Stack (LIFO || FILO)
+  Breadth-first (BFS)
+   Implementation
+    Queue (FIFO || LILO)
+
+#####################################################################
+-- Algorithms --
+
+Arbitrary trees
+Breadth-first search			--> Relates to tree structures
+Depth-first search			--> Relates to tree structures
+Lazy evaluation				--> In the family of evaluation strategies. May cause memleaks. May save memory usage on the other hand.
+Monte Carlo tree search			--> Initially I thought this was a joke. Since go-game states are too many, there may be a reason for this sort of stuff.
+(Polish notation)			--> Just a notation for math. Enables optimized math
+(Reverse Polish notation)		--> Just a notation for math. Enables optimized math
+
+#####################################################################
+-- Data structures --
+
+Linear
+ LinkedList
+ OneDimensionalArray
+
+Recursive
+ Tree
+  Used in
+  -File system directory structures
+  -Class hierarchy in OOP, at least sometimes
+  -NaturalLanguageProcessing
+  -DOM tree for HTML and XML
+  -Searching for data in some kind of structures
+  -Representating sorted data
+  -Computer created images
+  -Simulating galaxies
+  -Implementation of heaps
+  -Hierarchical temporary memory
+  -Visualization of some "exploded-view drawings"
+  -Notations for example JSON or YAML
+
+#####################################################################
+-- Functions --
+
+Types
+ Searching
+ Sorting
+
+Abstract
+ Recursion
+  -Uses memory at least in tree format. Can't say if it's possible to implement otherwise even.
+
+#####################################################################
+-- Notation methods --
+
+BigO (51.1)
+ -How an algorithm performs on each iteration. Using infinity as the amount of iterations is the standard
+ -Usually we note the worst case performance
+ -Run a recursive function (uses temporary memory) and after 5, 10, 20 checks, how much time has passed?
+ -There is also possible tradeoffs between time and space used. Depending of space type, there can elapse more or less time.
+ 
+JSON
+ -Typical notation way. Indent please for readability
+ 
+YAML
+ -Much like this document. Goes hand in hand with JSON as pretty OK ways of marking things down.
+
+#####################################################################
+## -- Play area + References + Examples -- ##
+#############################################
+_______
+--(7)--
+-------
+-I didn't want to crash my system, so I didn't properly test for now
+
+function* fibonacciNumbers() {					//Didn't know you can pointer in JS. You can and also get some info out aswell!
+    let memo = [1n, -1n]; // create the initial state (e.g. a vector of "negafibonacci" numbers) --> Assuming this may work. It does, but we need code execution after this or it doesn't...
+    while (true) { // repeat indefinitely
+        memo = [memo[0] + memo[1], memo[0]]; // update the state on each evaluation
+        yield memo[0]; // yield the next value and suspend execution until resumed
+    }
+}
+
+let stream = fibonacciNumbers(); // create a lazy evaluated stream of numbers
+let first10 = Array.from(new Array(10), () => stream.next().value); // evaluate only the first 10 numbers
+console.log(first10); // the output is [0n, 1n, 1n, 2n, 3n, 5n, 8n, 13n, 21n, 34n]
+
+
+
+
+

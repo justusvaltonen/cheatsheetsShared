@@ -1,0 +1,10 @@
+
+
+https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referer
+https://saturncloud.io/blog/what-does-meta-httpequivxuacompatible-contentieedge-do/
+
+
+-Good to remember that some features don't work unless some headers are configured properly
+
+

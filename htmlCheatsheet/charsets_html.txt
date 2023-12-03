@@ -1,0 +1,29 @@
+
+https://www.w3schools.com/charsets/ref_utf_latin1_supplement.asp
+
+======================================================================
+Charsets to use in <meta charset="">:
+ANSI			== Non-MS-Dos charsets.
+ASCII			== Fist I ever heard about. Thought everything was ASCII at one time.
+ISO-8859-1		== Extension to ASCII with international chars.
+UTF-8			== Common. First 128 chars are same as in ASCII. Preferred when using HTML5 or XML
+windows-1252		== Charset that was popular in 1985 - 1990. First 128 are the same as in ASCII
+
+======================================================================
+
+Char		Unicode			UTF-8			ISO-8859-15 Entity
+-----------------------------------------------------------------------------
+ä		U+00E4			c3 a4			&auml;
+Ä		U+00C4			c3 84			&Auml;
+ö		U+00F6			c3 b6			&ouml;
+Ö		U+00D6			c3 96			&Ouml;
+
+======================================================================
+
+When you have a word that starts with '&' and ends with ';' it means that some codec is being used. Here are some of these codes:
+
+&auml;			== The letter 'ä'
+&nbsp;			== Non-Breaking space.
+
+
+

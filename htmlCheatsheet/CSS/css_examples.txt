@@ -1,0 +1,112 @@
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference			== Navigate from here. Surely there is an easy solution to be found
+https://developer.mozilla.org/en-US/docs/Web/CSS/display
+https://developer.mozilla.org/en-US/docs/Web/CSS/border				== Combines 3 things to one line.
+https://developer.mozilla.org/en-US/docs/Web/CSS/border-block
+https://developer.mozilla.org/en-US/docs/Web/CSS/padding			== Is setting box lines space between a text or an image.
+https://developer.mozilla.org/en-US/docs/Web/CSS/margin
+https://developer.mozilla.org/en-US/docs/Web/CSS/flex				== Flex adjusts to the space available
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Center_an_element	== The answer!
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index
+
+======================================================================================================================================
+-- About magnitude in CSS:
+
+-We need to keep in mind that many of these are possibly relative to some settings or something.
+
+1rem		== A lot
+4mm		== Close to 1rem
+thick		== 1/3 or 1/4 of 1rem
+1em		== Guessing about 4 - 5 X thick. 1.25em; is totally valid.
+50px		== A bit less than 1rem
+2ex		==
+50%		== All relative
+======================================================================================================================================
+
+Apply for all paragraphs:
+p {
+    color: red;
+}
+
+
+Apply for all div subelements under paragraphs:
+p.div {
+...Something totally different
+}
+
+
+Apply for all elements that hold class="luokka"
+.luokka {
+    ominaisuus: arvo;
+}
+
+
+Apply for all elements that have id="henkkarit". 1rem is a lot. I think on border, solid; or alternative needs to be defined
+#henkkarit {
+    border: 1rem solid;
+}
+
+
+Apply for all elements that have an attribute pairing of:
+[name=author] {
+    ominaisuus: arvo;
+}
+
+
+Should center because margin: auto;	--> Most likely not doing good
+.keskitys {
+  margin: auto;
+  background: lime;
+  width: 66%;
+}
+
+
+
+
+
+======================================================================================================================================
+
+    <div class="container">
+        <div class="item">I am centered!</div>
+    </div>
+
+
+
+.container {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item {
+    align-items: center;
+}
+
+
+
+
+Looks OK to me. Not sure how this works but maybe it works
+https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Center_an_element
+======================================================================================================================================
+
+-- Ways discovered that enable centering:
+
+1) text-align: center;		--> Also seems to be aligning images
+2)
+
+
+
+-- Things that don't work:
+1) margin: auto;
+2) text-align: right;		--> Image is affected
+   width: 50%;			--> Surrounding box is affected
+3) display: block;		--> Nothing happens
+4) display: inline-block;	--> Things go to the left again
+
+
+
+
+

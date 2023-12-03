@@ -1,0 +1,50 @@
+
+####################################
+## What is a linux command prompt ##
+####################################
+www.networkworld.com/article/3688572/tailoring-your-linux-command-prompt.html
+
+
+___________
+GoodToKnow:
+-You have a symbol in your command-line that usually tells you what privilages you have atm or other stuff:
+$		--> Normal
+#		--> Root
+~		--> You are at $HOME (home directory of the user you are logged in as)
+/etc/apt	--> You are at absolutePath* /etc/apt/
+
+-You can have something like:
+[someUsername@computerName ~]$
+--> You are logged in as someUsername, you are logged in computerName, your current path is ~ that is your users home directory	-->
+-bash-5.1$
+--> Configuration shows name of shell* and the shells version instead. Bash is a general shell*
+
+-Command prompt you use is actually a variable by the name $PS1
+--> echo $PS1 to see some definitions. Warning! Hard to read at first
+
+Runnning the following could display the following...
+-bash-5.1$ echo $PS1		--> Outputs	-->
+\s-\v\$
+-->
+\s	== Shell
+\v	== Version
+
+-Syntax for this is hard, but logical. One needs to google more to understand properly
+-You can see your variables that are enabled in your current session by typing: set
+set | grep PS	--> Shows only variables and settings that have PS written in them. You most likely have multiple PS instances...*
+
+-Settings of bash are located in: ~/.bashrc	among other places. <Home dir>/.bashrc file. Hidden files are files that start with .
+-Look at your hidden files in current directory by typing: ls -la
+--> To see what that means: man ls
+
+____________
+References*:
+Absolute / Relative path
+Bash
+Echo
+grep
+set
+Shell
+|
+
+

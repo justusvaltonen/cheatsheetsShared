@@ -1,0 +1,27 @@
+
+###################################################################################################
+## Pilgrimige towards the imaginary goal of clean code and thou shall grow to be wiser every day ##
+###################################################################################################
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++ 14 Instructions to help you improve in your journy towards becoming a beautiful robot: ++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1) Avoid passing Null, Bool			// Can't think of a case where one would. Bad comments.
+ 2) Be Consistent
+ 3) Command Query Separation			// UI thing, FIFO or scripting related? 2 Categories: Alters state, doesn't alter state. || Permission +2 vs +0
+ 4) if (indentation && Code.Style) {
+      gainFameAndGlory();
+    }
+ 5) Keep framework code distant			// Application native code in one bucket and code that uses frameworks features in another. Easier to test, modify, read, migrate.
+  						// Create an API between AppCode and FrameworkCode. Avoid using Frameworks.
+ 6) Keep it simple and refactor often		// Totally opposite things. Simple leads to less need for refactoring. See a mistake and fix it. No, abstraction FPS problem.
+ 7) Keep methods(), Classes, __files small.
+ 8) Meaningful Names and #comments
+ 9) Minimize cyclomatic complexity		// Don't know what means, but sounds complex.
+ 10) Organize code by the actor it belongs to	// DDD.
+ 11) Pure functions: Not like in 2)		// Dependent on only arguments passed into it. Consistent return values. Doesn't modify state.
+ 12) Tests should be fast and independent	// Disagree on some cases. Think test driven design. Possibly automatically transforms to independency when using TDD even if not intuitive at first.
+ 13) Use correct constructs			// Construct == loop, conditionals, functions. Avoid: "recursion if can be done with for loop", "global vars". Prefer: "functional programming"
+ 14) Use meaningful names			// DDD. One approach to design SW for particular use. Makes easier for other people to understand.
+
+

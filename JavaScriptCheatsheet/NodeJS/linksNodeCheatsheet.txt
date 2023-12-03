@@ -1,0 +1,7 @@
+
+#############################################################
+## Fancy stuff about node that may require another reading ##
+#############################################################
+
+https://www.digitalocean.com/community/tutorials/how-to-create-a-web-server-in-node-js-with-the-http-module		--> No need for apache possibly
+https://nodejs.org/docs/latest-v20.x/api/										--> May be the wrong version, but check out HTTP section

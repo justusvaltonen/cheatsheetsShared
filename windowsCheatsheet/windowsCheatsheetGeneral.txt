@@ -1,0 +1,98 @@
+
+##############################
+## Tricks in MicrosoftWorld ##
+##############################
+
+https://www.lifewire.com/list-of-command-prompt-commands-4092302	--> Full set of commands for CommandLine. End of H reached
+https://www.lifewire.com/attrib-command-2625802			--> Same sort of thing as in linux are permissions
+https://www.lifewire.com/software-and-apps-4781541		--> Good source for windows related things
+https://www.lifewire.com/command-prompt-tricks-and-hacks-2618104
+https://www.lifewire.com/net-use-command-2618096		--> Some drive mapping
+https://www.lifewire.com/netstat-command-2618098
+https://www.lifewire.com/how-to-read-command-syntax-2618082	--> How to read help pages correctly
+https://www.lifewire.com/diskpart-command-2625864		--> Partition magic
+https://www.lifewire.com/bootcfg-command-2625821		--> Messing around with bootfiles
+https://www.lifewire.com/fixmbr-command-2625887			--> Writing a new master boot record. Possibly useable in nasty dell situations
+
+https://www.lifewire.com/what-is-a-hard-disk-drive-2618152	--> Info about storage
+https://www.lifewire.com/stp-file-4150703			--> Just one random filetype definition
+
+
+<any command> /?		== Displays help
+<any command> help		== May sometimes give help aswell
+
+attrib /?			== Info about files
+
+bootcfg /?			== If for some reason these things need doing in the console
+
+Cmdkey				== Displays usernames and passwords?
+copy				== Basic stuff. From -- to.
+
+FC file_one file_two		== Kind of like diff
+
+dir /s				== Show the content of subdirs aswell
+dir /s | more			== ...One page at a time. /p also page at a time, /w wide... dir /? for more info
+diskpart /?			== If for some reason these things need doing in the console
+Driverquery			== Shows installed drivers
+
+edit jotain.bat			== Create and edit files
+expand /d <someArchive>		== Gives a list of content of an archive, for example .cab file
+
+find /?				== Dunh
+fixmbr /?			== Fix master boot record. One thing to try in locked pc:s
+fsutil				== Shows landingpage and command list of FileSystemUtils family
+fsutil fsinfo			== Spans more details
+fsutil fsinfo drives		== Gives your dirves as a list
+
+hostname			== Current computers name
+
+net help			== Gives some manual to the net-family of commands
+net use	/?			== Map some drives
+netstat				== This is where the magic happens
+nslookup			== DNS lookup. nslookup google.com --> Gives some IPs for google
+
+prompt	XD			== Changes the standard C:\Users\whatnat> to XD. Type prompt without args to return back to defaults
+prompt /?			== Shows weird things
+
+robocopy /?			== Make backups easilly. Alternative is xcopy
+
+shutdown /i			== Initiates a remote shutdown menu. /? for more info
+subst /?			== Create links to paths
+systeminfo >> c:\genericdir\outputOfCommandSysteminfo.txt	== Appends to the file info of some of the hardware on the machine
+
+telnet towel.blinkenlights.nl	== Watch StarWarsIV in ascii art. Not tested yet. The telnet client itself is a thing. telnet /?
+title myCustomCommandPromptName	== Names the current window as such
+tree				== Same as one might guess
+
+vol /?				== Outputs current disk label and serial number
+
+#########################
+## Powershell commands ##
+#########################
+
+
+########################
+## Keyboard Shortcuts ##
+########################
+https://www.lifewire.com/best-windows-keyboard-shortcuts-6503973
+
+Win+E				== Open file explorer
+Win+I				== Open settings
+Win+L				== Lock workstation
+Win+Ctrl+D			== Open a virtual desktop
+Win+Ctrl+[Left or Right]	== Move between them
+Win+X				== Open PowerUserMenu
+
+Ctrl+Shift+T			== Re-Open accidentially closed tab
+
+#########################
+## Good to know things ##
+#########################
+1. Use / as char for flags
+2. Paths use \
+3. \\ has something to do with local network
+4. e:	--> Switches to drive e. Don't use cd.
+
+
+
+

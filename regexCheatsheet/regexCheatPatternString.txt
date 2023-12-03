@@ -1,0 +1,48 @@
+
++++++++++++++++++++++++++++++++++++++
++ StringManipulationBasedOnPatterns +
++++++++++++++++++++++++++++++++++++++
+https://www.digitalocean.com/community/tutorials/using-grep-regular-expressions-to-search-for-text-patterns-in-linux
+
+____________
+RandomNotes:
+-There are regex (regular expressions) and extended regular expressions that have more chars to them. Use with grep -E or egrep.
+-Eregex can be used to add multiple criteria with |. Use inside (firstCondition | secondCondition)
+
+___________
++ Example +
+
+cat test.txt {
+(kissa1koira)
+perhana
+(perhana)
+Jummijammi.
+}
+
+cat somefile | grep -i -v -n "sometext"	--> Case doesn't matter. Return lines that don't contain string sometext. Return linenumbers
+"^sometext"				--> Line starts with string sometext
+"sometext$"				--> Line ends with string sometext
+"..metext"				--> Replace each . with something to get a match
+"so[mo]etext"				--> Replace [] with a thing inside [], in this case m or o.
+"[^s]ometext"				--> When inside [], the ^ will act as a reverse bit operator. This will not return anything since
+					--> filtering anything that isn't s.
+"^[a-z]ometext"				--> Starts with any small alphabet
+"^[[:upper:]]"				--> POSIX syntax. Starts with any uppercase. Guessing lower would be the opposite
+grep "^[A-Z].*\.$" test.txt		--> Starts with Capital, has any character next, looks for any character as long as is found (.*),
+					--> escapes wildcard (.) and uses the . as a dot that ends the line. Returns a line Jummijammi.
+
+grep "([A-Za-z]*)" test.txt		--> Looks for (, finds patterns, repeats those patterns until finds ), reads from file test.txt
+					--> Returns only (perhana)
+grep -E "(per)?hana" test.txt		--> (per)? makes the thing inside () optional. Finds if it exists or not.
+grep -E "ana[^[:space:]]+" test.txt	--> Looks for string ana that doesn't have a space right after it.
+grep -E "[AEIOUaeiou]{3}"		--> Looks for 3 vowels in a row
+grep -E "[[:alpha:]]{16,20}"		--> Looks for strings with chars by the length of 16 to 20 characters
+grep -E 'perhana|Jummi' test.exe	--> Looks for lines with perhana or Jummi from file test.exe
+
+-Find a list of IP-addresses from a file, sort them and remove duplicates:
+cat filterInvalid | grep -n -o -E "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}" | sort -n > sortedList.txt
+--> Finds sort of the IP:s. also can have 999.0.0.99 in it. -o makes output only the IPs and not the rest of the line
+--> Also sorts the output and puts it in to a file sortedList.txt sort -n uses smarter number logic when sorting
+
+cat sortedList.txt | uniq --> UniqueIP.txt
+

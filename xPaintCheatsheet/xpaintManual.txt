@@ -1,0 +1,47 @@
+
+##Greatness of xpaint. My journy of discovery
+
+_________________
++++RandomNotes+++
+-The thing starts a new window for basically everything so Alt+Tab is very useful. Maybe even good to run the thing in a different desktop.
+-From one window you can choose your weapon-type and the board-window has some additional specs and features.
+-First I'll make my canvas 2560x1920 in size. Time will tell if it's plenty enough
+-Using different colors is a good thing.
+-We can reference different expansions with an ID system, so why not create one. We can use colors, shapes, text or maybe effects as tags.
+-
+
++++Board-Window+++
+-TopLeft eye-icon let's you choose a color from where you click and select that as your output color
+-Width of the brush can be selected as a number value from the board-window from the long line up-top. Starting width was 1.
+-To delete something you selected with the select-tool, go to edit/clear
+-Using the select-tool and not clicking out of it will leave a padding that can't be crossed
+-
+
++++ToolsWindow+++
+-Be careful with the select-tool (blue background) since it may overwrite your picture if you select too big of an area
+-
+
+
+___________________
++++ColoringLogic+++
+"Blue : Backups"; 		--> Because starts with the letter 'B'
+"Red : Danger(			--> Be careful when handling because something might break.
+  Variables, Scripts
+)";
+"Green : Experiment";		--> Do what you will in here
+"BabyShitBrown : Sourcing";	--> Something that is referenced at regular basis
+
+
+________________
++++ShapeLogic+++
+-Squarish == Directory/Folder
+-Round edges == File
+-Line (pretty or not) == Connection between 2 items. Coloring defines what kind of connection
+-Line with arrows == Where arrow points to is the sub-item.
+-
+
+
+___________
++++Menus+++
+-Canvas/NewCanvas --> Starts a new drawing board
+
