@@ -18,3 +18,6 @@ To Do:
 -Feel free to improve the manuals any time.
 
 -Keep tree map available and updated at all times
+
+-Things relating to networking is a large topic that needs to be triplechecked. This is time consuming, but is good to do.
+
