@@ -7,6 +7,8 @@ https://docs.github.com/en/get-started/using-github/troubleshooting-connectivity
 https://github-debug.com/                                                                                       (4)
 https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration                                                (5)
 
+TemoraryConundrums:
+(T1)
 ------------------------------------------------------------------------------------------------
 (2) Not being able to clone a repo. Getting 403 as response. Using windows 10. Not able to punch in creds.
 -Turned out that there was a credential helper program that had one accesstoken installed inside. It could only use one at a time.
@@ -16,6 +18,12 @@ https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration                
 
 (4) If all else fails, this can be used.
 (5) Anticipating that this will come in handy at some point
+
+
+(T1) Security logs show that some Gist OAuth access enabling is being done. I don't remember this one.
+-Logs are logged :D
+-Can't seem to be able to generate log messages when I try.
+- 21.28 I accessed GitBash
 
 ################################################################################################
 ## End of File

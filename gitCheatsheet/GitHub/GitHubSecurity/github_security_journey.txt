@@ -1,0 +1,18 @@
+
+Created:	04.12.2023
+################################################################################################
+<add-sources-here>
+------------------------------------------------------------------------------------------------
+
+As a topic many things overlap with security. These include all sorts of methods of authenticating, logging, handling scopes and such.
+
+My first puzzle was to find that something has been granted access to some part of my github account. Discovery was made from githubs web UI. I can't seem to figure out what is the thing that is now authorized. It's stated that my github user account has granted this access. I don't recall... There was info logged that this event has been initiated with firefox. Narrowing down by quite a bit since I don't usually have that much being done using firefox.
+	Goddamn, now as I take a better look at the log entry, I see references to other browsers also. Find these logs at your github.com profile:
+/settings/archives/securitylog
+
+	I took an export of the file as a JSON file or thats what I was aiming to do. Got it as .gz that is not opening on windows machines by default. It's a gzip-family compressed file at least based on the suffix. Also took a file that was supposed to be .csv, but ended up being .gz also. Maybe this could be one way of securing plaintext data? I just noticed that the filters don't work the way they are supposed to. I have an IP address mentioned on the entry for creating access to some app and it matches my current wan address. This means that something from inside my network is doing this. Now when I try filtering using that same IP address, I don't get the access event to be displayed... Waaaait... Is it just me logging in using my master password?
+
+
+################################################################################################
+## End of File
+################################################################################################
