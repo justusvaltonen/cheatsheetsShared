@@ -2,9 +2,12 @@
 Created:	04.12.2023
 ################################################################################################
 
-fork                ==
-VCS                 == Version Control System
-DVCS                == Distributed Version Control System. All users are constantly connected.
+File:
+.gitignore              is being used to disable sharing of some files that are not meant for public. Used on repository root path as a hidden file.
+.git/info/exclude       also one popular source of checking ignorable files
+
+-Config variable: core.excludesFile is also checked
+
 
 
 

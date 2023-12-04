@@ -8,8 +8,6 @@
 │           └── instructions_myEnv.txt
 ├── computerScienceCheatsheet
 │   └── computerScienceAbstractCheat.txt
-├── configs_that_worked.txt
-├── configs_that_worked.txt~
 ├── customWorkstation
 │   ├── useful_rc_git.txt
 │   ├── vim_customization.txt
@@ -18,17 +16,57 @@
 │   ├── findFromFiles.sh
 │   └── makeDirList.sh
 ├── gitCheatsheet
+│   ├── commands_git.txt
+│   ├── commands_git.txt~
 │   ├── ExamplesGit
+│   │   ├── configs_that_worked_windows.txt
+│   │   ├── create-local_push-to-new_github.txt
+│   │   ├── create-local_push-to-new_github.txt~
+│   │   ├── existing_branch.txt
+│   │   ├── existing_branch.txt~
 │   │   ├── FailingLikeStupid
-│   │   │   └── githubPushWalkthroughFailing.txt
-│   │   └── git_example_gittutorial.txt
-│   ├── git_accesstokens_info.txt
+│   │   │   ├── githubPushWalkthroughFailing_first_attempt.txt
+│   │   │   └── today_trials_with_git-second_attempt.txt
+│   │   ├── git_example_gittutorial.txt
+│   │   ├── GitWizardy
+│   │   ├── push_to_existing.txt
+│   │   └── push_to_existing.txt~
 │   ├── GitAPIs
 │   │   └── salesteam_git-apis.txt
-│   ├── git_commands.txt
-│   ├── git_github_readme.txt
+│   ├── git_commands.txt~
+│   ├── GitCredentials
+│   │   └── GCM
+│   │       ├── git-credential-manager_linux.txt
+│   │       └── git-credential-manager_linux.txt~
+│   ├── git_customisation.txt
 │   ├── git_help_all_commands.txt
-│   └── githubTerminology.txt
+│   ├── GitHub
+│   │   ├── AccessTokens
+│   │   │   ├── github_accesstokens_info.txt
+│   │   │   └── github_accesstokens_info.txt~
+│   │   ├── Actions
+│   │   │   ├── learn_actions.txt
+│   │   │   └── learn_actions.txt~
+│   │   ├── CLI
+│   │   │   ├── github_cli_win.txt
+│   │   │   └── github_cli_win.txt~
+│   │   ├── Copilot
+│   │   │   ├── copilot_copypaste.txt
+│   │   │   └── copilote_copypaste.txt~
+│   │   ├── git_github_readme.txt~
+│   │   ├── github_locations.txt
+│   │   ├── github_locations.txt~
+│   │   ├── githubTerminology.txt
+│   │   ├── githubTerminology.txt~
+│   │   ├── github_troubleshoot.txt
+│   │   ├── github_troubleshoot.txt~
+│   │   └── Packages
+│   │       ├── github_packages.txt
+│   │       └── github_packages.txt~
+│   ├── git_manpages.txt
+│   ├── git_terminology.txt
+│   ├── git_terminology.txt~
+│   └── intro_git-UNFINISHED.txt
 ├── htmlCheatsheet
 │   ├── attributes_html.txt
 │   ├── charsets_html.txt
@@ -125,6 +163,7 @@
 │   │   └── whatIsCommandPrompt.txt
 │   ├── macBookPro
 │   │   └── macCheatGeneral.txt
+│   ├── readman_unix.txt
 │   ├── unixCheatCommandsNetworking.txt
 │   ├── unixCheatCommands.txt
 │   ├── unixCheatCommandsUsers.txt
@@ -145,4 +184,4 @@
 └── xPaintCheatsheet
     └── xpaintManual.txt
 
-50 directories, 95 files
+59 directories, 125 files
