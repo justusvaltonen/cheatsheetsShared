@@ -2,9 +2,21 @@
 Created:	04.12.2023
 ################################################################################################
 
+Go to your local computer and do this:
+
+cd ~/.ssh
+ssh-keygen -t rsa -b 4096 -C "justusvaltonen@gmail.com"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
 
 
+Now print the key that will be posted to github
+cat ~/.ssh/id_rsa.pub
 
+Once the key is inserted to github/presonalaccount/settings/sshandgpg, you can set the new connection method.
+git remote set-url origin git@github.com:justusvaltonen/cheatsheetsShared.git
+
+-When doing a pull or a push, the cli will say a warning. I press yes and we're good to go.
 
 ################################################################################################
 ## End of File
