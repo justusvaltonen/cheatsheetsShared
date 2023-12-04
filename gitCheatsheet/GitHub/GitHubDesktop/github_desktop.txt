@@ -1,0 +1,15 @@
+
+Created:	04.12.2023
+################################################################################################
+
+This was supposed to be available only for windows, but someone had made a fork that works on linux.
+
+-Seems like a security risk.
+-When I started the app, it asked basically root privilages to my personal repo. I didn't want to give them.
+-It seems to work without privilages just fine.
+-Installation was done via Mint Application manager. This was a flatpack package.
+
+################################################################################################
+## End of File
+################################################################################################
+
