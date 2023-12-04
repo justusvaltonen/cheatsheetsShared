@@ -1,0 +1,17 @@
+
+Created:	04.12.2023
+################################################################################################
+"Everything is open source when you know how to reverse-engineer" - Homeless guy in Mellunmäki metro station
+
+https://github.com/proffapt/myREADME			- How to create readmes
+https://github.com/ZapeeoSheikh/docs-github		- Bunch of things stuffed together. If running out of ideas, go here
+https://github.com/restarian/brace_document_link	- How links work inside your readme files
+https://github.com/BartalD/GithubTemplates		- Misleading. About responses to pull requests and doing reviews
+
+------------------------------------------------------------------------------------------------
+
+Now here are some projects I can contribute to. It will look goog on the authors resume that they got some github visibility
+
+################################################################################################
+## End of File
+################################################################################################
