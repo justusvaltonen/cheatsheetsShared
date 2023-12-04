@@ -12,9 +12,10 @@ Checkout		== Return to state of last commit
 Clone			== Make a clone of some folder that is in some server. Folder is called repository.
 Codespace		== Cloud hosted environment
 Commit			== Confirm that you want to make changes to the external folder. This needs to be done before push.
-Dependabot      == Makes sure that all requirements are met.
+Copilot			== Autocorrect
+Dependabot      	== Makes sure that all requirements are met.
 Fetch			== Get stuff and include references to other repositories
-Gist			==
+Gist			== Small function or something of a sort. Can be embedded to readme as a script fpr example
 GitHub Actions		== Automating some functionality
 GitHub API  		== REST or GrapQL
 GitHub Marketplace  == Use applications integrated wit github

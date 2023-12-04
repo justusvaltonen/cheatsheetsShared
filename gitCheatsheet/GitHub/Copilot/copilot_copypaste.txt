@@ -5,6 +5,10 @@ Created:	04.12.2023
 https://docs.github.com/en/copilot
 https://docs.github.com/en/copilot/overview-of-github-copilot/about-github-copilot-individual           --> Sadly costs money
 
+
+-I believe this app corrects your code. Sounds nice
+
+
 ################################################################################################
 ## End of File
 ################################################################################################

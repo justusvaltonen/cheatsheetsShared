@@ -4,6 +4,14 @@ Created:	04.12.2023
 
 https://docs.github.com/en/actions/learn-github-actions
 https://docs.github.com/en/packages/quickstart
+https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions	(1)
+
+------------------------------------------------------------------------------------------------
+
+(1) Looks a lot like scripts..
+-Evenet triggers and then the computers start doing their thing.
+
+
 
 
 ################################################################################################
