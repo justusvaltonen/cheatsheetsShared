@@ -6,6 +6,7 @@ Possible sources of info:
 https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-linux-server        --> You may want to use SSH for your git
 https://www.geeksforgeeks.org/git-tutorial/                                                                             --> Extensive
 https://www.youtube.com/watch?v=kHkQnuYzwoo&t=302s
+https://git-scm.com/docs                                                                                                --> Official all commands
 
 Youtube:
 CampusStack
@@ -59,21 +60,6 @@ switch <branchname>                 == Switches branches. Very important. By def
 tag                                 == Possibly has something to do with GPG. Misleading if true
 upstream                            == Adds tracking reference somewhere
 worktree                            == If one has a lot to manage.
-
-
-
-MEANINGS:
-commit                              ==
-HEAD                                ==
-master                              == Default name of a branch
-mergetool                           == You get to choose what tool you want to use
-origin                              == Just a name. Default alias of some place where stuff was cloned from. Usually at least is URL
-password                            == Password that used to be text, but now is a token... that is text, but can be managed more easilly from github
-personal access token               == The method that is used to connect our locals with github. Uses HTTPS. PAT
-remote                              == Some URL that is not my own computer. Github repo for example.
-staging                             == Before commit files are in staging.
-username                            == Can mean github username or the real name of you as in author.
-
 
 
 GITHUB ON GUI:

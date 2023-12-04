@@ -3,6 +3,9 @@ Created:	04.12.2023
 ################################################################################################
 
 https://stackoverflow.com/questions/74493073/using-a-github-fine-grained-token-with-git-pull-over-https         (2)
+https://docs.github.com/en/get-started/using-github/troubleshooting-connectivity-problems                       (3)
+https://github-debug.com/                                                                                       (4)
+https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration                                                (5)
 
 ------------------------------------------------------------------------------------------------
 (2) Not being able to clone a repo. Getting 403 as response. Using windows 10. Not able to punch in creds.
@@ -10,6 +13,9 @@ https://stackoverflow.com/questions/74493073/using-a-github-fine-grained-token-w
 -Needed to update password manually.
 
 
+
+(4) If all else fails, this can be used.
+(5) Anticipating that this will come in handy at some point
 
 ################################################################################################
 ## End of File

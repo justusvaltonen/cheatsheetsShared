@@ -1,11 +1,12 @@
 
-Created:	30.08.2023          Updated: +++03.12.2023+++
+Created:	30.08.2023          Updated: +++04.12.2023+++
 ################################################################################################
 _________________________
 Possible sources of info:
 https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-linux-server        --> You may want to use SSH for your git
 https://www.geeksforgeeks.org/git-tutorial/                                                                             --> Extensive
 https://www.youtube.com/watch?v=kHkQnuYzwoo&t=302s
+https://git-scm.com/docs                                                                                                --> Official all commands
 
 Youtube:
 CampusStack
