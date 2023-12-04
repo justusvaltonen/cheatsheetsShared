@@ -1,0 +1,30 @@
+
+Created:	04.12.2023
+################################################################################################
+https://gist.github.com/
+https://gist.github.com/justusvaltonen		--> Possibly I have a separate account in the gist world
+
+________________________________________________
+Here is an example gist that I created to study:
+Time of creation: 21.00 on 04.12.2023
+{
+	Description:
+	Can I take over the world with this, I wonder
+
+	Payload:
+	I shall see if some securitylogs are going to appear when doing this
+}
+
+Creates the following when I choose private gist creation:
+justusvaltonen/gist:c82560213e364d9ee159c8f698cb816e Secret
+
+Link for embedding to html
+<script src="https://gist.github.com/justusvaltonen/c82560213e364d9ee159c8f698cb816e.js"></script>
+<script src="https://gist.github.com/justusvaltonen/0344a7eac4074fe2210664cdbfd0b273.js"></script>
+	--> For a public gist. 21.10
+
+-I can't seem to find the description anywhere any more...
+
+################################################################################################
+## End of File
+################################################################################################

@@ -1,0 +1,34 @@
+
+Created:	04.12.2023
+################################################################################################
+https://docs.github.com/en/actions/using-workflows/about-workflows
+
+------------------------------------------------------------------------------------------------
+
+___________________________________________________________________________________
+Me trying to explain (without knowing myself) to a dumb kid (below avg 5 year old):
+
+-- Attempt_1: --
+	Somehow I have managed to automate refreshing my home computers file listing to be the same as a computer somewhere in Kuala Lumpur. I wish to do something on my home computer and save what I did to the computer in Kuala Lumpur. Because I'm a nerd and have no life, I have the required skillset. Also because of that I have a need to do it with a push of a button or a few at maximum. This automation that I build is called GitHubWorkflow when doing it by using the GitHub. There are alternatives to GitHub that can do this. They may also have a totally different meaning to the word "workflow". Here is a life-lesson: Control the meaning of words (or language with no words) and you know that you have all the power over others there is to be had.
+	By adding instructions to your repositorys {root}/.github/workflows/ directory, you can do this. Instructions should be in format that has the suffix yml in it's filename. Example:
+.github/workflows/takeovertheworld.yml
+
+	Since I haven't done this yet, I don't have the manual that explains what is being done. One should study YAML format a bit better before advancing. Sometimes the instructions on internet are not the clearest of all and really understanding the notation, not just guessing helps a lot.
+
+--> With the attentionspan of a dumb 5 year old, this is not doing any good, but here is some extra to think about.
+--> Fuck, almost forgot. Also don't call your kids dumb in normal situations, especially 5 year olds. They are still developing.
+
+	While I don't know how many aspects of using the workflows are set up using the good practises they are a great study. One can learn a lot from insides of GitHub as a platform. The .yml files are just a set of instructions that is sent to a computer somewhere and that computer then translates them to execution commands. What things do we have access on when we use workflows? Let's say that I'm a hacker using the nick '3v1lh4x0r-2000' and I want to make your github account do nasty stuff like inserting inappropriate video material to whole internet. Or maybe spread false information about the fundamental building-blocks of our universe. If all of the access is centralized to one hub, then the logical thing would be to "try to take over the hub (think of the voice of the brain from cartoon pinky and the brain)".
+	My computer let's me access the central account that by default has a lot of access if not all available. Enabling 2-FA is good, but I haven't been prompted for confimations for a while and still I get to use everything. Because there were some security issues in credential managers and I don't want to paste the accesstokens each time I do a small change, I decided to give SSH access to my repo. But wait! I didn't specify in my admin account what repo am I granting access to. Appears as though access is granted to all of my account!!!
+	Point of this rant is to make sure one tests their stuff before deploying to production. Think of how things work and what can be done with them. Maybe it's not a good idea to give ideas on how to hack my account, but I'm too lazy to delete either. Just please don't even if you knew how to. If 1337h4x0r monitors your SSH activity for a long enough time, they could potentially capture something that could be used to break the system. Source of this info is interweb, so don't know how easy/hard to implement. SSH has Full access. I didn't find a way yet to apply scopes. Access tokens grant access, but need to be manually typed or cached for just a little while. Alternative is to create a method to renew tokens each 10min or so. I believe this is the way many connections work.
+
+
+------------------------------------------------------------------------------------------------
+Notes about this doc:
+"Example of mentally challengeness was used to indicate my approach to the situation, not to insult anyone"
+-At the time of writing, half of the features of github are yet to be discovered. Most likely there are ways of doing better.
+
+
+################################################################################################
+## End of File
+################################################################################################
