@@ -12,12 +12,18 @@ ______
 To Do:
 
 -Make some sense of the tokens. There is a lot of info to be found on the docs. Way too much for my liking. Once there is a need to use different methods, add a manual.
+  --> Some of the tokens are just plain bad. Some are good. How to use on application level is a thing that could interest. Leaking data seems to become an issue very easilly.
+  --> One thing is to automate refresh of cached creds. This is how happens in many protocols.
 
 -Clean the local versions of cheatsheets and remove extras. Backup first of course.
+  --> Too much to ask and maintain. Just generally keep it tidy
 
--Feel free to improve the manuals any time.
+-Feel free to improve the manuals any time. Maybe even integrating to readme could work
 
 -Keep tree map available and updated at all times
 
 -Things relating to networking is a large topic that needs to be triplechecked. This is time consuming, but is good to do.
 
+-Create your own styling guide to github
+
+-Make things public so features get enabled. I was too ambitious with my initial plan
