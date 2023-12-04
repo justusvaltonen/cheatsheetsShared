@@ -8,8 +8,11 @@ Branch			==
   Master			    == Same as Main. Typical branch name.
 Checkout		== Return to state of last commit
 Clone			== Make a clone of some folder that is in some server. Folder is called repository.
+Codespace		==
 Commit			== Confirm that you want to make changes to the external folder. This needs to be done before push.
 Fetch			== Get stuff and include references to other repositories
+Gist			==
+GitHub Actions		==
 HEAD			== The current status pointer or masterbranch status pointer. Goes hand-by-hand with index.
 Index			== When added files with add command, things go to "index" AKA. "staging area"
 Init			== Create some hidden files to current path that enable usage of git. Specifies current path as the root of your workspace
@@ -17,13 +20,14 @@ Gitconfig		== File with your configs. Should be in /etc/gitconfig or ~/.gitconfi
 Gitignore		== Blacklist some files that you don't want to send.
 Git-Shell		== Restricted access shell for gitting.
 License			== Some legals on how your code can be used by others
-Mergetool       == You get to choose what tool you want to use
+Markdown        == Language that is used on GUI on github
+Mergetool       	== You get to choose what tool you want to use
 Object			== Can be many things in git context
-  Blob			==
-  Commit		==
-  Tag			==
-  Tree			==
-Password        == Password that used to be text, but now is a token... that is text, but can be managed more easilly from github
+  Blob				==
+  Commit			==
+  Tag				==
+  Tree				==
+Password        	== Password that used to be text, but now is a token... that is text, but can be managed more easilly from github
 Patch			== See git apply
 Pull			== Get the latest version of your current working branch
 Push			== Apply your changes in code and send them to some other place than your local computer.
@@ -34,7 +38,13 @@ Staging			== Pre save. Including to be committed. Same as index.
 Status			==
 Tag		        == Stored in /refs/tags/<my-tag-name> - Are used to mark a specific point in history.
 Token			== Used to access to the repositories. Used by apps and people.
-  PersonalAccessToken   == The method that is used to connect our locals with github. Uses HTTPS. PAT
-Working tree    == The whole project
+  FineGrainedPAT		== Newer version
+  PersonalAccessToken   	== The method that is used to connect our locals with github. Uses HTTPS. PAT
+Username                == Can mean github username or the real name of you as in author.
+Working tree    	== The whole project
+
+################################################################################################
+## End of File
+################################################################################################
 
 

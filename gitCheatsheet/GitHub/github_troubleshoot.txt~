@@ -1,0 +1,15 @@
+
+Created:	04.12.2023
+################################################################################################
+
+https://stackoverflow.com/questions/74493073/using-a-github-fine-grained-token-with-git-pull-over-https         (2)
+
+------------------------------------------------------------------------------------------------
+(2) Not being able to clone a repo. Getting 403 as response. Using windows 10. Not able to punch in creds.
+-Turned out that there was a credential helper program that had one accesstoken installed inside. It could only use one at a time.
+-Needed to update password manually.
+
+################################################################################################
+## End of File
+################################################################################################
+

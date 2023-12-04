@@ -1,5 +1,5 @@
 
-Created:	28.8.2023
+Created:	28.8.2023           Updated: +++04.12.2023+++
 ################################################################################################
 
 
@@ -20,6 +20,7 @@ Gitconfig		== File with your configs. Should be in /etc/gitconfig or ~/.gitconfi
 Gitignore		== Blacklist some files that you don't want to send.
 Git-Shell		== Restricted access shell for gitting.
 License			== Some legals on how your code can be used by others
+Markdown        == Language that is used on GUI on github
 Mergetool       	== You get to choose what tool you want to use
 Object			== Can be many things in git context
   Blob				==
@@ -41,5 +42,9 @@ Token			== Used to access to the repositories. Used by apps and people.
   PersonalAccessToken   	== The method that is used to connect our locals with github. Uses HTTPS. PAT
 Username                == Can mean github username or the real name of you as in author.
 Working tree    	== The whole project
+
+################################################################################################
+## End of File
+################################################################################################
 
 
