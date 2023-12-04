@@ -27,3 +27,5 @@ To Do:
 -Create your own styling guide to github
 
 -Make things public so features get enabled. I was too ambitious with my initial plan
+
+-Create the so called prod-area where there are coding samples of old stuff.
