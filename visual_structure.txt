@@ -12,12 +12,13 @@
 │   ├── useful_rc_git.txt
 │   ├── vim_customization.txt
 │   └── zsh_customization.txt
+├── explore-this.txt
+├── explore-this.txt~
 ├── findingCheatsheet
 │   ├── findFromFiles.sh
 │   └── makeDirList.sh
 ├── gitCheatsheet
 │   ├── commands_git.txt
-│   ├── commands_git.txt~
 │   ├── ExamplesGit
 │   │   ├── configs_that_worked_windows.txt
 │   │   ├── create-local_push-to-new_github.txt
@@ -33,40 +34,62 @@
 │   │   └── push_to_existing.txt~
 │   ├── GitAPIs
 │   │   └── salesteam_git-apis.txt
-│   ├── git_commands.txt~
 │   ├── GitCredentials
-│   │   └── GCM
-│   │       ├── git-credential-manager_linux.txt
-│   │       └── git-credential-manager_linux.txt~
+│   │   ├── GCM
+│   │   │   ├── git-credential-manager_linux.txt
+│   │   │   └── git-credential-manager_linux.txt~
+│   │   ├── Reverse_Engineer_Build
+│   │   │   ├── credentiaL.txt
+│   │   │   ├── gitcredentialS.txt
+│   │   │   └── git_credsys_task.txt
+│   │   └── SSH
+│   │       └── git_connect_ssh.txt
 │   ├── git_customisation.txt
+│   ├── git_files.txt~
 │   ├── git_help_all_commands.txt
 │   ├── GitHub
-│   │   ├── AccessTokens
-│   │   │   ├── github_accesstokens_info.txt
-│   │   │   └── github_accesstokens_info.txt~
-│   │   ├── Actions
+│   │   ├── GitHubAccessTokens
+│   │   │   └── github_accesstokens_info.txt
+│   │   ├── GitHubActions
 │   │   │   ├── learn_actions.txt
 │   │   │   └── learn_actions.txt~
-│   │   ├── CLI
-│   │   │   ├── github_cli_win.txt
-│   │   │   └── github_cli_win.txt~
-│   │   ├── Copilot
+│   │   ├── GitHubApps
+│   │   │   └── github_apps_whatis.txt
+│   │   ├── GitHubCLI
+│   │   │   ├── github_cli_linux.txt
+│   │   │   ├── github_cli_linux.txt~
+│   │   │   └── github_cli_win.txt
+│   │   ├── GitHubCodespaces
+│   │   │   ├── github_codespaces_whatis.txt
+│   │   │   └── github_codespaces_whatis.txt~
+│   │   ├── GitHubCopilot
 │   │   │   ├── copilot_copypaste.txt
 │   │   │   └── copilote_copypaste.txt~
-│   │   ├── git_github_readme.txt~
+│   │   ├── GitHubDesktop
+│   │   │   ├── github_desktop.txt
+│   │   │   └── github_desktop.txt~
+│   │   ├── GitHubGists
+│   │   │   └── github_gist_whatis.txt
 │   │   ├── github_locations.txt
-│   │   ├── github_locations.txt~
-│   │   ├── githubTerminology.txt
-│   │   ├── githubTerminology.txt~
+│   │   ├── GitHubPackages
+│   │   │   ├── github_packages.txt
+│   │   │   └── github_packages.txt~
+│   │   ├── GitHubSecurity
+│   │   │   ├── analog.txt
+│   │   │   ├── github_security_journey.txt
+│   │   │   └── github_security_journey.txt~
+│   │   ├── github_terminology.txt
 │   │   ├── github_troubleshoot.txt
-│   │   ├── github_troubleshoot.txt~
-│   │   └── Packages
-│   │       ├── github_packages.txt
-│   │       └── github_packages.txt~
+│   │   └── GitHubWorkflows
+│   │       └── github_workflows_whatis.txt
+│   ├── git_ignorefile.txt
 │   ├── git_manpages.txt
+│   ├── git_sources.txt
+│   ├── git_sources.txt~
 │   ├── git_terminology.txt
-│   ├── git_terminology.txt~
-│   └── intro_git-UNFINISHED.txt
+│   ├── intro_git-UNFINISHED.txt
+│   └── Templates
+│       └── links_github_templates.txt
 ├── htmlCheatsheet
 │   ├── attributes_html.txt
 │   ├── charsets_html.txt
@@ -128,6 +151,11 @@
 │   │   └── notesCheatKubernetes.txt
 │   └── languagesSpokenCheatsheet
 │       └── russianLanguage.txt
+├── notationsCheatsheet
+│   ├── Notation_CSV
+│   ├── Notation_JSON
+│   ├── Notation_JUSTUS
+│   └── Notation_YAML
 ├── pokerCheatsheet
 │   ├── basicsPoker.txt
 │   ├── ggPlayers.txt
@@ -184,4 +212,4 @@
 └── xPaintCheatsheet
     └── xpaintManual.txt
 
-59 directories, 125 files
+73 directories, 139 files
