@@ -11,6 +11,8 @@ Commands and terminology memorization outsourced. Not properly maintained.
 ______
 To Do:
 
+-Create lateral backups inside github and learn the basic usage
+
 -Make some sense of the tokens. There is a lot of info to be found on the docs. Way too much for my liking. Once there is a need to use different methods, add a manual.
   --> Some of the tokens are just plain bad. Some are good. How to use on application level is a thing that could interest. Leaking data seems to become an issue very easilly.
   --> One thing is to automate refresh of cached creds. This is how happens in many protocols.
