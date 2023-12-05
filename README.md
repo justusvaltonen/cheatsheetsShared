@@ -41,4 +41,3 @@ To Do:
 
 -How did the varials transfer again between apps? How about other data. I've had some problems with some excel format. Use many passpoints and alternative routes to move data
 
--Is it possible to create your own SW license? I'd like to use some "all goes" license, but make it so that the original author and contributors are credited. Also sources of info should be available.
