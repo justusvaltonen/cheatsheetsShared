@@ -14,6 +14,7 @@ To Do:
 -Make some sense of the tokens. There is a lot of info to be found on the docs. Way too much for my liking. Once there is a need to use different methods, add a manual.
   --> Some of the tokens are just plain bad. Some are good. How to use on application level is a thing that could interest. Leaking data seems to become an issue very easilly.
   --> One thing is to automate refresh of cached creds. This is how happens in many protocols.
+  --> I predict that I will find a way of doing things better in the near future.
 
 -Clean the local versions of cheatsheets and remove extras. Backup first of course.
   --> Too much to ask and maintain. Just generally keep it tidy
@@ -24,8 +25,8 @@ To Do:
 
 -Things relating to networking is a large topic that needs to be triplechecked. This is time consuming, but is good to do.
 
--Create your own styling guide to github
+-Create your own styling guide to github. Use others as reference
 
--Make things public so features get enabled. I was too ambitious with my initial plan
+-Rewrite you own fingerprint rules. Create the CLI-tool later. It may take some time. Have the program take in the settings as parameter so anyone can make their own language.
 
--Create the so called prod-area where there are coding samples of old stuff.
+-Who/what is accessing my account?
