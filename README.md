@@ -30,3 +30,13 @@ To Do:
 -Rewrite you own fingerprint rules. Create the CLI-tool later. It may take some time. Have the program take in the settings as parameter so anyone can make their own language.
 
 -Who/what is accessing my account?
+
+-Win the skills.github.com
+
+-Create a vault of some sort. At least get credential.helper <custom> to work
+
+-Create an easy way of migrating away from GH and other service providers. One should always have at least 2 providers occupied and 2 extra options waiting for a catastrophy
+
+-How did the varials transfer again between apps? How about other data. I've had some problems with some excel format. Use many passpoints and alternative routes to move data
+
+-Is it possible to create your own SW license? I'd like to use some "all goes" license, but make it so that the original author and contributors are credited. Also sources of info should be available.
