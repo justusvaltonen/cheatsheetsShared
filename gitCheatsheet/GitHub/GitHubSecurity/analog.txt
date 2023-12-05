@@ -1,0 +1,69 @@
+
+Created:	04.12.2023
+################################################################################################
+https://www.epochconverter.com/
+https://en.wikipedia.org/wiki/Salt_(cryptography)
+------------------------------------------------------------------------------------------------
+
+-I will take a couple of entries from the logs and see if I can figure out what the fields mean
+
+{
+  "@timestamp": <epoch-time-entanglement-one>,
+  "_document_id": "<unique-per-entry>",
+  "action": "oauth_authorization.create",
+        (A)
+  "actor": "<name-from-where?>",
+  "actor_id": <always-same-entanglement-actor-one>,
+  "created_at": <epoch-time-entanglement-one>,
+  "operation_type": "create",
+  "org": [
+    "<organization-name>"
+  ],
+  "org_id": [
+    <organization-id>
+  ],
+  "user": "<username-of-what?>",
+  "user_agent": "Mozilla/5.0 (X11 Linux x86_64 rv:120.0) Gecko/20100101 Firefox/120.0",
+  "user_id": <always-same-entanglement-user-one>
+}
+
+
+
+{
+  "@timestamp": 1701653735790,
+  "_document_id": "HLQ02bwHof1yXoyNhrnmgw",
+  "action": "repo.create",
+  "actor": "justusvaltonen",
+  "actor_id": ********,
+  "created_at": 1701653735790,
+  "operation_type": "create",
+  "public_repo": true,
+  "repo": "justusvaltonen/miniprograms",
+  "repo_id": *********,
+  "request_category": "other",
+  "user": "justusvaltonen",
+  "user_agent": "Mozilla/5.0 (X11 Linux x86_64 rv:120.0) Gecko/20100101 Firefox/120.0",
+  "user_id": ********,
+  "visibility": "public"
+}
+
+1701653735790   ==> Monday, December 4, 2023 3:35:35.790 AM GMT+02:00       --> I can back this up.
+Document ID is unique, but with a twist. There are some times indicators of what type of action is performed. This happens with signatures at least.
+-Salts are something that resembles the usecase of the indicators, but not quite.
+Action indicates that repository is handled and method create is performed.
+Actor is a bit of a mystery. While on this case it's the same as user, I have a feeling that it's not always the case
+Actor ID is a thing that follows the actor field.
+Created at has always matched the timestamp. Possibly a security measure.
+Operation type seems to be linked to the method in actor
+Request category is a mystery. Things in between are quite self-explaining.
+User seems to be the same as actor, but is not the same possibly
+User agent tells something about the system that is being used to execute the task. From my "hacking" hobby, I can guess that this is not accurate always.
+User ID follows the user field
+
+    The entries that were used as an example were of the format: JSON. Just a standardized way of marking things down. Others include YAML, HTML, XML and my favourite JUSTUS. The last one is my own markup language that has changed quite a bit from the early days. Think of it as a way of writing things down or handwriting. All of the notation languages have in common the thing that they are easilly run through programs and produce a consistent output when handled. This is almost like cryptography except cryptography aims to output consistent data with annoyingly hard to guess method of parsing.
+
+
+################################################################################################
+## End of File
+################################################################################################
+

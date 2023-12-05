@@ -1,0 +1,253 @@
+
+Created:	05.12.2023
+################################################################################################
+git help credentials
+
+NotUnderstoodYet:
+git-credential-cache
+git-credential-store
+git-credential
+git-config
+------------------------------------------------------------------------------------------------
+## There are some files that have a special meaning when it comes to use of git through cli.
+## This file assumes that you are using a unix-based system. Something may accidentaly work for other OS types also.
+## The manual encourages you to write your own helper program.
+------------------------------------------------------------------------------------------------
+
+_________________
+.git-credentials:
+
+Related files / configs:
+Git Configuration Variable: credential.helper
+Git Configuration Variable: credential.https://example.com.username myusername
+Git Configuration Variable: core.askpass
+env: GIT_ASKPASS
+env: SSH_ASKPASS
+
+-If no credential helper defined, program tries to get the info by:
+GIT_ASKPASS env
+SSH_ASKPASS env
+Ask user for info
+
+-Keychains used to be good enough until it was discovered that they are actually quite bad. If on the other hand you use them in a closed environment, they should do.
+-One can share a password to be used by a particular scope. Then git asks if there is some username you would like to use.
+-Credential helpers can cache* or store* passwords to interact with a system wallet or keychain*.
+-Search for a third party helper by:
+git help -a | grep credential-
+
+-If one is found one should read the manual for it and decide if wants to use it:
+git help -a | grep credential-
+    ==>     credential-verygoodcred
+git help credential-verygoodcred
+
+-To start using it:
+git config --global credential.helper verygoodcred
+
+-No matter what you choose git assumes that if your config file has an entry, the evaluation is done by URL host-level domain. Also a subfolder needs to exist if we want eval to succeed.
+
+Entry in configfile:
+[credential "https://github.com"]
+                   username = mymainaccount
+
+https://github.com/mymainaccount/myrepo.git
+    ==> Eval stops at ....com/
+https://skills.github.com/mymainaccount/myrepopath/myrepo.git
+    ==> Eval stops at the first 's'. Comparison is done by strings it seems. There must be a way to change this if not officially then with modifying and rebuilding.
+https://github.com/mymainaccount/myrepopath/myrepo.git
+    ==> Eval succeeds because it does. Also entry for https://github.com/mymainaccount/myrepopath/myrepo.git succeeds.
+
+-Credentials can be configured by:
+credential.*
+    ==> For all credentials
+credential.<url>.*
+    ==> For one url
+
+-If you have multiple instances of config var: credential.helper then git will try them one-by-one till a username&&password combo is found.
+-If credential.helper is set to '' meaning an empty string, whole list of helpers will be treated as empty.
+
+------------------------------------------------------------------------------------------------
+_________
+Exploits:
+1) Configure your helper env if allowed to be empty and all will be dropped, even for other accounts. You can then inject helpers as you wish even for others. This means that no direct entry should be granted in any case to a user. That is to helper selection I mean.
+
+2) No idea if works or what happens, but try configuring only a username in helper to see how git behaves. It shouldn't accept this as an answer. Will it explode?
+
+3) Try to see if you can flush all saved creds from the list. After that try injecting new ones. After that try doing all at once.
+    ==> I suspect that the last attempt will be successful at least.
+
+4) Make helper string start with an absolute path
+5) Find a way to keep the process of settings files FOPEN (or what ever was the name of the operation that opens a file for reading or editing) and see what you can think of. There must be multiple angles here to be the 3v1lh4x0r!1 / screw up. Bugging out different SW can cause weird behaviour on other SW.
+
+------------------------------------------------------------------------------------------------
+________
+Options:
+helper              == Name of external helper. Use absolute path. If failing to do so, 'git credential-' is added before the string and shell executes the whole end-product.
+  Example:
+    mybuddyshelper --option=genericconfig
+        ==> Will execute git credential-mybuddyshelper --option=genericconfig
+username            == A default username if not specified in url already. Can this mean that the right way to config would be... never mind.
+useHttpPath         == Setting that when put to 'true' will allow the eval of the connection string till the end. Meaning ${URL}/repo-one.git will have access to ${URL}/repo-two.git unless this is true.
+
+------------------------------------------------------------------------------------------------
+__________________
+What goes inside?:
+1) You want to connect. Git looks for credentials. Does so by looking at configuration variables (guess like environment variables, but scope is different):
+credential.${URL}
+credential.helper
+core.askpass
+
+2) If not satisfied, keeps looking from environment variables scope. See man env:
+GIT_ASKPASS
+SSH_ASKPASS
+    ==> Possibly means that the value inside these is something that pipes the query to a place where the correct value is located.
+
+3) If for some reason there is no satisfying answer even now, git will ask the user. The answer should be formatted pretty good for it to work. Both username and password are required. I'm not sure what happens when only one criteria is satisfied. Have to find out.
+
+4) Let's assume that one of the methods did work. How was the retrieving of the creds done? Git has access to at least:
+read: env, config-env
+write: config-env
+    ==> Idea of the envs is that they are shared at some scope. Is it for one user account, all user accounts, anyone willing to listen?
+Git executes a command that inits a connection request. I believe the message goes to kernel or something that delivers the message to kernel. Connection is initiated with our creds as parameters? Encryption is done at least before going to interweb since we use https. What about before that? What about the queries about the cred usage? When are they resolved and what is the return value of that query? Since the manual states that the return value is being used as execution command, it must be true. Executing will happen as UID=<don't know>. Executing happens in shell. Where it goes from that scope is not interesting to me at this time. Manual helps build better injection strikes:
+    If we use ! in the beginning of our helper string, it will be executed as a different command. It will be considered as a snippet-command.
+
+5) If the helper string begins with an absolute path (starting with /) then something happens that my english is not good enough for. Good to experiment. When using absolutes, note that the path should be retrieved from an env so the darn thing works on other computers than just yours. Also do experimenting with single/double-quotes. The string that will be transformed to a command right after reading successfully from some settings is executed by the shell that is used to start the process of asking around for creds. How the shell works may not be the same on every system. I've had some fun times while trying to get some work done using a modified or unknown shell. Nothing works and weird things happen. Could be because of a hack though. Just escape just about any character when doing these remote code executions.
+
+------------------------------------------------------------------------------------------------
+______________
+More Examples:
+-From configs:
+    These examples are mostly / partially / not from the man pages. What I see is a whitespace in place where by some design shouldn't be one.
+(A)
+           [credential]
+                   helper = myprogram
+    ==> git credential-myprogram is executed by shell. We can't know what myprogram has inside so no way of knowing the result.
+
+           [credential]
+                   helper = "myprogram --withatwist=sure"
+    ==> Is a string at least. Trying to put an option in, but not sure how is being handled. Manual says that still just credential- is put before the string.
+
+(B)
+           [credential]
+                   helper = "myprogram --withatwist='sure butextraargument'"
+    ==> If someone wants to add an argument for fun to our option. There was some talks about the evaluation of URLs. Is there something wrong with the parser in git?
+
+
+(C) How are absolute paths evaluated again and where? There must be some general quizline on how people want to use these.
+          [credential]
+                   helper = "/path/to/my/helper --with-arguments"
+
+MyPathAbsolute='/path/to/my/helper';
+    ==> The syntax was all retarded in some cases. It's been such a long time that I don't remember. We get hints based on outputs where things run if we don't want to just read about it.
+    ==> Many times reading is impossible and written by someone in the morning with no sleep...
+    ==> I know that if we define MyPathAbsolute inside our file that contains configs, it will be used correctly at one point. When will it disappear?
+    ==> When the file has done returning value? When the file is closed by the OS that runs it? Can we keep the file open remotely for a loooooong time by disabling code execution to the end?
+          [credential]
+                   helper = "${MyPathAbsolute} --with-arguments"
+
+(D) Copypaste from the man. What is this thing where you put the url inside [] along with credential text? The scope where it applies? What about the doublequotes? Some SW regard it now as literal.
+           [credential "https://example.com"]
+                   username = your_user
+                   helper = "!f() { test \"$1\" = get && echo \"password=$(cat $HOME/.secret)\"; }; f"
+    ==> Is the thing in "" an alias of some sort? Is there a risk of execution at the wrong time if not in normal cases, then in special ones?
+    ==> We will say that things inside [] and the whitespaces and your_user will not cause any behaviour that is not good and we get to the helper functions getting of data...
+    ==> Not going to check the spacings or the "" behaviour at this point.
+-Run as snippet, is a function by the name of f()
+-Not sure but I believe it dies on undefined test.
+-The weird backslashes are escape things that enable the usage of " and other meaningful characters inside a scope where they could be misinterpreted as closing quoting.
+We need to be sure that / is used as an escape char wherever it's being evaluated at.
+-"$1" refers, at least in bash, to outside of current file, to parent scope, the second argument. "$0" would mean the command that is executed so "$1" means the argument passed to the program.
+    ==> I believe that the function tries but fails to run a command test and give it an argument that is the same argument that is being used when current program was called.
+-Not likely since the next character is whitespace again followed by an operator that assigns a value. *generic sound of frustration*
+-Not familiar with the language in use. The words get and echo most likely don't do much by themselves. But wait, there's more. We live in some snippetsyntaxland. What exactly is a snippet*?
+-The next one looks like something that tries to create a variable by the name of password. Because of dollars and (), I believe what is being attempted is bash execution in parent scope.
+-I know that $HOME (is where you live) has current users home path stored in my machine at least. Also cat doesn't do well with variables inside some scope at least. Using echo works.
+-When a file or a dir starts with . it means it's hidden. Can be accessed, yes, but not visible unless browsed in FileSystem with an extra option. Cats are cute, but some times evil.
+-Also 'cat' is not 'a cat', but a command in many popular CLI:s. It spits out the content of a file that is being passed to it as an argument (meaning argument is $1 and cat is $0)
+-Execution of a command happens with ; and this way you can do multiple commands on single script.
+-Now we got the } that ends our function definition and ; that executes the function. In some languages it's not a good idea to put ; in the function definitions themselves.
+    --> If I remember correctly, in C the functions need to be prototyped and defined. When you have a function executing inside, the execution will actually happen when the compiler is supposed to read it
+-Then the last thing is some mysterious lonely 'f'. In bash for example you need to define your ending to an 'if' statement. This is done with fi; Some other language may use a different syntax.
+
+-One theory would be that the design of this script makes some stuff do stuff and some stuff not do stuff. Relying on that, things work after all. It's possible that it was explained.
+-All has been only speculation since I tested nothing. This is because I do this for fun and for challenge. One shoudl definetly test properly for fun also.
+-From the man:
+"The details of the credential will be provided on the helper’s stdin stream.",
+"The exact format is the same as the input/output format of the git credential plumbing command"    == target { [ url, funk() || exit;, id, features, file ], datasegment }
+url [protocol, host ]
+funk(){if(isempty())then return}
+datasegment{ username(input): input.hash || input.usr.checkvalidity, password: input.hash || input.pas.checkvalidity,}
+-The notation method is that each line is separate and not in any way separated with commas. Everything is wrong in here.
+-There are only a few limitations when it comes to validating the format that gets passed here. Bad idea, but saves computing power. Then again if things are done correctly so far, there should be only little need to validate. The doc is dated 07.07.2023 so this is not about the old ways when computers were bad. Most likely a task that can't be accomplished. If success can be achieved, this might make it in to a standard of doing things.
+-I misread the doc. The line separations are done with the combo '=' + 'NEWLINE'. There is no quoting problems. Does this mean that a parser is needed aswell?
+-Also what was hinted was that no functionality or charsets.
+-File ends in a blank line or EOF thing that tells the reader that file is done.
+
+------------------------------------------------------------------------------------------------
+____________
+Terminology:
+Credential helpers:
+  cache*            == Can store username and password for a short period of time
+  function*         == Do something that is specified in function definition. When you're done, continue what you were doing before that.
+    method*         == Function that is inside an object. Object can be a human. Human can drink juice. Method inside human definition could be named drink_juice()
+  store*            == Stores the creds to HD for keeping longer than minutes.
+  snippet*          == Many times ! refers to NOT or UN- operator...
+  keychain*         == Set of hard to understand strings that are appended in a file. These are encrypted and are decrypted before they are sent to a app where they are needed.
+  $PATH             == Environment variable that is there to unify things. Installations are put in one place in linux mostly. No need for custom installation paths.
+  reverse-engineer  == When you try to figure out what a program is made of just by thinking and trying. Not seeing the code, but making educated guesses.
+
+------------------------------------------------------------------------------------------------
+__________________________________
+Create your own credential helper:
+-Be aware of the possible pitfalls and definite pitfalls when creating security applications. Test using your own stuff, don't say you have a great securityhimmeli.
+-Know that it will be bad most likely, but might still be better than the ones available.
+-Think where execution is happening when someone uses the thing in a bad / wrong way.
+-What are the scopes involved in each step. Of course you need to abstract yourself to some point, but just know what you do.
+-See other sources and methods. If someone has failed and reported it, you can avoid that particular fail. Also log your own fails to do the same.
+-Variables are fetched from somewhere. Know the source.
+-Use requested naming policy: "git-credential-$NAME"
+-If installation is needed, install somewhere specified in $PATH to make sure things don't break because of that.
+-The man suggests that alternative could be $GIT_EXEC_PATH that sounds like a good idea. For me doesn't exist by default. Storing this to make sure things execute where they should.
+    --> Have fun trying to create an environment variable that can last longer than the execution time of the script that creates it. If using a temp file, make sure of it's path.
+-Make sure that the user can enable/set your program with the command:
+    git config credential.helper $NAME
+-The program should take as an argument, one of the following: get, store, erase
+-Other way is to store your program as an object and use these as methods*/functions*
+  get       == Retrieve as return value the credential
+  store     == Store the credential to a store for keeping. Possibly one more argument needs to be added to this method.
+  erase     == When match is found, erase the credential.
+
+-This starts to look more and more like a game or a mission. Read: man gitcredentials. Breakdown of what "I know" of 'credential.helper':s is getting interesting.
+-Am I supposed to do some logic-loop type of a thing? Like a 2-way algorithm?
+-Normally when stored, creds are crypted before inserting to final location. It seemed that Github uses 2 separate actions when an action is done. I guess the other one is for lost passwords.
+    --> By building like this, it's easier to not screw up big time. Also enables practising on creating users and configurating their scopes.
+
+------------------------------------------------------------------------------------------------
+____________________
+Reverse engineering:
+What should I think about to solve?:
+permissions to fs
+scopes
+syntax
+usecase
+platform dependency
+piping from and to this program
+parsing input and maybe output
+process related permissions
+PID number can tell something, but can be overwritten... with the correct privilages
+logging and verbosity
+memdumps
+bg/fg
+workflow
+call stack
+mix of terminology like erase is get and store is a door
+input system
+dependency towards other commands
+structure of a credential               --> manual implies that there are 2 sections at least: headerlike (Info of the cred. Some linking instructions), data (username + password)
+
+------------------------------------------------------------------------------------------------
+
+
+################################################################################################
+## End of File
+################################################################################################
+
