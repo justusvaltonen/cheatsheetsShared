@@ -11,6 +11,15 @@ https://github.com/Code52/jibbr                         - Before chatbot 4.5 the
 https://github.com/Code52/ColourCode                    - Multiple things that I ponder. See gitignore and other files for idea copying
 https://github.com/Code52/Samurai                       - Game they say. I would be surprised if it worked
 https://github.com/Code52/gh-pages-template             - Another template
+https://www.freedesktop.org/wiki/Software/              - Platform that has been used for many things
+  https://www.freedesktop.org/wiki/Software/Farstream/
+  https://www.freedesktop.org/wiki/Specifications/      -
+  https://wiki.debian.org/FreeDesktop
+https://www.x.org/wiki/                                 - Something that has windowed things
+  https://www.x.org/wiki/Development/Security/          - See some problems get fixed
+https://gstreamer.freedesktop.org/                      - Video thing. Stream good video efficiently?
+https://gitlab.freedesktop.org/explore/groups           - The thing that has similar name to github
+
 
 ################################################################################################
 ## End of File
