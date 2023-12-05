@@ -1,10 +1,11 @@
 
 Created:	04.12.2023
 ################################################################################################
-https://git-scm.com/                                        - Official. Book, Videos, Links
+https://git-scm.com/                                            - Official. Book, Videos, Links
 
-https://training.github.com/                                - 
-https://githubtraining.github.io/training-manual/book.pdf   - Markdown language as a new thing for me
+https://training.github.com/                                    - 
+https://githubtraining.github.io/training-manual/book.pdf       - Markdown language as a new thing for me
+https://www.pluralsight.com/guides/how-to-use-gitignore-file    - Nice article about ignorance
 
 
 ################################################################################################

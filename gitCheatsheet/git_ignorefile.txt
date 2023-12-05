@@ -1,15 +1,81 @@
 
-Created:	04.12.2023
+Created:	04.12.2023              Updated: +++05.12.2023+++
 ################################################################################################
-
+https://www.pluralsight.com/guides/how-to-use-gitignore-file
+------------------------------------------------------------------------------------------------
 File:
+.env                    Local environment definitions
 .gitignore              is being used to disable sharing of some files that are not meant for public. Used on repository root path as a hidden file.
+.git-credentials        Obvious reasons
+.secrets
+.exclude
+.excludes
 .git/info/exclude       also one popular source of checking ignorable files
+.DS_Store               For i-people
+*.sh                    If you have scripts that have sensitivity or harming potential
+*~                      For autocreated files. I believe these are some backups
+env                     Good idea is to not share everything
+readme*                 If for some reason you don't want people with manuals
+
+
+Dirs:
+dist                    For i-people. Ignores files and folders
+Banned_in_brazil/       You can create local settings
+node_modules/           Ignores the folder
+backups/
 
 -Config variable: core.excludesFile is also checked
+-Best is to ignore dir node_modules since there is autocreated package file that has info needed for all dependencies
+-One exclude rule per line
+-There can be multiple .gitignore files in a project
+-Read is done from relative to .gitignore
+-Excluding IDE files is smart
+-Any file that is personally doing a thing for exactly your PC
 
 
+Commands for the haxors:
+-Already committed files are not affected. Fix:
+git rm --cached FILENAME
 
+-Creating a global ignored file (for your user only?):
+git config --global core.excludesFile ~/.gitignore
+
+-Why is something ignored:
+git check-ignore -v example.log
+
+------------------------------------------------------------------------------------------------
+_______
+Syntax:
+*                       Wildcard in play
+#                       Comment
+?                       Replace a char
+
+------------------------------------------------------------------------------------------------
+________________________________
+Template for ignorance training:
+
+.env
+.gitignore
+.git-credentials
+.secrets
+.exclude
+.excludes
+.git/info/exclude
+.DS_Store
+*.sh
+*~
+dist
+env
+readme
+readme*
+#todo
+Admin/
+Backups/
+node_modules/
+Planning/
+Secrets/
+Temp/
+temp/
 
 ################################################################################################
 ## End of File
