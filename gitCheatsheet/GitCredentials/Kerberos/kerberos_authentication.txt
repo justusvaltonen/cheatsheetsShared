@@ -1,0 +1,17 @@
+
+Created:	06.12.2023
+################################################################################################
+https://www.oreilly.com/library/view/linux-security-cookbook/0596003919/ch04s14.html
+https://ubuntu.com/server/docs/service-kerberos-workstation-auth                        (2)
+https://www.rootusers.com/how-to-configure-linux-to-authenticate-using-kerberos/        (3)
+------------------------------------------------------------------------------------------------
+
+(2) Looks pro, but seems like a task
+
+(3) Also looks pro
+
+
+################################################################################################
+## End of File
+################################################################################################
+
