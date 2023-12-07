@@ -1,8 +1,9 @@
 
-Created:	04.12.2023
+Created:	04.12.2023			Updated: 07.12.2023
 ################################################################################################
 https://www.epochconverter.com/
 https://en.wikipedia.org/wiki/Salt_(cryptography)
+https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/security-log-events#repo
 ------------------------------------------------------------------------------------------------
 
 -I will take a couple of entries from the logs and see if I can figure out what the fields mean
@@ -50,7 +51,11 @@ https://en.wikipedia.org/wiki/Salt_(cryptography)
 1701653735790   ==> Monday, December 4, 2023 3:35:35.790 AM GMT+02:00       --> I can back this up.
 Document ID is unique, but with a twist. There are some times indicators of what type of action is performed. This happens with signatures at least.
 -Salts are something that resembles the usecase of the indicators, but not quite.
+
 Action indicates that repository is handled and method create is performed.
+-Oher methods are listed in the link ending in #repo
+-I was just reading about cleancode. Principal not used when naming actions. There is a method called 'access' that changes the VISIBILITY of the repo...
+
 Actor is a bit of a mystery. While on this case it's the same as user, I have a feeling that it's not always the case
 Actor ID is a thing that follows the actor field.
 Created at has always matched the timestamp. Possibly a security measure.
