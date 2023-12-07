@@ -5,6 +5,8 @@
 
 /boot/                  --> Contains files neccessary to boot your system
 
+/dev/
+
 /etc/                   --> Gerally a place where you can find some configurations for stuff. System wide configs. Home dir contains personal configs
 /etc/apt/               --> Things that relate to apt packet manager tool. Includes your source repos of where you get the updates
 /etc/dbus-1/		--> DBUS enables applications to communicate with one-another. Here are settings for dbus

@@ -1,0 +1,14 @@
+
+Created:	07.12.2023          Updated: +++ +++
+################################################################################################
+https://kerneltalks.com/tips-tricks/how-to-configure-login-banners-in-linux/
+https://webhostinggeeks.com/howto/linux-login-banner/
+https://www.cyberciti.biz/howto/quick-tip-display-banner-message-before-openssh-authentication/
+------------------------------------------------------------------------------------------------
+
+
+
+################################################################################################
+## End of File
+################################################################################################
+

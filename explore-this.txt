@@ -19,7 +19,7 @@ https://www.x.org/wiki/                                 - Something that has win
   https://www.x.org/wiki/Development/Security/          - See some problems get fixed
 https://gstreamer.freedesktop.org/                      - Video thing. Stream good video efficiently?
 https://gitlab.freedesktop.org/explore/groups           - The thing that has similar name to github
-
+https://help.obsidian.md/                               - Markdown (github) manual creator. Looks pretty good in the pictures. Mindmapping
 
 ################################################################################################
 ## End of File

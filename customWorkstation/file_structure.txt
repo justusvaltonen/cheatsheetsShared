@@ -1,0 +1,19 @@
+
+Created:	07.12.2023
+################################################################################################
+
+------------------------------------------------------------------------------------------------
+-Using colors in your folders can help to see some properties folders have.
+Blue:       Shared
+Red:        Do not share
+Green:      Backup / reserve / not updated
+
+
+-When creating manuals, you can use a tool called obsidian to make the manuals as visual mindmaps. This is perfect for me.
+-Obsidian uses .md format (markdown) that is used in github for example
+
+
+################################################################################################
+## End of File
+################################################################################################
+

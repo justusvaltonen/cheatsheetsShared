@@ -1,0 +1,21 @@
+
+Created:	07.12.2023
+################################################################################################
+https://dev.exiv2.org/projects/exiv2/wiki/The_Metadata_in_PNG_files
+https://daminion.net/articles/tips/top-5-ways-to-view-and-edit-metadata/
+http://www.libpng.org/pub/png/spec/
+------------------------------------------------------------------------------------------------
+_______
+Visual:
+png             == Portable Network Graphics.
+
+_________
+Metadata:
+EXIF            == Some images have this
+IPTC            == Text, images, others
+XMP             == Adobe
+
+################################################################################################
+## End of File
+################################################################################################
+
