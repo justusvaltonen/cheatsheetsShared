@@ -3,6 +3,13 @@ Created:	04.12.2023			Updated: 07.12.2023
 ################################################################################################
 https://en.wikipedia.org/wiki/Unix_time
 https://www.theguardian.com/info/developer-blog/2013/apr/29/rewrite-git-history-with-the-bfg
+https://docs.github.com/en/apps/oauth-apps/using-oauth-apps/reviewing-your-authorized-oauth-apps    (3)
+https://docs.github.com/en/apps/oauth-apps/using-oauth-apps/internal-oauth-apps                     (4)
+https://www.oauth.com/oauth2-servers/access-tokens/
+https://oauth.net/2/access-tokens/                                                                  (6)
+https://oauth.net/2/refresh-tokens/                                                                 (7)
+https://oauth.net/id-tokens-vs-access-tokens/                                                       (8)
+https://user-agents.net/string/faraday-v0-17-3                                                      (9)
 GitHubAccount:Settings/Archives/SecurityLogs
 ------------------------------------------------------------------------------------------------
 
@@ -31,11 +38,16 @@ cat <massive-datafile> | jq > better-looking-data.json
 
     Back to logs. My logs stated that there is "action": "oauth_access.create" being done at the time I was AFK. Also what is weird is that I don't even use OAuth yet on anything made by me. There might be some logging in to my github-account done when OAuth is used. But access for an application? Not me. Who then? What about the regenerating. This means there has been one already or is it just the thing I suspected that when a token is created, some skeletonkey is created first that is stored somewhere else for case of losing the token and renewal of access. The word access seems to be repeated a lot. Not sure if I get this right, but OAuth provides different kinds of tokens for different usecases. Do we have any info on the token or where it could be found. I would like to know what it's for. Will there ever be a conclution to this mystery? Now it's time to put another hat on and return with a different account...
 
+    Finding a link that resembles my problem at (3). No access is granted. But wait! I found from PersonalAccount/Settings/Access/Emails: "<my-userid-from-logs>+justusvaltonen@users.noreply.github.com will be used for web-based Git operations, e.g., edits and merges. ". So I have an infochannel in github? What properties does it have? Can I send? Do I have a mailbox somewhere? Hey, there is a mention about an option that I can enable to block my mail from CLI push operations. That address I mentioned can be used there for privacy. Cool feature. Not going to set it up right now or neither am I going to find out about my mails capabilities. Also there is a feature that requires users to have history to be able to push to my account. Still it doesn't affect if tokens are granted? Also granting of tokens seems possible. Annoying as hell. Oh wait, yeah, the thing was done using my username.
+
+    When reading about OAuth access tokens from (6) I can see that there is no info about the user on the token. It should carry only some part that enables checking privilages, but not the user? Also I'm not sure about the type of the token based on the log entries. Then there is the OAuthRefreshToken that enables automatic regenerating of the original tokens. No user interaction required. Regeneration grants with same privilages as the previous token (7). Just found out about faraday. Some webcrawlers may be testing my linking skills. (9)
 
 
-
+What entries in my logs are:
 oauth_access.regenerate		- Access token was regenerated
 oauth_access.create		- Access token was created
+"_document_id"          - ???
+"user_agent"            - ???
 ################################################################################################
 ## End of File
 ################################################################################################

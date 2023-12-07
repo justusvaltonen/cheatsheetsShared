@@ -1,0 +1,40 @@
+
+Created:	07.12.2023			Updated:
+################################################################################################
+https://oauth.net/id-tokens-vs-access-tokens/
+ https://oauth.net/2/jwt/
+ https://oauth.net/2/bearer-tokens/
+ https://oauth.net/2/grant-types/
+https://leastprivilege.com/
+https://en.wikipedia.org/wiki/User-Managed_Access
+------------------------------------------------------------------------------------------------
+Accessing systems requires passwords... or tokens... or another system.
+
+API-tokens
+IAM
+ActiveDirectory
+JWT
+OAuth2
+  Access
+  ID-Tokens
+  Regenerate
+  OIDC
+SSH
+SSL/TLS
+  Letsencrypt
+Github Access Tokens
+Kerberos Authentication
+JavaScript
+  Passport
+Credential files
+GPG / PGP
+Signatures
+Password management
+Key-Vaults
+Nginx
+
+
+################################################################################################
+## End of File
+################################################################################################
+

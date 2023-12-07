@@ -38,6 +38,9 @@
 │   │   ├── GCM
 │   │   │   ├── git-credential-manager_linux.txt
 │   │   │   └── git-credential-manager_linux.txt~
+│   │   ├── Kerberos
+│   │   │   ├── kerberos_authentication.txt
+│   │   │   └── kerberos_authentication.txt~
 │   │   ├── Reverse_Engineer_Build
 │   │   │   ├── credentiaL.txt
 │   │   │   ├── gitcredentialS.txt
@@ -45,6 +48,7 @@
 │   │   └── SSH
 │   │       └── git_connect_ssh.txt
 │   ├── git_customisation.txt
+│   ├── git_customisation.txt~
 │   ├── git_files.txt~
 │   ├── git_help_all_commands.txt
 │   ├── GitHub
@@ -83,6 +87,7 @@
 │   │   └── GitHubWorkflows
 │   │       └── github_workflows_whatis.txt
 │   ├── git_ignorefile.txt
+│   ├── git_ignorefile.txt~
 │   ├── git_manpages.txt
 │   ├── git_sources.txt
 │   ├── git_sources.txt~
@@ -110,6 +115,29 @@
 │   │   └── seo_links.txt
 │   └── TemplatesHTML
 │       └── empty_html_document.txt
+├── IdentityManagementCheatsheet
+│   ├── create_believable_character.txt
+│   ├── create_believable_character.txt~
+│   ├── designing_visions.txt
+│   ├── designing_visions.txt~
+│   ├── make-diffusion_draw-things.txt
+│   ├── make-diffusion_draw-things.txt~
+│   ├── pictures
+│   │   ├── attempt_4-1_dark.png
+│   │   ├── attempt_4-2_dark.png
+│   │   ├── chess-1.png
+│   │   ├── chess-2.png
+│   │   ├── eco-1.png
+│   │   ├── eco-2.png
+│   │   ├── inside.png
+│   │   ├── livingroom.png
+│   │   ├── nosuper-1.png
+│   │   ├── nosuper-2.png
+│   │   ├── pipes-1.png
+│   │   ├── pipes-2.png
+│   │   └── wannabedevil.png
+│   ├── who_are_you.txt
+│   └── who_are_you.txt~
 ├── installingCheatsheet
 │   ├── virtualboxInstallCheat.txt
 │   └── wineInstallCheat.txt
@@ -180,6 +208,9 @@
 │       ├── makeFullBackup.sh
 │       ├── scriptRedirect.sh
 │       └── smallScriptsListing
+├── securityCheatsheet
+│   ├── tokens.txt
+│   └── tokens.txt~
 ├── structuringCheatsheet
 │   └── webdev
 │       └── expressRoutingStructureCheat.txt
@@ -212,4 +243,4 @@
 └── xPaintCheatsheet
     └── xpaintManual.txt
 
-73 directories, 139 files
+77 directories, 166 files
