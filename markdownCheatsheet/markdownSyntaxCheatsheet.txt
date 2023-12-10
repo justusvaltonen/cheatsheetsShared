@@ -1,0 +1,55 @@
+
+Created:	10.12.2023
+################################################################################################
+GitHub: Tutorial: skills-introduction-to-github: Compare files
+ https://docs.github.com/en/get-started/quickstart/github-glossary#git		--> There are some misinformation, so question
+ https://docs.github.com/en/repositories/creating-and-managing-repositories/about-repositories
+ https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme	--> Duplicated
+ 
+https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax	--> Markdown from original source
+ https://github.com/skills/communicate-using-markdown													--> Course in markdown
+------------------------------------------------------------------------------------------------
+
+_____________________________
+Markdown language properties:
+-Suffix is .md
+
+################################################################################################
+
+________________
+Markdown Syntax:
+<header>
+Without indenting something comes here. Will have your h1 for example.
+Seems that after header closes, a long line of ----------------------- is created.
+</header>
+
+<!--
+Comments written here will not be visible
+-->
+
+# Headline of your manual. Corresponds to <h1> in html.
+## Headline of your manual. Corresponds to <h2> in html. Line of ----------- is created again.
+
+_This text will be cursivated_
+
+:<generic-emoji>:
+
+**Will be bolded like <b> in html**
+
+`Will make a highlight of one type, used in reserved word or somehow important thing relating to the consept discussed`
+
+[link text](<link-path>)
+![link to a pic](<path-to-file-relative-to-repo-root>)
+
+
+################################################################################################
+_______________
+Unknown syntax:
+
+<<< I believe that this does something, not sure what >>>
+-There has to be a thing that enables some anchoring feature, since I can see a menu where I can navigate to a point in the readme-file.
+
+
+################################################################################################
+## End of File
+################################################################################################
