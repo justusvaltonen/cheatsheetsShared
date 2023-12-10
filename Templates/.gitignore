@@ -1,0 +1,71 @@
+
+## To enable / disable ignoring of a file toggle '#' in front of an entry
+## Hidden files that should be kept hidden.
+.credentials
+#.DS_Store
+#.env
+.exclude
+.excludes
+#.gitignore
+.git-credential
+.git-credentials
+.secrets
+
+## Files that expose too much but are not hidden, may cause harm or just useless files
+*.log
+*.log*
+*~
+
+## Not sure if these are ever going to be shared by accident, but feels that I would restrict some if not all of these.
+~/.gnupg/private*
+~/.gnupg/trustdb.gpg
+~/.local/share/
+~/.mozilla/*
+~/.npm/*
+~/.pki/*
+~/.ssh/*
+~/.var/*
+
+## Directories and specific files under them
+.git/info/exclude
+admin/
+Admin/
+backups
+dist
+IdentityManagementCheatsheet/*
+node_modules/
+NoGood/
+Planning/
+Temp/
+temp/
+tmp/
+#vars/
+
+## Disabling some variables
+#~/.config/user-dirs.dirs
+
+## Files that are repo-related
+.accesstokens_ignorant_git
+.git/exclude
+tempo/
+configs_that_worked.txt
+#env
+exclude
+#private
+#readme*
+#readme-private.*
+#todo
+#todo*
+vars
+
+#########################
+# The following doesn't work because the dir is ignored already. Precedence is a thing here aswell 
+# !NoGood/
+# ? is replacing one char
+# **/exampledir/*.suf	Excludes all files and dirs ending with '.suf' inside exampledir and subdirs
+# There can be multiple .gitignore files and can be put to any dir
+# Remove already committed file from tracked list: git rm --cached <filename>
+# Make things global for your current user: git config --global core.excludesFile ~/.gitignore
+# Something not working and you want to inspect: git check-ignore -v <filename>
+#########################
+

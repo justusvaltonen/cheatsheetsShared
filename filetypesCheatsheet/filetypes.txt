@@ -7,7 +7,8 @@ http://www.libpng.org/pub/png/spec/
 ------------------------------------------------------------------------------------------------
 _______
 Visual:
-png             == Portable Network Graphics.
+jpg		== Gets worse on every save. Small size.
+png             == Portable Network Graphics. Enables layers. Big in size
 
 _________
 Metadata:
