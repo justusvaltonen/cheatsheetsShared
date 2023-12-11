@@ -1,0 +1,22 @@
+
+Created:	12.12.2023
+################################################################################################
+
+https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches (C)
+https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets                     (K)
+
+https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes               (ää)
+------------------------------------------------------------------------------------------------
+
+__________________
+Branch protection:  (C)
+
+_________________
+Rulesets general:   (K)
+
+
+
+################################################################################################
+## End of File
+################################################################################################
+
