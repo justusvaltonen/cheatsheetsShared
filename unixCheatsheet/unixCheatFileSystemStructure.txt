@@ -1,11 +1,14 @@
 
+Created:	2022
+################################################################################################
+
 ++++++++++++++++++++++++++++++++
 + Some paths in the filesystem +
 ++++++++++++++++++++++++++++++++
 
 /boot/                  --> Contains files neccessary to boot your system
 
-/dev/
+/dev/                   --> Devices. What is connected to the computer
 
 /etc/                   --> Gerally a place where you can find some configurations for stuff. System wide configs. Home dir contains personal configs
 /etc/apt/               --> Things that relate to apt packet manager tool. Includes your source repos of where you get the updates
@@ -53,5 +56,7 @@
 /var/log/wtmp or btmp   --> Where the command last gets it's info.
 /var/run/utmp           --> Current login sessions
 
-
+################################################################################################
+## End of File
+################################################################################################
 

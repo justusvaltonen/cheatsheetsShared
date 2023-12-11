@@ -16,11 +16,11 @@ Time of creation: 21.00 on 04.12.2023
 }
 
 Creates the following when I choose private gist creation:
-justusvaltonen/gist:c82560213e364d9ee159c8f698cb816e Secret
+justusvaltonen/gist:<cryptic-message-1> Secret
 
 Link for embedding to html
-<script src="https://gist.github.com/justusvaltonen/c82560213e364d9ee159c8f698cb816e.js"></script>
-<script src="https://gist.github.com/justusvaltonen/0344a7eac4074fe2210664cdbfd0b273.js"></script>
+<script src="https://gist.github.com/justusvaltonen/<cryptic-message-1>.js"></script>
+<script src="https://gist.github.com/justusvaltonen/<cryptic-message-2>.js"></script>
 	--> For a public gist. 21.10
 
 -I can't seem to find the description anywhere any more...

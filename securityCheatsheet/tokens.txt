@@ -9,6 +9,7 @@ https://leastprivilege.com/
 https://en.wikipedia.org/wiki/User-Managed_Access
 ------------------------------------------------------------------------------------------------
 Accessing systems requires passwords... or tokens... or another system.
+Here is a set of keywords to start looking for
 
 API-tokens
 IAM

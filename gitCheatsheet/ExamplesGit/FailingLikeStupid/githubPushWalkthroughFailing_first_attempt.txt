@@ -8,7 +8,7 @@ Created:	Jun 2023
 
 -Go to github.com and sign in
 -Add new repository. Name is cheatsheets and the repo is private
--Address for the repo is: https://github.com/justusvaltonen/cheatsheets.git
+-Address for the repo is: https://github.com/justusvaltonen/<reponame>.git
 -The following is a copypaste from github webpage:
 
 echo "# cheatsheets" >> README.md
@@ -29,7 +29,7 @@ git commit -m "first commit"
 git branch -M mastery
  --> Not sure. See git-branch for more info
 
-git remote add origin https://github.com/justusvaltonen/cheatsheets.git
+git remote add origin https://github.com/justusvaltonen/<reponame>.git
  --> I'm guessing this sets the source to a remote location. Because the URL starts with https, we can see that we don't use SSH, but HTTPS as remote url type
 
 git remote set-url origin https://github.com/<owner>/<repository>.git
@@ -70,11 +70,11 @@ hint:   git branch -m <name>
 Initialized empty Git repository in <path-in-local-computer>/.git/
 
 (message_2)
-Username for 'https://github.com': justusvaltonen@gmail.com
-Password for 'https://justusvaltonen@gmail.com@github.com': 
+Username for 'https://github.com': yourmail@gmail.com
+Password for 'https://yourmail@gmail.com@github.com': 
 remote: Support for password authentication was removed on August 13, 2021.
 remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
-fatal: Authentication failed for 'https://github.com/justusvaltonen/cheatsheets.git/'
+fatal: Authentication failed for 'https://github.com/justusvaltonen/<reponame>.git/'
 
 
 

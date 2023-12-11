@@ -24,7 +24,7 @@ https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/s
     <organization-id>
   ],
   "user": "<username-of-what?>",
-  "user_agent": "Mozilla/5.0 (X11 Linux x86_64 rv:120.0) Gecko/20100101 Firefox/120.0",
+  "user_agent": "<some-stats>",
   "user_id": <always-same-entanglement-user-one>
 }
 
@@ -32,7 +32,7 @@ https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/s
 
 {
   "@timestamp": 1701653735790,
-  "_document_id": "HLQ02bwHof1yXoyNhrnmgw",
+  "_document_id": "<not-sure-if-important>",
   "action": "repo.create",
   "actor": "justusvaltonen",
   "actor_id": ********,
@@ -43,7 +43,7 @@ https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/s
   "repo_id": *********,
   "request_category": "other",
   "user": "justusvaltonen",
-  "user_agent": "Mozilla/5.0 (X11 Linux x86_64 rv:120.0) Gecko/20100101 Firefox/120.0",
+  "user_agent": "<some-stats>",
   "user_id": ********,
   "visibility": "public"
 }

@@ -1,0 +1,27 @@
+
+Created:	11.12.2023           Updated: +++ +++
+################################################################################################
+https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/about-your-profile
+  https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/personalizing-your-profile
+  https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme
+    https://gravatar.com/                                   --> No idea what this is
+    https://www.webfx.com/tools/emoji-cheat-sheet/          --> What emojis are available
+  https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/pinning-items-to-your-profile
+
+EXTRAS:
+https://docs.github.com/en/get-started/exploring-projects-on-github/finding-ways-to-contribute-to-open-source-on-github
+    --> How to find jobs that don't pay money, but offer learning possibilities
+------------------------------------------------------------------------------------------------
+
+-Create a repo that holds the same name as your username
+-There should be a README.md appearing automatically, but if not, you should create one.
+-Content of README.md will be shown to visitors. You use markdown language syntax
+-Ones picture should use formats: .png .jpg or .gif and should be less than 1 MB. Recommended 500px*500px, but 3000px*3000px at max.
+
+-If you contribute to a repo, you can pin that repo to your profile.
+-There are a bunch of things to discover. Going to continue as I progress.
+
+################################################################################################
+## End of File
+################################################################################################
+

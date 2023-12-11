@@ -9,11 +9,15 @@
 ├── computerScienceCheatsheet
 │   └── computerScienceAbstractCheat.txt
 ├── customWorkstation
+│   ├── banners.txt
+│   ├── file_structure.txt
+│   ├── file_structure.txt~
 │   ├── useful_rc_git.txt
 │   ├── vim_customization.txt
 │   └── zsh_customization.txt
 ├── explore-this.txt
-├── explore-this.txt~
+├── filetypesCheatsheet
+│   └── filetypes.txt
 ├── findingCheatsheet
 │   ├── findFromFiles.sh
 │   └── makeDirList.sh
@@ -49,6 +53,8 @@
 │   │       └── git_connect_ssh.txt
 │   ├── git_customisation.txt
 │   ├── git_customisation.txt~
+│   ├── git_debug.txt
+│   ├── git_debug.txt~
 │   ├── git_files.txt~
 │   ├── git_help_all_commands.txt
 │   ├── GitHub
@@ -75,13 +81,20 @@
 │   │   ├── GitHubGists
 │   │   │   └── github_gist_whatis.txt
 │   │   ├── github_locations.txt
+│   │   ├── github_locations.txt~
 │   │   ├── GitHubPackages
 │   │   │   ├── github_packages.txt
 │   │   │   └── github_packages.txt~
+│   │   ├── GitHubPersonalAccount
+│   │   │   ├── my_gh_profile.txt
+│   │   │   └── my_gh_profile.txt~
 │   │   ├── GitHubSecurity
 │   │   │   ├── analog.txt
 │   │   │   ├── github_security_journey.txt
 │   │   │   └── github_security_journey.txt~
+│   │   ├── GitHubSkills
+│   │   │   └── Skills-Introduction-To-Github
+│   │   │       └── basics_Web-GUI.txt
 │   │   ├── github_terminology.txt
 │   │   ├── github_troubleshoot.txt
 │   │   └── GitHubWorkflows
@@ -115,29 +128,6 @@
 │   │   └── seo_links.txt
 │   └── TemplatesHTML
 │       └── empty_html_document.txt
-├── IdentityManagementCheatsheet
-│   ├── create_believable_character.txt
-│   ├── create_believable_character.txt~
-│   ├── designing_visions.txt
-│   ├── designing_visions.txt~
-│   ├── make-diffusion_draw-things.txt
-│   ├── make-diffusion_draw-things.txt~
-│   ├── pictures
-│   │   ├── attempt_4-1_dark.png
-│   │   ├── attempt_4-2_dark.png
-│   │   ├── chess-1.png
-│   │   ├── chess-2.png
-│   │   ├── eco-1.png
-│   │   ├── eco-2.png
-│   │   ├── inside.png
-│   │   ├── livingroom.png
-│   │   ├── nosuper-1.png
-│   │   ├── nosuper-2.png
-│   │   ├── pipes-1.png
-│   │   ├── pipes-2.png
-│   │   └── wannabedevil.png
-│   ├── who_are_you.txt
-│   └── who_are_you.txt~
 ├── installingCheatsheet
 │   ├── virtualboxInstallCheat.txt
 │   └── wineInstallCheat.txt
@@ -150,35 +140,11 @@
 │       ├── createNodeJSProjectCheatsheet
 │       ├── express
 │       │   └── defaults
-│       │       ├── expressDefaultDirList
-│       │       ├── package.json
-│       │       └── package-lock.json
+│       │       └── expressDefaultDirList
 │       ├── linksNodeCheatsheet.txt
 │       └── nodejsCheatsheet.txt
-├── NoGood
-│   ├── aws
-│   │   └── awsCheatNotes.txt
-│   ├── azureCheetsheet
-│   │   └── abstractAzure.txt
-│   ├── dataAnalyticsCheatsheet
-│   │   └── dataAnalyticsIndexSources.txt
-│   ├── databasesCheatsheet
-│   │   ├── keyWords.txt
-│   │   ├── mariadbCheatsheet
-│   │   │   └── mariadbCheatsheet.txt
-│   │   └── mongodbCheatsheet
-│   │       ├── mongodbCheatsheet
-│   │       └── mongodbGuidelines.txt
-│   ├── dockerCheatsheet
-│   │   └── dockerCheatNotes.txt
-│   ├── IDECheatsheet
-│   │   ├── atomCheat.txt
-│   │   ├── sublimeTextCheat.txt
-│   │   └── vsCodeCheat.txt
-│   ├── kubernetesCheatsheet
-│   │   └── notesCheatKubernetes.txt
-│   └── languagesSpokenCheatsheet
-│       └── russianLanguage.txt
+├── markdownCheatsheet
+│   └── markdownSyntaxCheatsheet.txt
 ├── notationsCheatsheet
 │   ├── Notation_CSV
 │   ├── Notation_JSON
@@ -209,8 +175,8 @@
 │       ├── scriptRedirect.sh
 │       └── smallScriptsListing
 ├── securityCheatsheet
-│   ├── tokens.txt
-│   └── tokens.txt~
+│   ├── credential-secret.txt
+│   └── tokens.txt
 ├── structuringCheatsheet
 │   └── webdev
 │       └── expressRoutingStructureCheat.txt
@@ -243,4 +209,4 @@
 └── xPaintCheatsheet
     └── xpaintManual.txt
 
-77 directories, 166 files
+82 directories, 170 files

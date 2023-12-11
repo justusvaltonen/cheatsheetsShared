@@ -1,0 +1,23 @@
+
+Created:	11.12.2023           Updated: +++ +++
+################################################################################################
+https://docs.github.com/en/get-started/getting-started-with-git/configuring-git-to-handle-line-endings      --> (1) Nasty bug
+https://docs.github.com/en/get-started/getting-started-with-git/associating-text-editors-with-git           --> (2) Use IDE
+https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories                   --> (3) Config aliases for remotes
+https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories                --> (4) Remotes causing mayhem
+    https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
+https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository    (5) Sensitive cleaning
+https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/preventing-unauthorized-access   (6) How to handle bad actors
+https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/managing-contribution-settings-on-your-profile/viewing-contributions-on-your-profile
+    --> (7) How to hack the stats in your favour
+
+https://github.com/git-ecosystem/git-credential-manager/blob/main/README.md                                 --> (X1)
+------------------------------------------------------------------------------------------------
+
+-If for some reason it feels as if something extra is happening between apps, see (1)
+
+
+################################################################################################
+## End of File
+################################################################################################
+
