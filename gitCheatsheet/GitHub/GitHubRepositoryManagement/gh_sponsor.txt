@@ -1,0 +1,13 @@
+
+Created:	12.12.2023           Updated: +++ +++
+################################################################################################
+https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/displaying-a-sponsor-button-in-your-repository
+------------------------------------------------------------------------------------------------
+
+-There is a possibility that someone would tip you for creating good content. If you don't have an account you won't recieve anything, that's for sure.
+
+
+################################################################################################
+## End of File
+################################################################################################
+

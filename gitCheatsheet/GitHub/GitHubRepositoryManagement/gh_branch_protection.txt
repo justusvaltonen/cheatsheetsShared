@@ -1,0 +1,92 @@
+
+Created:	12.12.2023
+################################################################################################
+https://docs.github.com/en/repositories                                                                                                         (MAIN)
+
+https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches (C)
+  https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule  (C1)
+    https://ruby-doc.org/core-2.5.1/File.html#method-c-fnmatch                                                                                              (C1.1)
+  https://docs.github.com/en/rest/commits/statuses?apiVersion=2022-11-28                                                                                    (C2.1)
+  https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/collaborating-on-repositories-with-code-quality-features/about-status-checks    (C2.2)
+  https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-a-merge-queue         (C3.1)
+  https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request?tool=webui    (C3.2)
+  https://git-scm.com/docs/git-request-pull                                                                                                                 (C3.3)
+https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets                     (K)
+  https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/available-rules-for-rulesets     (KC.1)
+https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics (FF)
+https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners           (GG)
+https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-repository-languages  (HH)
+https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files        (II)
+
+https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes               (ää)
+------------------------------------------------------------------------------------------------
+
+SIMILAR DOCUMENTING IN ANOTHER FILE. SOURCES ARE ALMOST THE SAME
+
+__________________
+Branch protection:  (C)(C1)(C2)(C3)
+-Available on public repos
+-Needs "edit repository rules" permissions to edit the rules
+-Branch level rules
+-Pattern specified in: 'fnmatch' describes what is affected. Use regex or equivelant. Wildcards exist.
+-Possibly using Ruby as language
+-Priorities resemble firewall behaviour slightly
+-Check phase 6 from (C1). Didn't understand possibly. Maybe the merge is operated to a past timeline or something. Just don't select the option and it's easier... :D
+-The option "Require a pull request before merging" should be ticked.
+-"Require approvals" may be a thing that is used if the process is not automated. Because only trying to get something done, I won't require this one.
+    --> I am the one who does the merging and inspecting, so this seems a bit pointless. It's good to see what happens tho.
+-"Allow specified actors to bypass required pull request" seems sensible when not collaborating yet, but since someone is using my account, I think I'll leave this unticked.
+    --> Besides, I don't have this even as an option.
+-"Require status checks to pass before merging" seems a lot like email settings. You can add some status checks mentioned in (C2) that need passing.
+-"Require conversation resolution before merging" will be ignored at this time. I don't have signatures yet and no conversation is being made in this stage.
+-Managing merge problems can be done by a technique called "merge queue" solving. (C3.1)
+-"Do not allow bypassing the above settings" seems like a sensible setting, so forces can't be executed by just anyone. Admins and "bypass security" feature on your character still enables using free gitting.
+-You can protect the repo from yourself on the bottom of the page. If you don't allow force push, then something needs doing before pushes can be done.
+
+
+Quotes:
+"Because GitHub uses the File::FNM_PATHNAME flag for the File.fnmatch syntax, the * wildcard does not match directory separators (/). For example, qa/* will match all branches beginning with qa/ and containing a single slash, but will not match qa/foo/bar. You can include any number of slashes after qa with qa/**/*, which would match, for example, qa/foo/bar/foobar/hello-world. You can also extend the qa string with qa**/**/* to make the rule more inclusive."
+
+
+-Alright, my first rule got created. Not sure if everything is blocked now. Time to do a very short test:
+Git complained that a file will be overwritten if merge is done instantly. So I rename the file and do a diff with the 2 versions and there is no difference...
+
+The next thing failing was:
+---------------------------
+Total 9 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: error: GH006: Protected branch update failed for refs/heads/officialbranch.
+remote: error: Changes must be made through a pull request.
+To https://github.com/justusvaltonen/miniprograms.git
+ ! [remote rejected] officialbranch -> officialbranch (protected branch hook declined)
+error: failed to push some refs to 'https://github.com/justusvaltonen/miniprograms.git'
+
+-Oh yea, I believe that push doesn't cut it. Pull request needs to be generated somehow...
+-I have a hunch that this has to be done from WebUI
+-Changed Linear stuff to disabled. Let's see what happens. Well, nothing.
+
+-(C3.3) explains to some degree on how to create a request on the CLI
+git request-pull [-p] <start> <URL> [<end>]
+
+-When unticking: "Require a pull request before merging", all seems to work again.
+
+
+################################################################################################
+
+CONCLUTION, CONTINUE FROM AND FOLLOW UP:
+-I got merge to happen from WebUI by clicking just something. I have to say I didn't understand what I was doing. Seemed that there was at least 2 merges required.
+-This is not the easiest of tasks. Maybe just following the skill pages would be easier...
+
+
+
+
+
+################################################################################################
+_________________
+Rulesets general:   (K)
+____________
+Code Owners:        (GG)(HH)(II)
+
+################################################################################################
+## End of File
+################################################################################################
+

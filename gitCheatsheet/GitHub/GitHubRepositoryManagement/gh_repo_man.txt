@@ -1,19 +1,43 @@
 
 Created:	12.12.2023
 ################################################################################################
+https://docs.github.com/en/repositories                                                                                                         (MAIN)
 
 https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches (C)
+  https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule  (C1)
+    https://ruby-doc.org/core-2.5.1/File.html#method-c-fnmatch                                                                                              (C1.1)
+  https://docs.github.com/en/rest/commits/statuses?apiVersion=2022-11-28                                                                                    (C2.1)
+  https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/collaborating-on-repositories-with-code-quality-features/about-status-checks    (C2.2)
+  https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-a-merge-queue         (C3.1)
+  https://git-scm.com/docs/git-request-pull                                                                                                                 (C3.3)
+  
 https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets                     (K)
+  https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/available-rules-for-rulesets     (KC.1)
+https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics (FF)
+
+https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners           (GG)
+https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-repository-languages  (HH)
+https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files        (II)
 
 https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes               (ää)
 ------------------------------------------------------------------------------------------------
 
 __________________
-Branch protection:  (C)
+Branch protection:  (C)(C1)(C2)(C3)
 
+################################################################################################
 _________________
 Rulesets general:   (K)
+-If I got this right, these are the regex patterns that define rule scopes
+-"Require Linear History" is an interesting one.
+    "This means that any pull requests merged into the branch or tag must use a squash merge or a rebase merge"
 
+################################################################################################
+____________
+Code Owners:        (GG)(HH)(II)
+-Like so many settings, this field also can be found in hidden dirs ~/.github/CODEOWNERS
+-This is the same as is normal webdev without github. Same features available.
+-You can generate yet even more things that are not code.
 
 
 ################################################################################################
