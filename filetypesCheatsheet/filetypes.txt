@@ -10,6 +10,13 @@ Visual:
 jpg		== Gets worse on every save. Small size.
 png             == Portable Network Graphics. Enables layers. Big in size
 
+__________
+Notations:
+HTML            == Web
+JSON            == Used widely
+MD              == Mark Down
+XML             == Before there was HTML
+YAML            == Alternative to JSON
 _________
 Metadata:
 EXIF            == Some images have this
