@@ -1,15 +1,23 @@
 
+Created:                        Updated: +++15.12.2023+++
+################################################################################################
 
-
-awk			--> Language for text manipulation. Good for building UI:s.
+awk         --> Language for text manipulation. Good for building UI:s.
 cat			--> Display content of a file as text.
 cut			--> Possibly does something to each line of a file. Handy for restructuring YAML.
-echo			--> Insert text to input. Can be handful in weird situations.
+echo		--> Insert text to input. Can be handful in weird situations.
 fmt			--> Fuc.. FixMyText. Maybe same as macros in C. Find all instances and do something with them.
-grep			--> Find in input a pattern that can be defined as regex.. or just find simple strings from input.
+grep		--> Find in input a pattern that can be defined as regex.. or just find simple strings from input.
+hxnormalize --> Make all to gether in one HTML readable. Additional tool for linux cli
+jq          --> Makes bad looking JSON look better. Linux CLI
 nl			--> Numbering Lines. Write to stdout with line numbers added.
 sed			--> Filter and edit text.
-sort			--> Sorts lines.
+sort		--> Sorts lines.
 tr			--> TRansform a regex patter. Delete all 'g' letters from a book for instance. Who the hell needs gangstas anyway. Peace and love bitches.
-uniq			--> Finds if a line is repeated multiple times in input. Only gets rid of the first instance...
+uniq		--> Finds if a line is repeated multiple times in input. Only gets rid of the first instance...
 wc			--> WordCount
+
+################################################################################################
+## End of File
+################################################################################################
+

@@ -1,4 +1,7 @@
 
+Created:                        Updated: +++ +++
+################################################################################################
+
 ++++++++++++++++++++++++++++++++
 + Possible stuff to know about +
 ++++++++++++++++++++++++++++++++
@@ -34,10 +37,10 @@ cut				--> Enables cutting down a portion of a file away. Get rid of a banner fo
 
 D)
 date				--> Gives current time. A lot to modify.
-df				--> File system discs. Use more options to get a lot of info. DiscFree. -T
+df				    --> File system discs. Use more options to get a lot of info. DiscFree. -T
 dict				--> dict - suomi outputs definition of the word suomi. Try consciousness. Online dictionary.
 diff				--> Difference between 2 files
-dig				--> DNS lookup tool
+dig			        --> DNS lookup tool
 dpkg --list			--> List of installed with a description
 du -sh				--> Disc usage. See man du for more. Summarise, Human-readable
 
@@ -48,13 +51,13 @@ export				--> Exporting a variable to an enviroment variable
 F)
 factor				--> Punch in a number and this tells of which primes it's consisted of. Very handy
 fdisk				--> Partition table manager
-fg				--> Brings a task to foreground. Used in many instances
+fg				    --> Brings a task to foreground. Used in many instances
 firewalld			--> Said to be alternative to ufw
 fmt				--> Format a textfile to an alternative format. Use: fmt somefile.txt ==> This outputs alternative formatting without changing the already existing file.
 fold				--> Wordwrapping the manual way.
 free				--> Shows current memory usage.
 fwupdmgr			--> fwupdmgr --help for more info. Utility to manage larger scale updates
-fzf				--> Fuzzy finder. Enabling handy history/file querys. Lot's of configs can be found online
+fzf				    --> Fuzzy finder. Enabling handy history/file querys. Lot's of configs can be found online
 
 G)
 gawk				--> Find text in file and replace with something. Think macro.
@@ -72,6 +75,7 @@ history				--> See your command history. Useful thing to source. !123 typed on c
 hostname			--> Gives system name
 hostnamectl			--> Gives info about your operating system
 htop				--> Better then top. See also: atop, top
+hxnormalize         --> Make all to gether in one HTML readable. Additional tool for linux cli
 
 I)
 id				--> Groups info.
@@ -208,6 +212,9 @@ ls -l /etc/systemd/system /usr/lib/systemd/service | egrep .service$
 
 B)
 echo -n 'hereIsASecretString' | base64	--> aGVyZUlzQVNlY3JldFN0cmluZw==	--> No trailing newline (-n), --decrypt for reversing.
+
+H)
+cat somefile.html | hxnormalize         --> Outputs better indented data. Usually your IDE has this automatically
 
 N)
 Setting up a trap: If I can guess the attackers IP, I could be able to get a shell to their computer
