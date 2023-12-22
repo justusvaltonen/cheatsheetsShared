@@ -26,8 +26,8 @@ man gitcredentials				== How to add creds to git like a pro
 man git push
 
 git help config
-
-
+git help -a
+git help -g
 
 -- Interesting paths:
 /etc/gitconfig
