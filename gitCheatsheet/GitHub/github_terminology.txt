@@ -1,5 +1,5 @@
 
-Created:	28.8.2023           Updated: +++04.12.2023+++
+Created:	28.8.2023           Updated: +++29.12.2023+++
 ################################################################################################
 
 https://docs.github.com/en/codespaces/overview
@@ -17,7 +17,6 @@ Commit			== Confirm that you want to make changes to the external folder. This n
 Copilot			== Autocorrect
 Dependabot      	== Makes sure that all requirements are met.
 Fetch			== Get stuff and include references to other repositories
-Frontmatter     == Feature of Jekyll. Not sure what this is used for
 Gist			== Small function or something of a sort. Can be embedded to readme as a script fpr example
 GitHub Actions		== Automating some functionality
 GitHub API  		== REST or GrapQL
@@ -30,6 +29,7 @@ Gitconfig		== File with your configs. Should be in /etc/gitconfig or ~/.gitconfi
 Gitignore		== Blacklist some files that you don't want to send.
 Git-Shell		== Restricted access shell for gitting.
 Jekyll          == Pages creating library / framework. All seems quite familiar from K8
+  Frontmatter     == Feature of Jekyll. Not sure what this is used for
 License			== Some legals on how your code can be used by others
 Markdown        == Language that is used on GUI on github. Enables embedding gifs and headers for example.
 Merge           == Combining changes made to code in a project
@@ -50,7 +50,7 @@ Repository		== Some server that holds your code. Also remote means the same thin
   Origin			    == Typical name for a Repository in the manuals.
 Staging			== Pre save. Including to be committed. Same as index.
 Status			==
-Tag		        == Stored in /refs/tags/<my-tag-name> - Are used to mark a specific point in history.
+Tag		        == Stored in /refs/tags/<my-tag-name> - Are used to mark a specific point in history. This is version numbering. Bit confusing.
 Token			== Used to access to the repositories. Used by apps and people.
   FineGrainedPAT		== Newer version
   PersonalAccessToken   	== The method that is used to connect our locals with github. Uses HTTPS. PAT

@@ -1,0 +1,96 @@
+
+Created:	29.12.2023           Updated: +++ +++
+################################################################################################
+https://github.com/skills/release-based-workflow
+https://github.com/justusvaltonen/skills-release-based-workflow     --> Very useful looking repo. When it comes to deploy scripts, this is the shit.
+
+https://docs.github.com/en/get-started/quickstart/github-flow
+https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases
+https://docs.github.com/en/repositories/releasing-projects-on-github/automatically-generated-release-notes  (5)
+  https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels
+https://semver.org/     (6) Semantic versioning: major, minor, patch
+------------------------------------------------------------------------------------------------
+
+    Who is this for: Developers, DevOps Engineers, IT Operations, managers, and teams.
+    What you'll learn: How to follow a release-based workflow.
+    What you'll build: You will create tags, releases, and release notes.
+    Prerequisites: If you need to learn about branches, commits, and pull requests, take Introduction to GitHub first.
+    How long: This course takes less than 1 hour to complete.
+
+In this course, you will:
+    Create a beta release
+    Add a feature to a release
+    Open a release pull request
+    Add release notes and merge
+    Finalize a release
+    Commit a hotfix
+    Create a hotfix release
+
+
+CREATING A RELEASE:
+GitHub Releases point to a specific commit. Releases can include release notes in Markdown files, and attached binaries.
+Before using a release based workflow for a larger release, let's create a tag and a release.
+
+-Releases can be found on the right
+
+
+STEP 2: Add a new feature to the release branch
+-Usual branching style is production, dev, main
+-Do whatever style you want, but lifespan of branches, excluding main, should kept low.
+-In this step we use release-v1.0 as the main/base branch.
+
+You should update the page background color to black.
+I'll help you change the text colors to green.
+
+
+STEP 3: Open a release pull request
+Release branches and main
+-You should open a pull request between your release branch and main as early as possible. It might be open for a long time, and that's okay.
+
+In general, the pull request description can include:
+    A reference to an issue that the pull request addresses.
+    A description of the changes proposed in the pull request.
+    @mentions of the person or team responsible for reviewing proposed changes.
+
+
+STEP 4: Generate release notes and merge
+(5)
+Automatically generated release notes include a list of merged pull requests, a list of contributors to the release, and a link to a full changelog. You can also customize your release notes once they are generated.
+
+
+STEP 5: Finalize the release
+
+-It's important to be aware of the information what will be visible in that release. In the pre-release, the version and commit messages are visible.
+
+-- Semantic versioning --
+Semantic versioning is a formal convention for specifying compatibility. It uses a three-part version number: major version; minor version; and patch. Version numbers convey meaning about the underlying code and what has been modified.
+
+-Now let's change our recently automated release from draft to latest release.
+
+-Go to the release tab, find the draft that was saved earlier, see that main is selected and then publish.
+-Now we see that there are 2 releases available: v0.9.0 and v1.0.0
+
+
+STEP 6: Commit a hotfix to the release
+-For some reason the branch wasn't deleted
+-Bug was in the published code: text was supposed to be green, but the whole viewport is.
+
+
+Here's a recap of all the tasks you've accomplished in your repository:
+    Create a beta release.                      - Yes
+    Add a new feature to the release branch.    - Yes, kind of
+    Open a release pull request                 - Many times
+    Automate release notes.                     - Already automated. I prefer writing them myself
+    Merge and finalize the release branch.      - Yes
+    Commit a hotfix to the release.             - Yes
+    Create release v1.0.1.                      - Same as previous
+
+
+
+The product itself was a game of life-force kind simple thing. Quite cool
+
+
+################################################################################################
+## End of File
+################################################################################################
+

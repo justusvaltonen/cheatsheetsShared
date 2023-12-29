@@ -1,12 +1,31 @@
 
 Created:	29.12.2023           Updated: +++ +++
 ################################################################################################
+https://github.com/skills/resolve-merge-conflicts
+https://github.com/justusvaltonen/skills-resolve-merge-conflicts
+https://docs.github.com/en/get-started/quickstart/github-glossary#merge
 
+https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line
 ------------------------------------------------------------------------------------------------
+In this course, you will:
+    Create a pull request
+    Resolve a merge conflict
+    Create a merge conflict
+    Merge your pull request
+
+At least branches: my-resume and main are in use
+
+Step 3: Creating mayhem
+-Resolving a conflict doesn't automatically merge the pull request in GitHub
+-Instead, it stores the resolution of the conflict in a merge commit and allows you and your team to keep working.
+-To resolve a conflict, GitHub performs what is known as a reverse merge. This means that the changes from the main branch were merged into your my-resume branch.
+-With a reverse merge, only the my-resume branch is updated.
+-This allows you to test the resolved changes on your branch before you merge it into main.
+-
 
 
 
-
+-That was easy
 
 
 
