@@ -9,44 +9,71 @@ GitHub: Tutorial: skills-introduction-to-github: Compare files
  
 https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax	--> Markdown from original source
  https://github.com/skills/communicate-using-markdown													--> Course in markdown
+  https://github.com/justusvaltonen/skills-communicate-using-markdown                                   --> Personal walkthrough
  https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams    --> I would say this is a full language
  https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions     --> Cool
+ 
 ------------------------------------------------------------------------------------------------
 
 _____________________________
 Markdown language properties:
--Suffix is .md
+-Suffix is .md or .markdown
 
 ################################################################################################
 
 ________________
 Markdown Syntax:
+
 <header>
 Without indenting something comes here. Will have your h1 for example.
 Seems that after header closes, a long line of ----------------------- is created.
 </header>
 
+<h1> Works as well
+
+# This is h1
+## This is h2
+### Three, there is total of six
+#### Remember this when coming from *nix world
+
+
 <!--
 Comments written here will not be visible
 -->
 
+
 # Headline of your manual. Corresponds to <h1> in html.
 ## Headline of your manual. Corresponds to <h2> in html. Line of ----------- is created again.
 
+
 _This text will be cursivated_
+
 
 :<generic-emoji>:
 
+
 **Will be bolded like <b> in html**
+
 
 `Will make a highlight of one type, used in reserved word or somehow important thing relating to the consept discussed`
 
-[link text](<link-path>)
-![link to a pic](<path-to-file-relative-to-repo-root>)
 
-...
+![Image of Yaktocat alternative](https://octodex.github.com/images/yaktocat.png "This should be showing as original")
+<!--
+  The text inside brackets will be read out loud with screenreader as an alternative and it's a description of the image
+  If we only use the text inside brackets, only that is used
+-->
+
+
+```
 <create code between the dots to make them look like they do in the interweb>
-...
+```
+
+
+``` javascript
+var myVar = "This acts as a shebang replacement";
+```
+<!-- Doesn't work inside divs -->
 
 
 -Listing
@@ -62,6 +89,31 @@ _This text will be cursivated_
 Escaping character can be found \@ \#2 in your keyboard.
 
 
+<!-- Different kinds of boxes -->
+[!NOTE]
+Your text here
+
+[!TIP]
+Your text here
+
+[!IMPORTANT]
+Your text here
+
+[!WARNING]
+Your text here
+
+[!CAUTION]
+Your text here
+
+
+<!-- Very important on syntax again. This is called frontmatter -->
+---
+title: "Some generic title needed"
+date: 2023-12-12
+---
+
+
+
 ################################################################################################
 _______________
 Unknown syntax:
@@ -73,3 +125,4 @@ Unknown syntax:
 ################################################################################################
 ## End of File
 ################################################################################################
+

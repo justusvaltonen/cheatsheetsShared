@@ -1,0 +1,100 @@
+
+Created:	29.12.2023           Updated: +++ +++
+################################################################################################
+https://github.com/skills/review-pull-requests
+https://github.com/justusvaltonen/skills-review-pull-requests
+https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches
+https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request (2)
+https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors
+  https://docs.github.com/en/contributing
+  https://github.com/rails/rails/blob/main/CONTRIBUTING.md
+  https://github.com/opengovernment/opengovernment/blob/master/CONTRIBUTING.md
+
+https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/incorporating-feedback-in-your-pull-request
+https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+
+------------------------------------------------------------------------------------------------
+
+In this course, you will:
+    Open a pull request
+    Assign yourself
+    Leave a review
+    Suggest changes
+    Apply changes
+    Merge your pull request
+
+-Good idea is to add a branch protecting ruleset to a repositorys settings
+-Nice, a tic-tac-toe game is in the index.md file
+-Branch name: update-game is used to modify gaming features
+
+
+git clone https://github.com/justusvaltonen/skills-review-pull-requests.git
+    --> Clones the repo in the above url to your local machine. Works if you have permissions to do this. READ
+    
+git pull origin main
+    --> Creates a request to remotes main branch to pull after inspection
+    
+git checkout main
+    --> Switch to remotes main branch
+
+git merge update-game
+    --> update-game is the temporary working branch that is being merged
+
+git push -u origin main
+    --> Push to the branch that is the main repo main branch. This assumes that aliasing is done between 'origin' and
+    https://github.com/justusvaltonen/skills-review-pull-requests.git
+
+-Review gives a second oppinion to the changes about to be made
+-You can also create a draft pull request if you are not ready for review (2)
+-Where do I rollback if a mistake is made?
+-Before merge, on the pull request itself, you can assign the reviewer for example. At the moment it's done on the right side of screen
+-One can't assign oneself as the reviewer, if the pull request is done by you... and of course is.
+-I got a mail that enabled me to do some commenting, so I did.
+-I had messed up with the branches again. Had to re-create some branch with the name 'update-game' to pass to the next step.
+-How to delete accidentally created files? I thought I had sudo here. Couldn't find the menus that I believe were there before.
+
+################################################################################################
+
+
+When reviewing a pull request:
+    Review the title and body of the pull request, and possibly any associated issue, to understand the intended change.
+    Review the diff, the comparison of the proposed code, in the context of the whole project.
+    For most things, try out the proposed change. Check if the actual change matches the intention. Find the repository's contributing guide to find out how to review the changes.
+
+
+In your review comments:
+    Identify potential issues, risks, and limitations.
+    Suggest changes and improvements.
+    Share awareness of upcoming changes that the pull request doesn't account for.
+    Ask questions to verify shared understanding.
+    Highlight what the author did well and should keep doing.
+    Prioritize the most important feedback.
+    Be concise and provide meaningful detail.
+    Treat the pull request author with kindness and empathy.
+
+
+When an approval or request for changes is not yet needed, consider using comments. An approval lets the author know you believe the pull request is safe to merge. Requesting changes lets the author know you believe the pull request is not ready to merge.
+
+
+-I didn't find a place where to "Add a suggestion", but still something happened and now I'm to next level????
+
+Step 5: Apply suggested changes
+https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/incorporating-feedback-in-your-pull-request
+
+
+Here's a recap of all the tasks you've accomplished in your repository:
+    You learned how to assign pull requests for review. - No
+    You left a review on a pull request.                - Yes, but no
+    You suggested changes to a pull request.            - No
+    You applied suggested changes to a pull request.    - No
+
+
+-There is some sort of a feedback system, but not sure how it works
+-There are also CODEOWNERS that get all the code for review. Basic ~/.github/ dir gives a home for these settings
+
+
+################################################################################################
+## End of File
+################################################################################################
+

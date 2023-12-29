@@ -1,0 +1,54 @@
+
+Created:	29.12.2023
+################################################################################################
+https://github.com/justusvaltonen/skills-communicate-using-markdown
+https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-workflows
+https://docs.github.com/en/actions/security-guides/automatic-token-authentication
+https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
+https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks
+
+https://github.com/github-linguist/linguist
+  https://github.com/github-linguist/linguist/blob/master/vendor/README.md
+  https://github.com/github-linguist/linguist/blob/master/lib/linguist/languages.yml    (9)
+
+~/.github/
+  steps/
+  workflows/
+
+------------------------------------------------------------------------------------------------
+-Seems that the manual doesn't actually walk us through the thing, but instead some digging is needed. Fun, but time consuming
+-There was a need to commit to another branch with a specific name to get past step 2.
+-Go through the cloned repo (hidden dirs also) to find the correct answer
+-We can see what are accepted syntax highlights from (9)
+-When committing changes, use start-markdown branch as a temporary branch that can then be merged if no conflicts arise.
+-Some status logging was new on the list that was shown on step 3
+
+-Possible fields that define keyword:
+    ace_mode: javascript
+    codemirror_mode: javascript
+    language_id: 183
+    
+    ace_mode: c_cpp
+    codemirror_mode: clike
+    language_id: 41
+
+-Not sure if this is the defining factor, but when left blank, the 3 dots autodetect based on running system or default to linux command line
+-Seems that these things don't work when put inside <div> for soem reason.
+
+`git status` embedded inside markdown displays better looking version of the string. Syntax is the same as JS command strings
+
+``` javascript
+var myVar = "Syntax highlighting in JS!\n";
+```
+
+
+You can enable GitHub Pages and see your Markdown file as a website! 
+
+
+
+
+
+################################################################################################
+## End of File
+################################################################################################
+

@@ -1,0 +1,57 @@
+
+Created:	29.12.2023
+################################################################################################
+https://github.com/skills/github-pages
+https://github.com/justusvaltonen/skills-github-pages
+ https://pages.github.com/themes/                           (3)
+ https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-jekyll-build-errors-for-github-pages-sites   (DEB-UG)
+
+
+Tools_external:
+https://jekyllrb.com/
+ https://jekyllrb.com/docs/themes/
+ https://jekyllrb.com/docs/configuration/
+ https://jekyllrb.com/docs/front-matter/
+
+https://github.com/daattali/beautiful-jekyll/blob/master/_config.yml                                                       (CONF)
+
+------------------------------------------------------------------------------------------------
+-- In this course, you will: --
+    Enable GitHub Pages
+    Configure your site
+    Customize your home page
+    Create a blog post
+    Merge your pull request
+
+
+
+-Use a branch called: my-pages
+-Settings stored by Jekyll in a file: _config.yml
+-Good example of a config file: (CONF)
+-Supported themes can be found in (3)
+-I got some errors when doing the tutorial. Maybe (DEB-UG) helps
+
+-GitHub Pages first looks for an index.md file
+
+GitHub Pages uses Jekyll. In Jekyll, we can create a blog by using specially named files and frontmatter. The files must be named _posts/YYYY-MM-DD-title.md. You must also include title and date in your frontmatter.
+
+What is frontmatter?: The syntax Jekyll files use is called YAML frontmatter. It goes at the top of your file and looks something like this:
+
+---
+title: "Welcome to my blog"
+date: 2019-01-20
+---
+
+
+-I don't get it. The errors went away almost by themselves. No explanation what happened, but now all is good again...
+-There were complaints that can't create a file because we are missing the dir: _posts, then what is the problem? It was created eventually without manual user interference...
+
+
+-The error message itself:
+Error:  Logging at level: debug github-pages 228 | Error: (/github/workspace/./_config.yml): did not find expected key while parsing a block mapping at line 1 column 1 
+
+
+################################################################################################
+## End of File
+################################################################################################
+

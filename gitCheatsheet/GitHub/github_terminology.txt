@@ -4,30 +4,36 @@ Created:	28.8.2023           Updated: +++04.12.2023+++
 
 https://docs.github.com/en/codespaces/overview
 https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git
+------------------------------------------------------------------------------------------------
 
-Branch			==
+Actions                 == Automation used to do things inside github.com and maybe somewhere else aswell
+Branch			== Version of a project. Used for feature creation for example.
   Main				    == Typical name used for a branch. Doesn't mean anything by itself.
   Master			    == Same as Main. Typical branch name.
 Checkout		== Return to state of last commit
 Clone			== Make a clone of some folder that is in some server. Folder is called repository.
 Codespace		== Cloud hosted environment
-Commit			== Confirm that you want to make changes to the external folder. This needs to be done before push.
+Commit			== Confirm that you want to make changes to the external folder. This needs to be done before push. Saying "this is what I did, here's a checkpoint"
 Copilot			== Autocorrect
 Dependabot      	== Makes sure that all requirements are met.
 Fetch			== Get stuff and include references to other repositories
+Frontmatter     == Feature of Jekyll. Not sure what this is used for
 Gist			== Small function or something of a sort. Can be embedded to readme as a script fpr example
 GitHub Actions		== Automating some functionality
 GitHub API  		== REST or GrapQL
 GitHub Marketplace  == Use applications integrated wit github
-HEAD			== The current status pointer or masterbranch status pointer. Goes hand-by-hand with index.
+GitHub Pages    == Combine your repos in to a whole website
+HEAD			== On dev-branch the thing that is changed and not merged to master
 Index			== When added files with add command, things go to "index" AKA. "staging area"
 Init			== Create some hidden files to current path that enable usage of git. Specifies current path as the root of your workspace
 Gitconfig		== File with your configs. Should be in /etc/gitconfig or ~/.gitconfig. One should also see the .git dir that gets created on git init.
 Gitignore		== Blacklist some files that you don't want to send.
 Git-Shell		== Restricted access shell for gitting.
+Jekyll          == Pages creating library / framework. All seems quite familiar from K8
 License			== Some legals on how your code can be used by others
 Markdown        == Language that is used on GUI on github. Enables embedding gifs and headers for example.
-Mergetool       	== You get to choose what tool you want to use
+Merge           == Combining changes made to code in a project
+Mergetool       == You get to choose what tool you want to use
 Object			== Can be many things in git context
   Blob				==
   Commit			==
@@ -37,6 +43,7 @@ Passkey             == For accessing your user account. Used on multiple devices
 Password        	== Password that used to be text, but now is a token... that is text, but can be managed more easilly from github
 Patch			== See git apply
 Pull			== Get the latest version of your current working branch
+Pull Request    == "Please integrate my code to a project"
 Push			== Apply your changes in code and send them to some other place than your local computer.
 Remote			== Some repository that is hosted somewhere else than your local computer. Define with URL. You can only push to remote.
 Repository		== Some server that holds your code. Also remote means the same thing.

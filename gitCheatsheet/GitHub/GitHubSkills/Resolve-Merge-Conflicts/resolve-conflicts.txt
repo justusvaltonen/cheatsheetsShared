@@ -1,15 +1,12 @@
 
-Created:	11.12.2023
+Created:	29.12.2023           Updated: +++ +++
 ################################################################################################
-GitHub: Tutorial: skills-introduction-to-github
 
-/markdownCheatsheet/
-
-https://docs.github.com/en/get-started/quickstart/github-glossary#merge
 ------------------------------------------------------------------------------------------------
 
--Fast forwarding to phase 4 since there is another file that contains most of the things done so far.
--After pull request gets merged, you can delete the branch that got merged.
+
+
+
 
 
 
