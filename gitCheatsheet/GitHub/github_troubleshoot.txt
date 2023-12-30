@@ -47,6 +47,37 @@ fatal: Need to specify how to reconcile divergent branches.
 
 --> After some push / pull action all seems good again.
 
+
+------------------------------------------------------------------------------------------------
+Nesting repositories:
+
+-I cloned a game from skills tutorials and added it to another repo: miniprograms while holding inside the init things. I now get the following message:
+
+warning: adding embedded git repository: NotMyCreations/Games/GH_SkillsGame
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint: 
+hint: 	git submodule add <url> NotMyCreations/Games/GH_SkillsGame
+hint: 
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint: 
+hint: 	git rm --cached NotMyCreations/Games/GH_SkillsGame
+hint: 
+hint: See "git help submodule" for more information.
+
+-Nothing special, but the conscept of submodule...
+-Sad that this needs to be somewhere else than my repo holding small stuff.
+
+------------------------------------------------------------------------------------------------
+
+
+
+
+
+
 ################################################################################################
 ## End of File
 ################################################################################################

@@ -14,6 +14,7 @@ Checkout		== Return to state of last commit
 Clone			== Make a clone of some folder that is in some server. Folder is called repository.
 Codespace		== Cloud hosted environment
 Commit			== Confirm that you want to make changes to the external folder. This needs to be done before push. Saying "this is what I did, here's a checkpoint"
+Configuration-As-Code   == Config files deploy your IDE on cloud just the way you like it.
 Copilot			== Autocorrect
 Dependabot      	== Makes sure that all requirements are met.
 Fetch			== Get stuff and include references to other repositories
@@ -50,6 +51,7 @@ Repository		== Some server that holds your code. Also remote means the same thin
   Origin			    == Typical name for a Repository in the manuals.
 Staging			== Pre save. Including to be committed. Same as index.
 Status			==
+Submodule       == Repo inside your repo. Came up, but still a bit unclear
 Tag		        == Stored in /refs/tags/<my-tag-name> - Are used to mark a specific point in history. This is version numbering. Bit confusing.
 Token			== Used to access to the repositories. Used by apps and people.
   FineGrainedPAT		== Newer version
