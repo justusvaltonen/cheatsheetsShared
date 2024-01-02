@@ -1,0 +1,59 @@
+
+name: learn-github-actions
+run-name: ${{ github.actor }} is learning GitHub Actions
+on: [push]
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+      - run: npm install -g bats
+      - run: bats -v
+
+
+---
+---
+
+
+name: learn-github-actions
+    --> Optional field. This will display in "Actions tab" in GH. If can't be found, workflow-files name will be used.
+
+run-name: ${{ github.actor }} is learning GitHub Actions
+    --> Optional field. Will be referenced when kind of loginshell is not initiator, but another workflow instead.
+
+on: [push]
+    --> Trigger. When is this particular file used. - When someone pushes. The 'on:' is a reserved word.
+
+jobs:
+    --> All jobs running on one workflow
+
+  check-bats-version:
+        --> Name for this Job
+
+    runs-on: ubuntu-latest
+        --> What version of what container we want to use
+
+    steps:
+        --> All steps that are run on this job
+
+      - uses: actions/checkout@v4
+        --> Notice the dash and versioning mention as a suffix. Think of this as a constructor or initiating step.
+        --> 'uses:' is a keyword. Using checkout is a best practice that is used when using code from a repo? Didn't get it. This is also an action
+
+      - uses: actions/setup-node@v3
+        --> Load the set of instructions in to memory I guess and prepare to install node. This is from GH perspective. This is an action.
+
+        with:
+          node-version: '14'
+            --> Specifying what version to install. This is Nodes versioning number.
+
+      - run: npm install -g bats
+            --> Entering command for the container. The bats is some debugging tool for bash. This guy requires a connection to a place where it's able to get a module
+
+      - run: bats -v
+            --> Running verbosely. All of this doesn't seem like so smart way of doing things. Then again I don't have any knowledge on bats.
+
+

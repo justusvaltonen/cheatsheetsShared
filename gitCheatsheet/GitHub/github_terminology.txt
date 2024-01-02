@@ -1,12 +1,12 @@
 
-Created:	28.8.2023           Updated: +++29.12.2023+++
+Created:	28.8.2023           Updated: +++02.01.2024+++
 ################################################################################################
 
 https://docs.github.com/en/codespaces/overview
 https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git
 ------------------------------------------------------------------------------------------------
 
-Actions                 == Automation used to do things inside github.com and maybe somewhere else aswell
+Actions                 == Automation used to do things inside github.com and maybe somewhere else aswell. "(CI/CD) platform"
 Branch			== Version of a project. Used for feature creation for example.
   Main				    == Typical name used for a branch. Doesn't mean anything by itself.
   Master			    == Same as Main. Typical branch name.
@@ -31,6 +31,7 @@ Gitignore		== Blacklist some files that you don't want to send.
 Git-Shell		== Restricted access shell for gitting.
 Jekyll          == Pages creating library / framework. All seems quite familiar from K8
   Frontmatter     == Feature of Jekyll. Not sure what this is used for
+Job             == Some process
 License			== Some legals on how your code can be used by others
 Markdown        == Language that is used on GUI on github. Enables embedding gifs and headers for example.
 Merge           == Combining changes made to code in a project
@@ -58,6 +59,7 @@ Token			== Used to access to the repositories. Used by apps and people.
   PersonalAccessToken   	== The method that is used to connect our locals with github. Uses HTTPS. PAT
 Username                == Can mean github username or the real name of you as in author.
 Working tree    	== The whole project
+Workload        == Automation process that runs Jobs. Configurable. .github/workflows/ has config. Runs when event occurs
 
 
 -- TOOLS: --

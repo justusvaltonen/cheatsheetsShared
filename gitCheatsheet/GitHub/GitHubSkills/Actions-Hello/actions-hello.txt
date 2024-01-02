@@ -1,0 +1,144 @@
+
+Created:	02.01.2024           Updated: +++ +++
+################################################################################################
+https://github.com/skills/hello-github-actions
+https://github.com/justusvaltonen/skills-hello-github-actions
+
+https://docs.github.com/en/actions      (E1)
+  https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions  (E1.1)
+  https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions#viewing-the-activity-for-a-workflow-run
+https://github.com/features/actions     (E2)
+  https://docs.github.com/en/actions/using-jobs                                         (E2.1)
+
+
+https://www.npmjs.com/package/bats              (X1) Here is a testing / debugging tool for bash!
+https://github.com/sdras/awesome-actions
+  https://github.com/webfactory/ssh-agent       (X2-1) How to multi-ssh to everywhere
+
+------------------------------------------------------------------------------------------------
+
+Who is this for: Developers, DevOps engineers, students, managers, teams, GitHub users.
+What you'll learn: How to create workflow files, trigger workflows, and find workflow logs.
+What you'll build: An Actions workflow that will check emoji shortcode references in Markdown files.
+
+    --> It says this should take less than 2 hours, so most likely a lot longer for me
+
+What does actions do then?
+(E2) implies that basically it replaces you. I have my doubts for now at least. I shall do the skills version instead of (E2)
+-Actions is a "(CI/CD) platform" is said on (E1.1)
+
+-Workflows are configs / instructions for what to do when an even occurs in automation. Event can be a pull_request() for example.
+
+
+
+
+Workflow    == Configs for Actions. At the moment I think of these as routes, but these have hierarchy as parent of jobs.
+
+Runner      == Server that runs workflows when an event occurs. Each runner can run 1 job. Different OS can be used. Same as Pod.
+    Job         == Runs inside one runner. Series of scripts. By default has no dependencies and runs parallel / Asynchronous.
+                == When a dependency is found, waiting for others to finish is needed.
+        Action      == This is GH perspective. Things that execute on the platform. Good naming.
+        Step        == Steps inside jobs descriptions. Needs to run in particular sequence. Each step is a script or an action
+                    == Actions steps have scope of current repo, other public repo or docker container image (published).
+
+
+
+Actions == CI/CD or as I like to think of it as just backend. Actions is an application on low-code platform of github,
+Workflow activates in case of an event. Configs in ~/.github/workflows/somefile.yaml
+  Event starts a chain reaction that starts 'Runners'. These are like pods in K8s. Job for a runner is to run 2 scripts and 3 actions. When done, it will exit.
+  It's possible to start another runner when the first is done, so this is 'Synchronous'
+
+
+------------------------------------------------------------------------------------------------
+STEP_1: Activity: Create a workflow file
+-Now we did a pull request without a merge... at least for now.
+
+------------------------------------------------------------------------------------------------
+Step 2: Add a job to your workflow file
+
+The file that was created, called welcome.yml (Didn't replace anything as initially believed):
+
+name: Post welcome comment
+on:
+  pull_request:
+    types: [opened]
+permissions:
+  pull-requests: write
+jobs:
+  build:
+    name: Post welcome comment
+    runs-on: ubuntu-latest
+
+
+  -- Breakdown of the file: --
+
+name: <visible-to-ghgui>
+on:
+  <action-type-gh-perspective>:
+    types: <when-for-example-request-is-opened-as-in-here>
+permissions:
+  <assign-permissions-for-workflow-also-enabling-things>
+
+jobs:
+  build:
+    name: <needs to match the one on top>
+    runs-on: <what image is used on running the pod, this is just a name someone has created>
+
+-I believe there must be a full set of possible params with their usecases and syntax somewhere. Usually these are some sort of a secret to document creators.
+-On the jobs part, see the indentation. It is kind of different thing as a configuration that it may initially seem. Possibly usually separated to different files
+-Try to migrate pods to runners. These are widely used inside gh
+-Syntax is very important when it comes to list items and others. Sometimes it's hard to figure out where these options should be gotten from.
+
+------------------------------------------------------------------------------------------------
+Step 3: Add actions to your workflow file
+
+-Latest addition is to use gh cli to make a post request that has a string inside it's body. We assume that the routes are configured.
+-Also note that the token that grants our himmeli the posting access is accessed as NOT hardcoded / plaintext. --> It is indeed plain and only inside an env
+    --> How silly of me. We're of course talking about pull requests and not post requests.
+    --> If we get the debugger to work, we possibly can take a look if the message is using post-route by accident. Possibly some other messaging system is used.
+
+name: Post welcome comment
+on:
+  pull_request:
+    types: [opened]
+permissions:
+  pull-requests: write
+jobs:
+  build:
+    name: Post welcome comment
+    runs-on: ubuntu-latest
+    steps:
+      - run: gh pr comment $PR_URL --body "Welcome to the repository!"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_URL: ${{ github.event.pull_request.html_url }}
+
+------------------------------------------------------------------------------------------------
+Step 4: Merge your workflow file
+-Finally merge
+
+
+-There was some steps done inside the GH GUI-platform, so I didn't post stuff here.
+
+
+
+-I really don't know how some of thing works, but GH mascot says that:
+
+Here's a recap of all the tasks you've accomplished in your repository:
+    You've created your first GitHub Actions workflow file.
+    You learned where to make your workflow file.
+    You created an event trigger, a job, and steps for your workflow.
+    You're ready to automate anything you can dream of.
+        --> This is not true. Only if I do exactly as the tutorial says. Luckily I do know more than that.
+
+
+
+
+
+-I saw a following pro-tip:
+ ProTip! Add .patch or .diff to the end of URLs for Git’s plaintext views. 
+
+################################################################################################
+## End of File
+################################################################################################
+
