@@ -1,0 +1,30 @@
+
+Created:	03.01.2024           Updated: +++ +++
+################################################################################################
+https://github.com/skills/publish-packages
+https://github.com/justusvaltonen/skills-publish-packages
+
+------------------------------------------------------------------------------------------------
+
+This course is about CD (Continous Delivery). Emphasis on artifacts.
+    --> Sounds cool. HOMM3 was one of the best. Lightning + SP 4 life.
+
+Who is this for: Developers, DevOps engineers, full stack developers, cloud engineers.
+What you'll learn: Continuous delivery, how to save and access build artifacts, package management, how to publish to GitHub Packages.
+What you'll build: We will build a Docker image that runs a small game.
+
+In this course, you will:
+    Create a workflow
+    Add a Dockerfile
+    Merge your pull request
+
+------------------------------------------------------------------------------------------------
+
+
+
+
+
+################################################################################################
+## End of File
+################################################################################################
+

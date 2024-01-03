@@ -2,11 +2,123 @@
 Created:	02.01.2024           Updated: +++ +++
 ################################################################################################
 https://github.com/skills/test-with-actions
+https://github.com/justusvaltonen/skills-test-with-actions      (2.0.0)
+  https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions     (2.1.0)
+  https://docs.github.com/en/actions/using-workflows/storing-workflow-data-as-artifacts     (2.2.0)
+    https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions      (2.2.1)
+  https://docs.github.com/en/actions/learn-github-actions/contexts                          (2.3.0)
+  https://docs.github.com/en/rest/commits/statuses?apiVersion=2022-11-28                    (2.4.3)
+https://github.com/remarkjs/remark-lint
+https://en.wikipedia.org/wiki/Continuous_integration
 
 ------------------------------------------------------------------------------------------------
 
+Who is this for:
+    Developers, DevOps Engineers, new GitHub users, students, teams.
+
+What you'll learn:
+    What continuous integration is, how to use GitHub Actions for CI, how to create a workflow that runs tests and produces test reports.
+
+What you'll build:
+    We'll use remark-lint to check the consistency of Markdown files.
 
 
+------------------------------------------------------------------------------------------------
+Step 1: Add a test workflow
+
+Terminology:
+
+workflow        == Automation process from start to finish
+job             == Synchronous running of things bundled. After finish, one can move to next job
+steps           == Job is consisted of multiple steps. Run script or do GH-Action.
+action          == Different format code, but written in a way that is useable with corrrect API
+
+------------------------------------------------------------------------------------------------
+Step 2: Fix the test
+-Doesn't pass the tests straight on
+
+-See that youre on the correct branch and not doing it on main.
+-Then replace piece of text that says: *Git* with _Git_
+-Dumb thing. I don't know how that was supposed to do anything or what happened
+
+------------------------------------------------------------------------------------------------
+Step 3: Upload test reports
+
+-Passing the return value of a Job is done with 'Artifact Storage'. Works like pipes:
+
+$ history | grep 'git'
+
+-This would be the command line way of passing history output to grep as input.
+-Reminds me of variables at first glance, but who knows. See (2.2.0)
+-There is a github API -method called: actions/upload-artifacts that stores the results
+-Permissions are at least 'Write' for github actions and workflows inside a 'Run'
+-Default storing time for all logs is 90d
+
+These are some of the common artifacts that you can upload:
+    -Log files and core dumps
+    -Test results, failures, and screenshots
+    -Binary or compressed files
+    -Stress test performance output and code coverage results
+
+-Back to Skills tutorial... We need to modify our file in a way that was stated in the briefing.
+
+------------------------------------------------------------------------------------------------
+Step 4: Add branch protections
+-Nothing else, but settings tweaking, adding rule that pull request needs to exist before we're able to merge.
+
+------------------------------------------------------------------------------------------------
+Step 5: Merge your pull request
+-New feature in this tutorial: Only works if you inspect the correct branch
+-Once the protective feature: 'branch protection' is enabled, GH-Actions isn't able to push to main any more. You have your own branch for this tho
+
+-Something went wrong. There was a request to merge and I assumed it was with the main branch. Only thing that made sense to me. Apparently not what was hoped.
+
+-I believe that there are only a few files that had diff to main. Getting those back and re-establishing the branch: 'ci'.
+
+
+resume.md
+-step.txt
+ci.yml
+
+
+-Taking a look at the steps file from before, I found out that it contains the description of that particular step. Now I'm stuck at the logs.
+
+-I was supposed to have a cigarette break only, but ended up having a longer one. Once I come back I'm not wiser at all. Red cross has a marketing campaign or something is wrong with my... what ever it is we were supposed to do.
+-I changed basically nothing. Still I was trying to find out what exactly was the problem. In one window I get "more detailed errors", but they explain nothing. If something, open new questions. I run tests again from different windows, different timelines, different, well everything. All seems to work. This is so weird since I don't remember doing anything else than writing a comment. Funny is, the content is possibly wrong information. I really can't evaluate myself.
+
+
+Why are there so many issues with my techique in GH?
+ (all is just speculating)
+
+-I am tired and made a mistake somewhere. I can't seem to find it
+-I am not using my brain and thought while doing this tutorial, so I don't really understand what is going on or wanted to achieve
+-Instructions were not so clear
+-Error messages aren't clear
+-System most likely is not stable. This is not the first time and as always, thigs get fixed by themselfes, or so it seems.
+-Bad design on the tutorial, but if I understood correctly, it will try to fix itself
+-Many of possible issues come from poor communication. How to improve?
+
+
+
+------------------------------------------------------------------------------------------------
+I AM A STATUS BADGE:
+
+[![CI](https://github.com/justusvaltonen/skills-test-with-actions/actions/workflows/ci.yml/badge.svg)](https://github.com/justusvaltonen/skills-test-with-actions/actions/workflows/ci.yml)
+
+--> Why don't I get a badge? Forget about knowledge addiction, from now on I will only hunt for trophies
+
+------------------------------------------------------------------------------------------------
+LAST WORDS:
+
+I still believe in knowledge. Understanding something at least to some degree makes understanding it easier. It's not easy, always. Funny thing I noticed. I have 2 Firefoxes runnning and inside them, a few tabs. On the original source (parent) screen the CI stuff didn't work. In the other window though it did. But it didn't always work for the sibling screen / browser.
+
+Many things in this part of github feel a lot like kubernetes. I don't know if it's safe to say that GithubActions is just a ripoff or a spinoff. Meaning of many words has changed since my last time inside K8s system, when comparing to GH. Easier to handle now, than what it was before, when doing this the first time.
+
+We can already tell a lot about the github as a platform. Or we think we can. When you inspect different sites where one authenticates, pay special attention on the behaviour of the site. Is there a timeout? If parent opens a new tab, what happens? What about a new window? What about a totally different browser? What about proxies on the level outside of your personal network. Do you get served fast when requested, meaning what is cached?
+
+I feel my predictions are coming true. I predicted that at first advertised as an easy tool to make your life easier may end up as a added layer of complexity. Does an easy solution for version control even exist? Can it exist? Outsourcing to an IT-company doesn't count as a solution.
+
+No matter what, I've enjoyed my journey through GH-Skills. On a flip-side, I must state that it's hard to know when you're doing things wrong compared to when the platform doesn't work for some reason. Many hours are being spent driving around in circles because of that. If I had the knowledge to debug myself, I would do it and provide better feedback. As things are taken away from me as a user, I can't really do much, but to learn assembly...
 
 
 ################################################################################################

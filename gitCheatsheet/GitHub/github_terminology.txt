@@ -6,7 +6,7 @@ https://docs.github.com/en/codespaces/overview
 https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git
 ------------------------------------------------------------------------------------------------
 
-Actions                 == Automation used to do things inside github.com and maybe somewhere else aswell. "(CI/CD) platform"
+Actions                 == Automation used to do things inside github.com and maybe somewhere else aswell. "(CI/CD) platform". Using different format, but is compatible with YAML configs
 Branch			== Version of a project. Used for feature creation for example.
   Main				    == Typical name used for a branch. Doesn't mean anything by itself.
   Master			    == Same as Main. Typical branch name.
@@ -18,6 +18,7 @@ Configuration-As-Code   == Config files deploy your IDE on cloud just the way yo
 Copilot			== Autocorrect
 Dependabot      	== Makes sure that all requirements are met.
 Fetch			== Get stuff and include references to other repositories
+Frontmatter     == Replaces Bashes HASHBang!
 Gist			== Small function or something of a sort. Can be embedded to readme as a script fpr example
 GitHub Actions		== Automating some functionality
 GitHub API  		== REST or GrapQL
@@ -30,8 +31,8 @@ Gitconfig		== File with your configs. Should be in /etc/gitconfig or ~/.gitconfi
 Gitignore		== Blacklist some files that you don't want to send.
 Git-Shell		== Restricted access shell for gitting.
 Jekyll          == Pages creating library / framework. All seems quite familiar from K8
-  Frontmatter     == Feature of Jekyll. Not sure what this is used for
-Job             == Some process
+Job             == Some process. Inside one job is multiple steps
+  Step            == Script or an action on GH. Can't parallel-process inside one Job
 License			== Some legals on how your code can be used by others
 Markdown        == Language that is used on GUI on github. Enables embedding gifs and headers for example.
 Merge           == Combining changes made to code in a project
@@ -52,6 +53,7 @@ Repository		== Some server that holds your code. Also remote means the same thin
   Origin			    == Typical name for a Repository in the manuals.
 Staging			== Pre save. Including to be committed. Same as index.
 Status			==
+Status Badge    == Small image at least for my Not-ContinousIntegration badge. I got the badge, but it is just lame.
 Submodule       == Repo inside your repo. Came up, but still a bit unclear
 Tag		        == Stored in /refs/tags/<my-tag-name> - Are used to mark a specific point in history. This is version numbering. Bit confusing.
 Token			== Used to access to the repositories. Used by apps and people.
@@ -59,7 +61,10 @@ Token			== Used to access to the repositories. Used by apps and people.
   PersonalAccessToken   	== The method that is used to connect our locals with github. Uses HTTPS. PAT
 Username                == Can mean github username or the real name of you as in author.
 Working tree    	== The whole project
-Workload        == Automation process that runs Jobs. Configurable. .github/workflows/ has config. Runs when event occurs
+Workflow        == Automation process that runs Jobs. Configurable. .github/workflows/ has config. Runs when event occurs. From start to finish
+  Job             == Some process. Inside one job is multiple steps
+    Step            == Script or an action on GH. Can't parallel-process inside one Job
+      Actions                 == Automation used to do things inside github.com and maybe somewhere else aswell. "(CI/CD) platform". Using different format, but is compatible with YAML configs
 
 
 -- TOOLS: --
