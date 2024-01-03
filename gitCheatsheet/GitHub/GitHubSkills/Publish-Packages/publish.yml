@@ -1,0 +1,129 @@
+
+name: Publish to Docker
+on:
+  push:
+    branches:
+      - main
+permissions:
+  packages: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+
+      # Add your test steps here if needed... Also remove emptylines if needed
+      - name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ghcr.io/YOURNAME/publish-packages/game
+          tags: type=sha
+
+
+      - name: Login to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+
+      - name: Build container
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+
+
+
+---
+
+---
+
+---------------
+-- BREAKDOWN --
+---------------
+
+name:           I believe the name of the publish we create. Notice Capitals with whitespace   is OK
+on:             Happens when event x happens
+push:           When push happens
+branches:       ...on main branch. Add another entry to enable on others aswell
+permissions:    Needs to be able to save...
+
+jobs:           I would put a line in between if things don't break because of it.
+publish:        Not a reserved word at this context. Only a name chosen by someone. Only 1 job is done and that is named publish.
+runs-on:        Name of the image that uses this task. These are called runners. They use images to create containers for themselfs to run a job.
+steps:          Breakdown of cronologically sorted tasks
+
+name:           First one is always the checkout. I believe this is universal
+uses:           We use GH-Action at this example, so there is a need to specify that
+id:             Some unique identifier. Who uses this? Docker container registry or GH-Logs?
+uses:           Second example uses action that is part of GH||Docker
+with:           Used to pass input to the GH-Action. Is a parameter.
+images:         I believe this one is the destination image that gets created. Replace with your username. GHCR GitHubContainerRegistry
+tags:           ??? Not intuitive tag meaning.
+
+name:           I guess that it means what it says.
+uses:           Why do we use different versionings for almost each action. Here is a hint on how the commands possibly work when it comes to naming
+with:           Used to pass input to the GH-Action. Is a parameter.
+registry:       Possibly the root domain where the images are or are referenced.
+username:       Not sure these are a smart thing to pass to external services especially when not encrypted properly. This I find from another source.
+                It is possible there is a user created that somehow uses actions only and we do not need to worry about this. Test this one.    ÅÅÅ
+password:       No idea about the security side of these. At least the tokens are a fast thing to change on the go. Take note on syntax.
+
+name:           Refers to a container that is created and then does somethign, container gets created that creates an image or something that loads but not yet builds.
+                These are the things that are a mystery. There is a difference on how and what is done. I like to know what I'm doing especially when sharing
+uses:           Possibly some API that formats things correctly and GETS THINGS DONE.
+with:           Are these the arguments for the action? Yes. "with" is a keyword used to pass input to a GH-action
+context:        There is a small dot somewhere. In other context doesn't always relate to path/position on some map. Bash uses that as sourcing symbol.
+                In kubeworld this could mean the top level of the file where we are, while still skipping the metadata field if I recall correctly.
+                --> What if this evaluation of scope is done in a different phase as originally thought? There was a mention that all code will be spagettified to one.
+                --> If spaghettiphase is used for eval in a bigger publishing workflow, we may or may not run in to difficulties.
+                --> Is there some imaginary wildcards used somewhere or does "filtering to left" happen here aswell? If lefting happens, where will the code start looking
+                --> for a match? Direction is "up to down" or the other way? Is this a sensible thing to be worried about alltogether?
+
+push:           This is bool. Now what the hell. When push "action","command","service","process" happens. And on what? readme.md is unclear about this.
+                I don't know why it's important to keep these as a mystery. If I had a product, I would assist gladly on all usage.
+tags:           So many possibilities where this may connect to. I don't have the will to read about a whole new topic at this hour. I used chatbot to get info...
+
+-When an image is built (we build it hopefully), it will be assigned some tags. Read the syntax as follows
+--> First you need to notice that "docker/build-push-action" is used in this step
+
+Value from tags is used
+That value is gotten from outputs-variable (type)
+The outputs-variable can be found in "meta" field on a previous step
+There is steps used for pathfinding because of this first line.
+
+steps           --> Code is inside this subcategory or whatever it is called
+meta            --> I assume only keys are scanned by the name of meta. First is found when we see the field "id". Scanning happens top-to-bottom or not?
+                --> What if there is no meta found? Will we use another scope or just stay home instead of Nascar?
+outputs         --> Annoying naming policy. While technically ok, this particular case confuses the kungfutse out of me.
+
+
+I am a structure freak. I flip a bit each time I see things puttogetherunclearly. For this reason I put some empty lines between the yaml.
+There might be a thing that computer doesnt like what I do and punishes me with an error. Then all is needed is remove the empty lines.
+
+
+
+Chatbot is the dr.green:
+This syntax ${{ steps.<step_name>.outputs.<output_name> }} is used in GitHub Actions workflows to access outputs from previous steps.
+
+
+he ${{ steps.meta.outputs.tags }} syntax references the tags output from the meta step, using its dynamically evaluated value for the tags field in the Docker image building step (docker/build-push-action).
+
+    --> Oh yeah, when a value is used in everyday life, we do not need to think about the evaluation timing. When creating an image, there is an evaluation done and what is then gotten as the value, will be that also in the future. This can be used as an additional security feature for checking if the imagefile is the real-or-fake.
+
+
+The checkout that is a must, is used do pass a runner your creds for getting your repo to create an image out of.
+
+
+
+
+
+
