@@ -26,14 +26,58 @@ In this course, you will:
 ------------------------------------------------------------------------------------------------
 Step 1: Make a workflow reusable
 
+-What specifies a workflow reuseable is an option inside workflow YAML-file called 'workflow_call'. This is a trigger like push, workflow_dispatch or issues
+
+Activity: Add a workflow_call trigger to a workflow
 
 ------------------------------------------------------------------------------------------------
+Make a workflow reusable, call it in another workflow, and use a matrix strategy to run multiple versions.
+Step 2: Add a job to call the reusable workflow
+
+Breakdown:
+
+name: Reusable Workflow
+
+on:
+  workflow_call:
+    inputs:
+      node:
+        required: true
+        type: string
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Output the input value
+        run: |
+          echo "The node version to use is: ${{ inputs.node }}"
+
+-Required is the .on.workflow_call.input.node for workflow to be a reusealbe one
+"You need to make sure that the other workflow you are using to call this reusable workflow outputs a node version"
+"If a node input is detected, the workflow will kick off a job called build that runs on ubuntu-latest."
+
+
+Activity: Add a job to your workflow to call the reusable workflow
+
+-Did a testrun and there were no errors at the moment
+
+------------------------------------------------------------------------------------------------
+Step 3: Add a matrix strategy to your workflow
+
+-Basically what is done, is iterating through an array of numbers and FOR EACH entry, running the code. Be aware of the syntax. Here we see again how to reference some values from inside our file and outside.
+-It's not that obvious that the other file gets called on the last line. This is because of the node: setting that can be found closest to current file from neigbourign file, or at least I believe that to be the reasoning.
 
 
 ------------------------------------------------------------------------------------------------
+Step 4: Merge your changes
+Step 5: Trigger your workflow and view the Actions logs
+
+-See Actions / "My Starter Workflow" for logs 
 
 
-------------------------------------------------------------------------------------------------
+
 
 ################################################################################################
 ## End of File
