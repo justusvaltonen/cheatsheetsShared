@@ -1,0 +1,41 @@
+
+Created:	06.01.2024           Updated: +++ +++
+################################################################################################
+https://github.com/skills/deploy-to-azure
+https://github.com/justusvaltonen/skills-deploy-to-azure
+
+https://docs.github.com/en/actions/security-guides/automatic-token-authentication#modifying-the-permissions-for-the-github_token    (3)
+
+------------------------------------------------------------------------------------------------
+Deploy to Azure
+-Create two deployment workflows using GitHub Actions and Microsoft Azure.
+
+In this course, you will:
+    Configure a job
+    Set up an Azure environment
+    Spin up the environment
+    Deploy to staging
+    Deploy to production
+    Destroy the environment
+
+------------------------------------------------------------------------------------------------
+Activity 1: Configure GITHUB_TOKEN permissions
+-At the start of each workflow run, GH creates a unique secret: GITHUB_TOKEN, that is to be used in the particular workflow
+-There is a need to check that the secret (token) has the correct privilages to operate
+
+"Go to Settings > Actions > General. Ensure that the GITHUB_TOKEN also has Read and write permissions enabled under Workflow permissions. This is required for your workflow to be able to upload your image to the container registry."
+
+-The menus indicate that these rights are used only inside this workflow, so it's safe to turn on I guess. Is there a risk for lateral movement, I don't know
+-Also I had the tighter settings put to the previous tutorial and they were enough for that, but then again, the workflow wasn't that automatic
+-See (3) to find out how to modify more detailed usage of the GITHUB_TOKEN.
+
+
+Activity 2: Configure a trigger based on labels
+-Copy + pasting the file used for deploying to staging.
+-Next step is to create an account for Azure. I already used up my free account, so this tutorial will not finish for me.
+
+
+################################################################################################
+## End of File
+################################################################################################
+

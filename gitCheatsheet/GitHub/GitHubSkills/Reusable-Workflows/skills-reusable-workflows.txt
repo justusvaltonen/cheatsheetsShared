@@ -1,0 +1,41 @@
+
+Created:	06.01.2024           Updated: +++ +++
+################################################################################################
+https://github.com/skills/reusable-workflows
+https://github.com/justusvaltonen/skills-reusable-workflows
+
+https://www.youtube.com/watch?v=MBpyouQtY_M             (1)
+
+------------------------------------------------------------------------------------------------
+Make a workflow reusable, call it in another workflow, and use a matrix strategy to run multiple versions.
+
+-Matrix is cool
+-There is a saying in codeland that somehow relates to not being wet. DontRepeatYourself ==> DRY
+-Personally I think it is just idiotic. I learn by repetition and I believe that so do others.
+-Then again it's stupid to write the same piece all over again multiple times. Good practise is to make a piece of a code to a template when used more than once...
+-Also popular idea is to cut down code in to smaller pieces and decide when it's good to hide the details
+-There is a good video about the matrix and strategy keywords. The guy on the video is evil. He uses del instead of backspace, but the thing gets cleared out
+
+In this course, you will:
+    Make a reusable workflow
+    Add a job
+    Add a matrix strategy
+    Merge your pull request
+    Trigger the workflow
+
+------------------------------------------------------------------------------------------------
+Step 1: Make a workflow reusable
+
+
+------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------
+
+################################################################################################
+## End of File
+################################################################################################
+

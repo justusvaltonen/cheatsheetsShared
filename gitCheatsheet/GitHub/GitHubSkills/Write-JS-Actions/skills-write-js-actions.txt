@@ -1,0 +1,170 @@
+
+Created:	06.01.2024           Updated: +++ +++
+################################################################################################
+https://github.com/skills/write-javascript-actions
+https://github.com/justusvaltonen/skills-write-javascript-actions
+
+https://docs.github.com/en/actions/using-workflows#choosing-the-type-of-actions-for-your-workflow           (1)
+https://github.com/actions/toolkit                                                                          (2)
+  https://github.com/actions/javascript-action                                                                  (2.1)
+  https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions                        (2.2)
+https://icanhazdadjoke.com/api                                                                              (3)
+  https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers                                                     (3.1)
+  https://github.com/request/request-promise/                                                                   (3.2)
+
+https://github.com/marketplace/actions/github-action-for-slack
+https://github.com/marketplace/actions/jekyll-action
+https://github.com/marketplace/actions/run-jest
+https://docs.github.com/en/actions/creating-actions/publishing-actions-in-github-marketplace#publishing-an-action
+
+------------------------------------------------------------------------------------------------
+In this course, you will:
+    Initialize a JavaScript project
+    Configure an action
+    Create a metadata file
+    Create JavaScript files
+    Add actions to workflow file
+    Trigger action
+
+-Mentioned that it will take 1 - 2 hours to finish.
+
+------------------------------------------------------------------------------------------------
+Step 1: Initialize a new JavaScript project
+
+-Oh good, there is a mention about naming "policy" of a workflow file.
+-Multiple workflows per repo, so name workflow-files so that the name tells what is it used for.
+-Why do I feel that (2) doesn't really explain a whole lot, but instead just has some pseudorandom text and links.
+-I will not be using my local machine, but instead see if I can use codespaces inside GH to make things happen
+-Seems that node is pre-installed on the VM that gets created in codespaces
+
+-For some reason we want to install node_modules inside ~/.github/actions/joke-action, I don't know but I would use non-hidden dir as the destination
+-Also the tutorial suggest adding the installed node modules dir for the upload of this project. Not so sure if this is smart.
+-Also pushing to main is suggested. Something is a miss here.
+-As I do what I'm asked, I get a 403, even when it was stated in the tutorial that all settings are good to go
+-Normal approach would be to add node_modules to our .gitignore, but since this is a tutorial, it may be neccessary to do exactly as stated or things break
+
+What I'll do is not complete the course, but go through it without triggering GH stuff
+
+------------------------------------------------------------------------------------------------
+Step 2: Configure Your Action
+
+-Creating file: .github/actions/joke-action/action.yml
+    -->
+
+name: "my joke action"
+description: "use an external API to retrieve and display a joke"
+runs:
+  using: "node16"
+  main: "main.js"
+    <--
+
+------------------------------------------------------------------------------------------------
+Step 3: Create the metadata file
+-Each GH-Action needs a metadata-file that is always called 'action.yml'
+-Required for both Docker container and JavaScript actions.
+-In (2.2) there are more instructions of what is needed
+-The new modified version of action.yml:
+    -->
+name: "my joke action"
+description: "use an external API to retrieve and display a joke"
+
+outputs:
+  joke-output:
+    description: The resulting joke from the icanhazdadjokes API
+    
+runs:
+  using: "node16"
+  main: "main.js"
+
+    <--
+-New stuff is the outputs section
+-The generic-joke is going to be outputted to our actions console
+-Jokes are from (3)
+-No authentication, but small config on the headers of our HTTP request is needed (3.1)
+
+Example res from the source:
+{
+  id: '0LuXvkq4Muc',
+  joke: "I knew I shouldn't steal a mixer from work, but it was a whisk I was willing to take.",
+  status: 200
+}
+
+-Next we create a file called joke.js:
+    -->
+const request = require("request-promise");
+
+const options = {
+  method: "GET",
+  uri: "https://icanhazdadjoke.com/",
+  headers: {
+    Accept: "application/json",
+    "User-Agent": "Writing JavaScript action GitHub Skills course.",
+  },
+  json: true,
+};
+
+async function getJoke() {
+  const res = await request(options);
+  return res.joke;
+}
+
+module.exports = getJoke;
+    <--
+-This file is placed on the root of our module, so: .github/actions/joke-action
+-First we use / import request-promise module that is in node_modules dir in our root. Because we use the standard node_modules, we don't need to specify the path further.
+-Keyword is a bit misleading and once one gets familiarized with the default path from where to get the modules, all becomes clearer.
+-Next we specify some options in a JS-kind of syntax. We specify the method, source, headers and format
+-Next we do something that is called a promise. It takes time to get the joke from interweb, but we can allow our computer to run other code in the meantime
+-Function getJoke() doesn't return before it has a joke to give us
+-Last we enable the use of this function outside of our specification file.
+
+
+Now that we have our module.exports done, we can write the file that uses our function that gets jokes... ehh... (Kanye West)
+
+-Our main.js looks like this:
+    -->
+const getJoke = require("./joke");
+const core = require("@actions/core");
+
+async function run() {
+  const joke = await getJoke();
+  console.log(joke);
+  core.setOutput("joke-output", joke);
+}
+
+run();
+    <--
+-First line looks a bit different from the previous require. This syntax is here to show that this is a custom module. We need the ./joke with the relative path in it specified. For some reason tutorials leave the .js away because it's not needed to specify what we are requiring. I like to use it though, since it takes away the need for guessing what is going on.
+-Second line we load the preset module installed earlier
+-Then we create a function that puts our JS-logic in to an output
+-Last we run the code
+
+
+------------------------------------------------------------------------------------------------
+Step 5: Add your action to the workflow file
+
+-Automatically created workflow file of ours should look as following after modifications:
+    -->
+name: JS Actions
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  action:
+    if: ${{ !github.event.repository.is_template }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: ha-ha
+        uses: ./.github/actions/joke-action
+    <--
+
+
+
+
+
+################################################################################################
+## End of File
+################################################################################################
+
