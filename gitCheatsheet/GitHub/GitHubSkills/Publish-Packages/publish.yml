@@ -67,6 +67,9 @@ id:             Some unique identifier. Who uses this? Docker container registry
 uses:           Second example uses action that is part of GH||Docker
 with:           Used to pass input to the GH-Action. Is a parameter.
 images:         I believe this one is the destination image that gets created. Replace with your username. GHCR GitHubContainerRegistry
+  ghcr.io/YOURNAME/publish-packages/game:   ghcr.io/NAMESPACE/IMAGE_NAME is possibly the correct definition.
+                --> https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry
+
 tags:           ??? Not intuitive tag meaning.
 
 name:           I guess that it means what it says.
@@ -115,12 +118,11 @@ Chatbot is the dr.green:
 This syntax ${{ steps.<step_name>.outputs.<output_name> }} is used in GitHub Actions workflows to access outputs from previous steps.
 
 
-he ${{ steps.meta.outputs.tags }} syntax references the tags output from the meta step, using its dynamically evaluated value for the tags field in the Docker image building step (docker/build-push-action).
+The ${{ steps.meta.outputs.tags }} syntax references the tags output from the meta step, using its dynamically evaluated value for the tags field in the Docker image building step (docker/build-push-action).
 
     --> Oh yeah, when a value is used in everyday life, we do not need to think about the evaluation timing. When creating an image, there is an evaluation done and what is then gotten as the value, will be that also in the future. This can be used as an additional security feature for checking if the imagefile is the real-or-fake.
 
-
-The checkout that is a must, is used do pass a runner your creds for getting your repo to create an image out of.
+The checkout that is a must, is used to pass a runner your creds for getting your repo to create an image out of. Can we state that secrets.GITHUB_TOKEN uses what ever repo is used to run the YAML-file in. If so, one must be quite careful when (A) Creating the image, if things are loaded inside it. (B) Using the image, if not your own created one. I believe the secrets are stored somewhere else than a GIT repository. Hmm... Not sure, but it's a good way to spend the night, finding out.
 
 
 

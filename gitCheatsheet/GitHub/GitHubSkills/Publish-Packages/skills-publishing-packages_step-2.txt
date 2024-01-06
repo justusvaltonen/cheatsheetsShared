@@ -1,0 +1,54 @@
+
+Created:	06.01.2024           Updated: +++ +++
+################################################################################################
+https://github.com/justusvaltonen/skills-publish-packages
+https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens                 (1)
+https://docs.github.com/en/rest/authentication/keeping-your-api-credentials-secure?apiVersion=2022-11-28                            (2)
+https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens?apiVersion=2022-11-28   (3)
+
+https://docs.docker.com/engine/reference/builder/
+
+------------------------------------------------------------------------------------------------
+Step 2: Add a Dockerfile
+-If I got this right then we are creating a copy from an already existing image, copying all files from it's root to a shared folder
+
+------------------------------------------------------------------------------------------------
+Step 3: Merge your changes
+-Funny sidenote: I created a pull request as an optional thing in step 1. I also made a commit that was added later. Still it shows that the merging part is all of both
+
+------------------------------------------------------------------------------------------------
+Step 4: Pull your image
+
+-On the right side there is a link in the Packages section that says: publish-packages/game
+-Looks very familiar from the NodeJS world.
+-Install this package by using the following on bash terminal on your computer: docker pull ghcr.io/justusvaltonen/publish-packages/game:sha-dfd1c2e
+-You should read (1) before continuing although you wouldn't be here if you haven't already.
+-If you use the classic version, you will give root-privilages to everything inside your GitHub account including stuff you are a part of that is not yours.
+-If you already did the codespaces tutorial, you can use a VM from there to test the end-product of this tutorial
+
+docker login ghcr.io -u <github-username>
+<your-pat-here>
+
+@justusvaltonen ➜ /workspaces/skills-publish-packages (main) $ docker login ghcr.io -u justusvaltonen
+Password: 
+WARNING! Your password will be stored unencrypted in /home/codespace/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+@justusvaltonen ➜ /workspaces/skills-publish-packages (main) $ 
+
+
+-After that is done, and other steps in the tutorial are complete, do the following:
+
+docker run -dp 8080:80 --rm ghcr.io/justusvaltonen/publish-packages/game:sha-dfd1c2e
+
+-I run the thing in a new codespace created inside the repo of this current tutorial.
+-Permissions granted for PAT are most likely too allowing, but I limited access to this particular repository only using fine-grained token instead of what was proposed.
+-Once I run the above command, a notification pops up and I start a new tab on my browser to play a game of tic-tac-toe
+-After I'm done, I delete my codespace VM so no accidental bill gets created
+
+################################################################################################
+## End of File
+################################################################################################
+

@@ -1,0 +1,102 @@
+
+-----------------------------------------------------------------------------------------
+
+SET UP JOB
+
+Current runner version: '2.311.0'
+Operating System
+  Ubuntu
+  22.04.3
+  LTS
+Runner Image
+  Image: ubuntu-22.04
+  Version: 20231217.2.0
+  Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20231217.2/images/ubuntu/Ubuntu2204-Readme.md
+  Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20231217.2
+Runner Image Provisioner
+  2.0.321.1
+GITHUB_TOKEN Permissions
+  Contents: write
+  Metadata: read
+Secret source: Actions
+Prepare workflow directory
+Prepare all required actions
+Getting action download info
+Download action repository 'actions/checkout@v4' (SHA:b4ffde65f46336ab88eb53be808477a3936bae11)
+Complete job name: Check current step number
+
+
+-----------------------------------------------------------------------------------------
+
+CHECKOUT
+
+Run actions/checkout@v4
+  with:
+    repository: justusvaltonen/skills-publish-packages
+    token: ***
+    ssh-strict: true
+    persist-credentials: true
+    clean: true
+    sparse-checkout-cone-mode: true
+    fetch-depth: 1
+    fetch-tags: false
+    show-progress: true
+    lfs: false
+    submodules: false
+    set-safe-directory: true
+Syncing repository: justusvaltonen/skills-publish-packages
+Getting Git version info
+  Working directory is '/home/runner/work/skills-publish-packages/skills-publish-packages'
+  /usr/bin/git version
+  git version 2.43.0
+Temporarily overriding HOME='/home/runner/work/_temp/ab103b06-7930-4656-a24f-040ed1db56e7' before making global git config changes
+Adding repository directory to the temporary git global config as a safe directory
+/usr/bin/git config --global --add safe.directory /home/runner/work/skills-publish-packages/skills-publish-packages
+Deleting the contents of '/home/runner/work/skills-publish-packages/skills-publish-packages'
+Initializing the repository
+  /usr/bin/git init /home/runner/work/skills-publish-packages/skills-publish-packages
+  hint: Using 'master' as the name for the initial branch. This default branch name
+  hint: is subject to change. To configure the initial branch name to use in all
+  hint: of your new repositories, which will suppress this warning, call:
+  hint: 
+  hint: 	git config --global init.defaultBranch <name>
+  hint: 
+  hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+  hint: 'development'. The just-created branch can be renamed via this command:
+  hint: 
+  hint: 	git branch -m <name>
+  Initialized empty Git repository in /home/runner/work/skills-publish-packages/skills-publish-packages/.git/
+  /usr/bin/git remote add origin https://github.com/justusvaltonen/skills-publish-packages
+Disabling automatic garbage collection
+  /usr/bin/git config --local gc.auto 0
+Setting up auth
+  /usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+  /usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+  /usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+  /usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+  /usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Fetching the repository
+  /usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +2f63db69a91310943a4e09af7972e5cc0ace3d7f:refs/remotes/origin/cd
+  From https://github.com/justusvaltonen/skills-publish-packages
+   * [new ref]         2f63db69a91310943a4e09af7972e5cc0ace3d7f -> origin/cd
+Determining the checkout info
+Checking out the ref
+  /usr/bin/git checkout --progress --force -B cd refs/remotes/origin/cd
+  Switched to a new branch 'cd'
+  branch 'cd' set up to track 'origin/cd'.
+/usr/bin/git log -1 --format='%H'
+'2f63db69a91310943a4e09af7972e5cc0ace3d7f'
+
+-----------------------------------------------------------------------------------------
+
+-logs seemed to get only crypted data, which is good
+-Got to logs through GH-Web-UI / YourRepo / Actions / Some action
+-From the menus I found more configuring when it comes to runners and caching
+
+
+
+
+-----------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------
+

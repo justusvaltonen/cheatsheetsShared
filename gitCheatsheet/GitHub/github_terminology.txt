@@ -51,6 +51,7 @@ Push			== Apply your changes in code and send them to some other place than your
 Remote			== Some repository that is hosted somewhere else than your local computer. Define with URL. You can only push to remote.
 Repository		== Some server that holds your code. Also remote means the same thing.
   Origin			    == Typical name for a Repository in the manuals.
+Runner          == Container running a workflow
 Staging			== Pre save. Including to be committed. Same as index.
 Status			==
 Status Badge    == Small image at least for my Not-ContinousIntegration badge. I got the badge, but it is just lame.

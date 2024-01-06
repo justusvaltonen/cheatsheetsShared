@@ -1,0 +1,175 @@
+
+Created:	03.01.2024           Updated: +++ +++
+################################################################################################
+https://github.com/skills/publish-packages
+https://github.com/justusvaltonen/skills-publish-packages
+https://github.com/opencontainers/image-spec
+https://docs.docker.com/registry/
+
+https://www.docker.com/why-docker/
+https://github.com/features/packages                                                                                        (2)
+  https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry               (2.1)
+  https://docs.github.com/en/packages/learn-github-packages/configuring-a-packages-access-control-and-visibility                (2.2)   Important topic
+
+https://docs.github.com/en/packages/learn-github-packages/introduction-to-github-packages                                   (3)
+  https://docs.github.com/en/actions/security-guides/automatic-token-authentication#using-the-github_token-in-a-workflow        (3.1)
+  https://docs.github.com/en/actions/security-guides/automatic-token-authentication#permissions-for-the-github_token            (3.2)
+  https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions                                            (3.3)
+    https://docs.github.com/en/authentication/connecting-to-github-with-ssh/managing-deploy-keys#deploy-keys                        (3.3.1)
+    https://docs.github.com/en/actions/using-workflows/reusing-workflows#passing-inputs-and-secrets-to-a-reusable-workflow          (3.3.2)
+      https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions                                             (3.3.2.1)
+    https://libsodium.gitbook.io/doc/public-key_cryptography/sealed_boxes                                                           (3.3.3)
+
+https://docs.github.com/en/actions/learn-github-actions/contexts#context-availability                                       (4) Parameters listed
+https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository
+https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions                                    (6)
+
+https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/about-monitoring-and-troubleshooting            (7)
+  https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/using-workflow-run-logs                           (7.1)
+
+------------------------------------------------------------------------------------------------
+
+This course is about CD (Continous Delivery). Emphasis on artifacts.
+    --> Sounds cool. HOMM3 was one of the best. Lightning + SP 4 life.
+
+Who is this for: Developers, DevOps engineers, full stack developers, cloud engineers.
+What you'll learn: Continuous delivery, how to save and access build artifacts, package management, how to publish to GitHub Packages.
+What you'll build: We will build a Docker image that runs a small game.
+
+In this course, you will:
+    Create a workflow
+    Add a Dockerfile
+    Merge your pull request
+
+------------------------------------------------------------------------------------------------
+Step 1: Create the workflow file
+
+-Seems we are creating a "3-in-a-row", or tic-tac-toe as one might call it. Sounds fun.
+
+What does any word mean, really? Only a few can explain them, but can use them. Thing is that they are slightley different for different people. One reason for elevated bloodpressure is not knowing what is meant by CI/CD. It's incredibly important for employers that everyone applying for a job knows what CI/CD means, even when everyone has a different meaning to it. I have some difficulties "integrating" to socieatal norms at times. Luckily GitHub is here to save the day! No superpowers or ridiculous spandex, but only explaining CI/CD and saying it's not for debate. This is what it means...
+
+Imagine it's like group-theory in math... XD Enough with the imagining and the metaforas.
+
+"Code":     ["Continous Integration (CI)", "Continous Delivery (CD)", "Continous Deployment (CD)... wait, no, (DP)"],
+"Build":    ["Continous Integration (CI)", "Continous Delivery (CD)", "Continous Deployment (DP)"],
+"Testing":  ["Continous Integration (CI)", "Continous Delivery (CD)", "Continous Deployment (DP)"],
+"Release":  ["Continous Delivery (CD)", "Continous Deployment (DP)"],
+"Deploy":   ["Continous Deployment (DP)"]
+
+CI      == Sharing code inside the Dev people inside a company. New stuff arrives multiple times a day
+CD      == Share with the world the same stuff as earlier. Now the word 'world' means so many things it's a guessing game what exactly happens.
+Docker  == Thing that enables running containers. Containers run on just about any machine. Bundle of SW as simplicity. Easy on machinery. Better than VM
+  Docker Image      == Bundle of SW. Kind of like linux, but works on different level. Image contains same info that would have in the old days put to a CD-ROM
+  Dockerfile        == Instructions to build a runtime environment of docker container. Dockerfile has these configs.
+  Docker Container  == Runtime environment that runs Docker image SW
+
+
+We'll start by creating the workflow file to publish a Docker image to GitHub Packages.
+
+-Remember to use the sidebranch: 'CD', when fooling around with things/stuff
+
+On publishing an image for docker usage, I specify things in a YAML-file. Tutorial that is there to help me, doesn't give information where the value for a field is gotten from. Field is the last one, the one that says tags:
+      - name: Build container
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+
+context: path in GitHubContainerRegistry container/pod/vm/server where the image will be placed for future use. To make things a bit harder, the usual "~/" or "/" is not the home or root of the repository for images. Instead only a dot is used to mark root. This is not in anyway proven. When you get there, take a look. Chatbot gives possibly 2 kinds of information. One says it is the root dir and one states that it is the relative path of where a process? is run. I have learned that use of words is in constant entropy (the way I mean it, can be replaced with the word change). Amazing how we can avoid bigger conflicts with our conflicting information on things. Big applause to human kind for not killing each-other. Maybe using dictionarys would be good to avoid conflicts, so small buu for that.
+
+push: When the image is created (someones local, my mystical cloud git hub something, possibly somewhere else I do not know about), will it be stored. Do you want to automatically push the image to a GHCR-repo under your account. Defaults to no.
+
+
+-Hmm, the chatbot did the unexpected and gave me 2 slightly different answers. First was the one with a small mixup with where . points at. That being said, it can be technically correct aswell, since for example when using git, we initialize a repo on some local. For that repo, the place with the init happened IS the root for that repo. Saying that, chatbot hinted in the right way where the file will be most likely executed on creation. This means exactly the root of the repo. Now if one is following instructions for the first time and just going with it, these findings of roots can be a mess. Depending on the context, roots are almost everywhere.
+    My advice is that do not try to become root unless you have a very good reason to. You may endup accidentally enabling almost all for your big-pic posting application. If somebody sees this, who knows what they do, maybe use your machine as part of a botnet to mine bitcoin making it warmer outside.
+    My point: when possible, try to avoid confusion unless you are aware of the situation. I heard of this SW called Obsidian that looked quite nice. Easier structuring than with just notepad. I do not know about the privacy things then. Looked croooked, but I might have been very hasty to judge because of lack of time at that moment.
+    
+Second answer was also OK, giving less to guess about. There was a use of words that I personally disliked, so I preferred the first answer. When making abstractions un-perfectly for my personal taste / knowledgelevel things will not recieve my time. Maybe a thing to work on for more.
+    I take some of that back. There was some very unclear "this, that, the, it" usage that could reference many objects (I see all as objects today, tomorrow as tradesgoods convertable to food or possibly tools with usecase unspecified ATM). The point in all this understanding of where configvalues come from is to be able to use them correctly in the future. What was left out from the second answer was all the unasked questions. This is not in any way obvious always, but there is a goal with a purpose in mind when asking questions.
+
+ATM == "Automatic Teller Machine", "At The Moment". Second one is more likely out of these.
+
+
+There are other fields that seem important before starting with "blind obediance (BO)" approach. The following lines seem risky at first glance. Most likely because I don't understand how they work.
+
+images: ghcr.io/YOURNAME/publish-packages/game
+username: ${{ github.repository_owner }}
+password: ${{ secrets.GITHUB_TOKEN }}
+
+First line.
+I don't remember creating an account to the url. (3) says that one can only use the classical version of access tokens to use this feature.
+
+
+(2.1)   -Gives an idea to what the docker related command does in our YAML
+"docker push ghcr.io/NAMESPACE/IMAGE_NAME:latest"
+
+
+
+(3.2)   -Good read. When more time is at hand, read again with thought
+'You can modify the permissions for the GITHUB_TOKEN in individual workflow files.'
+'You can see the permissions that GITHUB_TOKEN had for a specific job in the "Set up job" section of the workflow run log. For more information, see "Using workflow run logs."'
+'You can use the permissions key in your workflow file to modify permissions for the GITHUB_TOKEN for an entire workflow or for individual jobs'
+'When the permissions key is used, all unspecified permissions are set to no access, with the exception of the metadata scope, which always gets read access.'
+'Alternatively, you can create a personal access token, store it as a secret in your repository, and use the token in your workflow with the ${{ secrets.SECRET_NAME }} syntax.'
+
+-In a nutshell: Privilages are inherited by [enterprise, organization, repository] level. You can use more details to add permissions, but it will set everything not specified to deny-mode. If you want to automate properly, you need to create an application for that. One approach is to create a secret-file that holds the creds and replace GITHUB_TOKEN with YOUR_SECRET_PAT. GITHUB_TOKEN is a thing that exists by default, if I guessed correctly. What happens if this environment variable is not found in secrets file inside your workflow? Is it searched from somewhere else? Bad thing would be to give my personal credentials to a publicly shared image. We have 'gitignore'-file that ignores at least some things. Do environment variables include to the list?
+
+
+(3.3)   -Some more information about secrets
+-Secrets you create cannot start with GITHUB_ that is nice. Can contain alnum and _ in their names. Names need to be unique at the level they are created at. Levels are easilly understood wrongly, since can be used differently in a similar, but different context. Since in GitHub documentary, I believe this applies here at least.
+
+3: Environment
+5: Repository
+8: Organization
+
+Primarilly use smaller number from the above list if there is a mixup at naming the secrets.
+
+"To help ensure that GitHub redacts your secret in logs, avoid using structured data as the values of secrets. For example, avoid creating secrets that contain JSON or encoded Git blobs."
+    --> This is code injection. Don't do it, but be aware of it when running tests on just about anything.
+
+"If a secret was used in the job, GitHub automatically redacts secrets printed to the log. You should avoid printing secrets to the log intentionally."
+    --> This is the problem in other SW aswell. How does GitHub handle variables then? Do the logs get the processed value or just literally 'secrets.YOUR_SECRET_PAT', because for me it would make sense to get the rendered version. I was given a hint that using SSL-Certs inside our own environment as encryption method might do the trick. Then again this seems like a big task for someone like me, who never setup a CA for personal use.
+
+"Organization and repository secrets are read when a workflow run is queued, and environment secrets are read when a job referencing the environment starts."
+    --> Excellent... More info.
+
+"When generating credentials, we recommend that you grant the minimum permissions possible. For example, instead of using personal credentials, use deploy keys (3.3.1) or a service account."
+    --> This is to help our cause? We want to do things the easy way and all that gets presented is a box of mines and tripwires.
+
+"With the exception of GITHUB_TOKEN, secrets are not passed to the runner when a workflow is triggered from a forked repository."
+"Secrets are not automatically passed to reusable workflows. For more information, see (3.3.2)"
+    --> Here, also example of passing "env" vs passing "secret". Both can use the same file as source.
+
+"If a secret has not been set, the return value of an expression referencing the secret (such as ${{ secrets.SuperSecret }} in the example) will be an empty string."
+    --> This is relieving to hear (see, read)
+
+"To help protect secrets, consider using environment variables, STDIN, or other mechanisms supported by the target process."
+
+
+(6)
+personal access tokens
+    "You should never use a personal access token (classic). These tokens grant access to all repositories within the organizations that you have access to, as well as all personal repositories in your personal account. This indirectly grants broad access to all write-access users of the repository the workflow is in."
+
+"If you do use a personal access token, you should never use a personal access token from your own account. If you later leave an organization, workflows using this token will immediately break, and debugging this issue can be challenging. Instead, you should use a fine-grained personal access tokens for a new account that belongs to your organization and that is only granted access to the specific repositories that are needed for the workflow. Note that this approach is not scalable and should be avoided in favor of alternatives, such as deploy keys."
+
+
+-Try to test logs that get generated through workflows to see if secret values are logged as errors or success runs.
+-When a value is put in to a secret, it shouldn't find it's way to logs or GitHub at all unencrypted
+-Permissions are needed for things to run. Know your scopes and needs.
+-Rotate secrets to ensure safety
+-Creating form validator checks would be a good idea to protect against injection attacks
+-When using shell variables, use doublequotes to reference content of variables. This is for general usage, not just GH.
+-See that jobs get finished. Unfinished jobs may have an active GITHUB_TOKEN in their hands.
+
+
+------------------------------------------------------------------------------------------------
+
+-I was a bit lazy and did what was asked. I created the publish.yml with information given from the tutorial, modifying 1 field
+-Also did the optional part. Didn't merge
+
+
+################################################################################################
+## End of File
+################################################################################################
+
