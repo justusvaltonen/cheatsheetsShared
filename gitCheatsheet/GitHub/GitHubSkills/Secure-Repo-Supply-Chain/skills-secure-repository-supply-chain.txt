@@ -1,0 +1,143 @@
+
+Created:	06.01.2024           Updated: +++ +++
+################################################################################################
+https://github.com/skills/secure-repository-supply-chain
+https://github.com/justusvaltonen/skills-secure-repository-supply-chain
+
+https://github.com/advisories                                                                       (1)
+https://docs.github.com/en/get-started/learning-about-github/about-github-advanced-security         (2)
+  https://docs.github.com/en/code-security/dependabot/dependabot-auto-triage-rules/about-dependabot-auto-triage-rules   (2.1)
+  https://docs.github.com/en/code-security/dependabot/working-with-dependabot/troubleshooting-dependabot-errors         (2.2)
+  https://www.npmjs.com/package/adal-node                                                                               (2.3)
+  https://learn.microsoft.com/en-us/javascript/api/@azure/msal-node/?view=msal-js-latest                                (2.3.1)
+  https://github.com/AzureAD/microsoft-authentication-library-for-js                                                    (2.3.2)
+  https://learn.microsoft.com/en-us/entra/identity-platform/msal-node-migration                                         (2.3.3)
+
+https://axios-http.com/docs/intro                   (6)
+https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html   (7)
+
+https://web.dev/learn/pwa
+
+------------------------------------------------------------------------------------------------
+"Secure your supply chain, understand dependencies in your environment, know about vulnerabilities in those dependencies and patch them."
+
+What you'll learn: How to view repository dependencies, view Dependabot alerts, and enable Dependabot security and version updates
+What you'll build: Repository dependencies, Dependabot alerts, pull requests to fix dependencies and version updates
+
+In this course, you will:
+    Dependency graph
+    Dependency alerts
+    Dependency security
+    Dependency versions
+
+------------------------------------------------------------------------------------------------
+Step 1: Review and add dependencies using dependency graph
+
+What's the big deal about securing your repository's supply chain?:
+    "With the accelerated use of open source, most projects depend on hundreds of open-source dependencies."
+        --> This is silly in my oppinion. Basic building-blocks can be used more easilly and securely at least most of the time
+        
+    "This poses a security problem: what if the dependencies you're using are vulnerable?"
+        --> Every SW is. Not just some dependency, but the misuse of the code
+
+    "You could be putting your users at risk of a supply chain attack."
+
+    "One of the most important things you can do to protect your supply chain is to patch your vulnerable dependencies and replace any malware."
+        --> What? Replace malware? There shouldn't be any malware
+
+
+The supply chain features on GitHub are:
+    Dependency graph
+    Dependency review
+    Dependabot alerts
+    Dependabot updates
+        Dependabot security updates
+        Dependabot version updates
+
+
+What is a dependency graph:
+    The dependency graph is a summary of the manifest and lock files stored in a repository and any dependencies that are submitted for the repository using the dependency submission API (beta). For each repository, it shows:
+    Dependencies, the ecosystems and packages it depends on
+    Dependents, the repositories and packages that depend on it
+
+-Does this read package.json?
+
+-Turns out it's package-lock.json instead.
+-I have no idea what is the point in adding this thing that needed adding
+
+------------------------------------------------------------------------------------------------
+Step 2: Enable and view Dependabot alerts
+
+-Dependabot alerts seem to be the same as npm security for example. Scan for common things and inform.
+-GH Advisory Database is a security Database for automated detection
+-While browsing the DB, I easilly get the feeling that redirects are a huge risk. May not be totally true. Reading some of the reports, they don't neccessarily mean a vuln, but something else. If I got this correctly, symlinks to someone elses account through shared dir does enable sometimes reading of the files. All depends on the privilages that have been granted. If I try to use something as weirdly as I can, I'm sure I can find some bugs. Just try creating any SW on a tight schedule...
+
+-Enabling dependabot alerts through Web-GUI happens from the settings. No surprise there
+
+Listing of problems encountered:
+A) "Prototype Pollution" in minimist
+B) "Inefficient Regular Expression Complexity" vulnerability, axios
+C) "tough-cookie Prototype Pollution vulnerability"
+D) xml2js is vulnerable to "prototype pollution"
+E) "Cross-Site Request Forgery" Vulnerability, Axios
+F) ""
+
+And more details:
+A) I see that there is a SHA hardcoded into our package-lock.json for this one. If we change the version, I believe the SHA needs to change aswell. Dependabot fixes via update
+B) Bug with parsing, I see. Good to have a fix on that. Update fixes
+C) New thing for me, updating seems to make it go away, if only could happen:
+
+@azure/arm-appinsights@2.1.0 requires tough-cookie@^2.4.3 via @azure/ms-rest-js@1.11.2
+@azure/arm-botservice@1.0.0 requires tough-cookie@^2.4.3 via @azure/ms-rest-js@1.11.2
+request-promise@4.2.6 requires tough-cookie@^2.3.3
+No patched version available for tough-cookie
+
+-IC. Not the first time I stumble upon this kinds of puzzles. Last time everything went to shit. Let's see what happens on this one.
+-Could it be that order is important when doing these dependancy hell related things? I had to run updates in a weird matter when doing a pre-install on Win11
+-Possibly on (2.2), the last <h2> may help
+
+D) This is weird. I thought this was taken care of by now.
+E) This is a bit embarassing even, but very good it's found. No fix though. Hmm... I know I've used this on some of my JS-things, but don't really know how it works.
+Also I used it for just some particular feature, not replacing all functionality. Is it ok to tell the coders not to use some of the features? Does it even help?
+
+The fix is available for Axios, but it doesn't comply with other modules:
+@azure/ms-rest-nodeauth@3.1.1 requires axios@^0.21.1 via adal-node@0.2.4
+
+-It seems that adal-node shouldn't be in use at all. Switch to a new module should be done. (2.3)
+-There are instructions in (2.3.3) to migrate to new thing instead of adal
+-We need node version of: 10, 12, 14, 16 or 18.
+
+-When there is a ^ in the package-lock.json, it means that you can use newer minor and patch versions. If you have a ~ then it means only patches have room to use latest
+
+------------------------------------------------------------------------------------------------
+Step 4: Enable and trigger Dependabot version updates
+-Where is step 3. I accidentially did it without updating the browser. It was there
+
+What are Dependabot version updates?
+
+-Through the settings, I get to a dependabot.yml file that is some versions update configuring file
+
+-Here is my dependabot.yml:
+
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+  - package-ecosystem: "nuget"
+    directory: "/code/"
+    schedule:
+      interval: "daily"
+
+
+------------------------------------------------------------------------------------------------
+
+Dependabot, alerts, autotriangle
+Dependency Graph
+GH Advisory Database
+
+################################################################################################
+## End of File
+################################################################################################
+

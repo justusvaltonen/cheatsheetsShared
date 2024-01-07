@@ -1,0 +1,85 @@
+
+Created:	07.01.2024           Updated: +++ +++
+################################################################################################
+https://github.com/justusvaltonen/skills-secure-repository-supply-chain
+
+https://learn.microsoft.com/en-us/entra/identity-platform/msal-node-migration
+https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph
+https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/exploring-the-dependencies-of-a-repository
+https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-supply-chain-security
+https://docs.github.com/en/code-security/dependabot/dependabot-alerts/about-dependabot-alerts
+https://learn.microsoft.com/en-us/entra/identity-platform/msal-node-migration
+
+------------------------------------------------------------------------------------------------
+Reason for this document is that I'm pissed off. Some update doesn't run because dependency issues.
+Let's see if I have the skills to fix the damn thing
+
+
+Issue_1: "Tough-cookie Prototype Pollution vulnerability"
+Issue_2: "Cross-Site Request Forgery" Vulnerability, Axios
+
+
+------------------------------------------------------------------------------------------------
+
+---------------------
+Tough Cookie Problem:
+---------------------
+{
+    request-promise@4.2.6 requires tough-cookie@^2.3.3
+    No patched version available for tough-cookie
+    The earliest fixed version is 4.1.3.
+}
+
+-Seems that the request-promise is oldish and even uses old style in features. Needs replacing
+
+{
+    @azure/arm-appinsights@2.1.0 requires tough-cookie@^2.4.3 via @azure/ms-rest-js@1.11.2
+    @azure/arm-botservice@1.0.0 requires tough-cookie@^2.4.3 via @azure/ms-rest-js@1.11.2
+    request-promise@4.2.6 requires tough-cookie@^2.3.3
+    No patched version available for tough-cookie
+}
+
+-Once I get to replacing the request-promise thing with something, I can update. Just a second
+-Wait a second. In Stackoverflow they recommend axios as the replacement for request-promise. Did someone just forget to uninstall?
+
+https://stackoverflow.com/questions/60334548/alternatives-to-request-promise-native
+    https://www.npmjs.com/package/node-fetch
+    https://www.npmjs.com/package/axios
+    
+https://github.com/request/request/issues/3143
+
+code/src/AttendeeSite/package-lock.json update suggested:
+tough-cookie ~> 4.1.3
+
+------------------------------------------------------------------------------------------------
+
+-----------------------------------------
+Axios Cross-Site-Request-Forgery Problem:
+-----------------------------------------
+@azure/ms-rest-nodeauth@3.1.1 requires axios@^0.21.1 via adal-node@0.2.4
+The earliest fixed version is 1.6.1.
+
+-Getting away from adal is the most likely solution
+
+Evaluate the following:
+axios                       Good, needs newer
+azure/ms-rest-nodeauth      ???
+adal-node                   Bad, throw away
+
+-I don't know enough to know how these things really work.
+
+code/src/AttendeeSite/package-lock.json update suggested:
+axios ~> 1.6.0
+
+
+
+
+
+Don't think I'll make it
+
+
+
+################################################################################################
+## End of File
+################################################################################################
+
