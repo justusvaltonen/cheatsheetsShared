@@ -109,6 +109,11 @@ The fix is available for Axios, but it doesn't comply with other modules:
 
 -When there is a ^ in the package-lock.json, it means that you can use newer minor and patch versions. If you have a ~ then it means only patches have room to use latest
 
+
+    ---UPDATE---
+    There is no way I found that would make this in any way sensible task to waste time on. Stack is old and it has bugs
+    I don't understand what the whole repo does, so I'm not spending my time on it any further
+
 ------------------------------------------------------------------------------------------------
 Step 4: Enable and trigger Dependabot version updates
 -Where is step 3. I accidentially did it without updating the browser. It was there
@@ -132,6 +137,7 @@ updates:
 
 
 ------------------------------------------------------------------------------------------------
+Things to add to my terminology file after finding out properly
 
 Dependabot, alerts, autotriangle
 Dependency Graph
