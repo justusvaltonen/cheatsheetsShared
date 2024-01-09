@@ -1,0 +1,32 @@
+
+Created:	09.01.2024
+################################################################################################
+
+
+------------------------------------------------------------------------------------------------
+
+
+Datatypes
+  Dictionary
+  List
+  Set
+  Tuple
+
+
+-- Tuple: --
+-Is an array of some data that is indexed like, first entry / element of the tuple is index 0 and second is 1...
+-Once applied, a tuple cannot be changed
+-The following are valid statements:
+    mytuple = ("cat", "dog", "hummingbird")
+    thistuple = ("apple", "banana", "cherry", "apple", "cherry")
+    my_tuple = (1, "Hello", 3.4)
+    my_tuple = ("mouse", [8, 4, 6], (1, 2, 3))
+    my_tuple = 1, "Hello", 3.4
+
+
+
+
+################################################################################################
+## End of File
+################################################################################################
+

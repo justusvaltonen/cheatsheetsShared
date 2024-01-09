@@ -1,0 +1,106 @@
+
+Created:	08.01.2024
+################################################################################################
+https://www.w3schools.com/python/python_tuples.asp
+https://sites.pitt.edu/~naraehan/python3/mbb1.html
+
+https://peps.python.org/pep-0008/                   (3)
+
+------------------------------------------------------------------------------------------------
+
+OK, starting off with some trouble. My updater hasen't finished for some reason.
+    ps aux
+-Shows that there is a hanging process of 6050 that runs apt upgrade and update. Because of that, I can't do much.
+    sudo kill -9 6050
+-Makes the problem go away
+
+    apt list --installed
+-Shows that I have my required libs in place
+
+    npm install --prefix Season-2/Level-4/ Season-2/Level-4/ && npm install --global mocha
+-Appeared to do something, but no idea what. Maybe mocha I understand. It is a testing thing if I remember correctly. Yes, alternative would be jest
+
+-Using the VSCode on Codespaces. I see that there is a mention in Season-2/Level-4/package-lock.json
+
+------------------------------------------------------------------------------------------------
+S1 - L1
+Season 1 - Level 1: Cyber Monday
+
+Finally finding something instructive. There was something going on with the workflow dir, but couldn't get the hang of it.
+Now at ~/Season-1/README.md
+
+-Storyline states that I need to fix something. Hmm... there is a mention that indicates that I need to bypass testcases while doing what I'm here to do.
+
+For each level, you will find the same file structure:
+    code        includes the vulnerable code to be reviewed.
+    hack        exploits the vulnerabilities in code. Running hack.py will fail initially, your goal is to get this file to pass.
+    hint        offers a hint if you get stuck.
+    solution    provides one working solution. There are several possible solutions.
+    tests       contains the unit tests that should still pass after you have implemented your fix.
+
+
+Time to start!
+    Review the code in code.py. Can you spot the bug(s)?
+    Try to fix the bug. Ensure that unit tests are still passing 🟢.
+    You successfully completed the level when both hack.py and tests.py pass 🟢.
+    If you get stuck, read the hint in the hint.js file.
+    Compare your solution with solution.py.
+
+
+
+While in the terminal inside my codespace, I try the normal
+    ./code.py
+But it doesn't work.
+Next I make the file executable by chmod +x <filename>
+Then the UI says that something needs installing. So I install it.
+Next there is a mention in "PROBLEMS" in the same place where the terminal is, but on another tab. There it gives me linenumbers.
+First 2 problems were with having an extra space in call of collections inside our __init__.py file that is somewhere inside our system where the libs are kept
+-It is a huge file, but thanks for our IDE, finding the bug is fast and easy
+
+-So it was that the bug wasn't it. Still getting the same error:
+
+: No such file or directory
+from: can't read /var/mail/collections
+./code.py: line 16: syntax error near unexpected token `('
+./code.py: line 16: `Order = namedtuple('Order', 'id, items');'
+
+-When I paint the word collections and right click, I get to see declaration and definition of it or so I think.
+-Can't seem to understand intuitively what the definition does. Looking at the first line helps the most, maybe.
+
+
+Tuple is a thing in python. It's a list that is sorted with some logic. We can not change the order, once it's written down.
+    myvariable = ("cat", "dog", "hummingbird")
+-Tuples are defined inside (), usually that is.
+
+    thistuple = ("apple", "banana", "cherry", "apple", "cherry")
+-The above is also allowed with multiple entrys that are the same.
+
+    my_tuple = (1, "Hello", 3.4)
+    my_tuple = ("mouse", [8, 4, 6], (1, 2, 3))
+    my_tuple = 1, "Hello", 3.4
+-All are valid statements
+
+
+On line 16 of code.py, there is a capital letter used. Should that mean something?
+The lines are:
+    Order = namedtuple('Order', 'id, items')
+    Item = namedtuple('Item', 'type, description, amount, quantity')
+Things that hurt my brain are:
+-Capital letter on variable creation
+-Not knowing how '"` and others behave, is there a problem with the parsing?
+-Some styling guidance can be found at (3)
+-Chatbot states that the capitalized Order is a class and order is a variable name. Why do we want to pass hardcoded values to our class definition?
+-Are we somehow building the base of our object with a funny looking syntax? Tuples can't be changed BTW
+
+-Things don't give me sensible output, I needed to restart the Virtual-VS-Code. Now I see there are new dirs popping up. Some .venv dir that wasn't there before, now exists.
+
+
+
+-Let's see if our diff is still bugging out. No it wasn't. Now I can't seem to do just about anything right. Got to take a nap
+
+
+
+################################################################################################
+## End of File
+################################################################################################
+
